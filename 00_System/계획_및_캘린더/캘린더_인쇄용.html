@@ -1070,6 +1070,25 @@
             </div>
         </div>
 
+        <!-- SMB Path Converter Widget -->
+        <div class="sidebar-section" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top:15px; margin-top:15px;">
+            <h3 style="color:#ffffff; font-size:14px; font-weight:700; margin-bottom:10px; text-transform:uppercase; letter-spacing:0.5px;">🔗 Mac ↔ Win 경로 변환기</h3>
+            <p style="font-size: 11px; line-height: 1.5; margin-bottom: 8px; color: #cbd5e1;">네트워크 공유(SMB) 경로를 맥/윈도우용으로 상호 변환합니다.</p>
+            <div style="margin-bottom: 8px;">
+                <textarea id="converter-input" rows="2" style="width:100%; padding:6px 8px; border-radius:4px; border:1px solid #475569; background-color:#1e293b; color:#ffffff; font-size:11.5px; font-family:inherit; resize:vertical;" placeholder="변환할 경로를 입력하세요..."></textarea>
+            </div>
+            <div style="display: flex; gap: 8px; margin-bottom: 8px;">
+                <button class="btn-side-action" style="margin-bottom:0; flex:1; padding:8px;" onclick="runPathConversion('mac2win')">Mac → Win</button>
+                <button class="btn-side-action" style="margin-bottom:0; flex:1; padding:8px;" onclick="runPathConversion('win2mac')">Win → Mac</button>
+            </div>
+            <div style="margin-bottom: 8px;">
+                <textarea id="converter-output" rows="2" readonly style="width:100%; padding:6px 8px; border-radius:4px; border:1px solid #475569; background-color:#0f172a; color:#38bdf8; font-size:11.5px; font-family:inherit; resize:vertical;" placeholder="변환 결과가 여기에 표시됩니다..."></textarea>
+            </div>
+            <button class="btn-side-action" style="background-color: #334155; color: white; border: none; font-weight: 600; padding:10px;" onclick="copyConverterOutput()">
+                📋 결과 복사하기
+            </button>
+        </div>
+
         <div class="sidebar-section" id="save-info-section" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top:15px;">
                 <h3 style="margin:0 0 10px 0; font-size:14px; color:#f1f5f9; border-bottom:1px solid #334155; padding-bottom:6px;">💾 일정 저장 방법</h3>
             <p><strong>방법 A (서버 연동 - 권장):</strong></p>
@@ -1961,6 +1980,68 @@
             } finally {
                 btn.disabled = false;
                 btn.innerHTML = originalHtml;
+            }
+        }
+
+        // SMB Path Converter Functions
+        function convertMacToWin(macPath) {
+            let path = macPath.trim();
+            if (path.startsWith("/Volumes/")) {
+                path = path.replace("/Volumes/", "dujonpnn/");
+            }
+            path = path.replace(/^smb:\/\//i, "");
+            path = path.replace(/^smb:/i, "");
+            path = path.replace(/\._smb\._tcp\.local/gi, "");
+            path = path.replace(/\//g, "\\");
+            if (!path.startsWith("\\\\")) {
+                if (path.startsWith("\\")) {
+                    path = "\\" + path;
+                } else {
+                    path = "\\\\" + path;
+                }
+            }
+            return path;
+        }
+
+        function convertWinToMac(winPath) {
+            let path = winPath.trim();
+            path = path.replace(/^\\\\/g, "");
+            path = path.replace(/^\\/g, "");
+            let parts = path.split("\\");
+            if (parts.length === 0 || parts[0] === "") return "";
+            let host = parts[0];
+            if (host.toLowerCase() === "dujonpnn") {
+                host = "dujonpnn._smb._tcp.local";
+            }
+            let rest = parts.slice(1).join("/");
+            return "smb://" + host + "/" + rest;
+        }
+
+        function runPathConversion(mode) {
+            const input = document.getElementById("converter-input").value;
+            const outputField = document.getElementById("converter-output");
+            if (!input.trim()) {
+                outputField.value = "";
+                return;
+            }
+            if (mode === 'mac2win') {
+                outputField.value = convertMacToWin(input);
+            } else if (mode === 'win2mac') {
+                outputField.value = convertWinToMac(input);
+            }
+        }
+
+        function copyConverterOutput() {
+            const outputField = document.getElementById("converter-output");
+            if (!outputField.value.trim()) return;
+            outputField.select();
+            outputField.setSelectionRange(0, 99999);
+            try {
+                navigator.clipboard.writeText(outputField.value);
+                alert("결과가 클립보드에 복사되었습니다!");
+            } catch (err) {
+                document.execCommand("copy");
+                alert("결과가 복사되었습니다!");
             }
         }
 
