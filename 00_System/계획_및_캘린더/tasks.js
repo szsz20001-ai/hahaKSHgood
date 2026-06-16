@@ -120,7 +120,7 @@ const savedTasks = {
         },
         {
             "text": "마케팅협력사 회의(10시)",
-            "completed": false
+            "completed": true
         },
         {
             "text": "지예은 미팅(13시)",

@@ -9,7 +9,7 @@ PORT = 8000
 DIRECTORY = os.path.dirname(os.path.abspath(__file__))
 
 def update_obsidian_tasks(date_str, updated_tasks):
-    vault_dir = "E:\\Shkang_Obsidian\\00_System\\Daily_Notes"
+    vault_dir = os.path.abspath(os.path.join(DIRECTORY, "..", "Daily_Notes"))
     file_path = os.path.join(vault_dir, f"{date_str}.md")
     if not os.path.exists(file_path):
         content = f"# {date_str} 오늘 할 일\n\n"
@@ -84,7 +84,7 @@ def update_tasks_js(date_str, tasks):
         f.write(js_content)
 
 def carry_over_uncompleted_tasks(target_date_str):
-    vault_dir = "E:\\Shkang_Obsidian\\00_System\\Daily_Notes"
+    vault_dir = os.path.abspath(os.path.join(DIRECTORY, "..", "Daily_Notes"))
     date_pattern = re.compile(r'^\d{4}-\d{2}-\d{2}$')
     
     # List all daily notes in vault_dir
@@ -350,7 +350,7 @@ class CalendarRequestHandler(http.server.SimpleHTTPRequestHandler):
             except Exception as e:
                 print("Error carrying over tasks on server:", e)
                 
-            vault_dir = "E:\\Shkang_Obsidian\\00_System\\Daily_Notes"
+            vault_dir = os.path.abspath(os.path.join(DIRECTORY, "..", "Daily_Notes"))
             file_path = os.path.join(vault_dir, f"{date_str}.md")
             
             tasks = []
