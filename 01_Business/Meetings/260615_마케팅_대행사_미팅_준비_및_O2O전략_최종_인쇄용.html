@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>더존하우징 2026 하반기 마케팅 전략 제안서</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --color-bg: #FFFFFF;
+            --color-primary: #1E293B; /* Navy */
+            --color-accent: #B08D5B; /* Premium Gold */
+            --color-text-main: #111827;
+            --color-text-sub: #4B5563;
+            --color-border: #E5E7EB;
+            --font-main: 'Noto Sans KR', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-main);
+            background-color: #F3F4F6;
+            color: var(--color-text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* A4 Paper Styling for Web View */
+        .a4-container {
+            width: 210mm;
+            min-height: 297mm;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 40px auto;
+            padding: 20mm;
+            position: relative;
+        }
+
+        /* Cover & Header */
+        .doc-header {
+            background: var(--color-primary);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 6px solid var(--color-accent);
+        }
+
+        .brand-logo {
+            display: block;
+            margin-bottom: 20px;
+            height: 45px;
+        }
+        
+        .brand-logo img {
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .doc-header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+
+        .doc-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 0.95rem;
+            color: #CBD5E1;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+
+        /* Section Styling */
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            border-bottom: 2px solid var(--color-primary);
+            padding-bottom: 10px;
+            margin: 40px 0 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i { color: var(--color-accent); }
+
+        .sub-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin: 25px 0 15px 0;
+            padding-left: 12px;
+            border-left: 4px solid var(--color-accent);
+        }
+
+        p { margin-bottom: 12px; font-size: 0.95rem; }
+
+        /* Grids & Cards */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 20px; }
+
+        .card {
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            padding: 18px;
+            background: #FAFAFA;
+            page-break-inside: avoid; /* Prevents splitting during print */
+        }
+
+        .card h4 {
+            color: var(--color-primary);
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .card-tag {
+            font-size: 0.75rem;
+            background: rgba(176, 141, 91, 0.15);
+            color: #9A7B4F;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .card ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .card li {
+            position: relative;
+            padding-left: 14px;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: var(--color-text-sub);
+        }
+
+        .card li::before {
+            content: "·";
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        /* Stat Box */
+        .stat-box {
+            background: #F3F0EC;
+            border: 1px solid #E5D5C1;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: #7D6136;
+        }
+        .stat-box strong { color: #5D431E; }
+
+        /* Action/Quote Box */
+        .action-box {
+            background: #EFF6FF;
+            border-left: 4px solid #3B82F6;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+            page-break-inside: avoid;
+        }
+
+        .action-box.alert {
+            background: #FEF2F2;
+            border-left-color: #EF4444;
+        }
+
+        .action-box h5 {
+            font-size: 0.95rem;
+            color: var(--color-primary);
+            margin-bottom: 8px;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid var(--color-border);
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #F8FAFC;
+            font-weight: 700;
+            color: var(--color-primary);
+            text-align: center;
+        }
+
+        /* Funnel (Simplified for Print) */
+        .funnel {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+            page-break-inside: avoid;
+        }
+        
+        .funnel-step {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--color-border);
+            border-radius: 6px;
+            background: white;
+            overflow: hidden;
+        }
+
+        .funnel-badge {
+            background: var(--color-primary);
+            color: white;
+            padding: 20px;
+            width: 100px;
+            text-align: center;
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .funnel-badge i { font-size: 1.5rem; color: var(--color-accent); }
+        
+        .funnel-content {
+            padding: 15px 20px;
+            flex: 1;
+        }
+        
+        .funnel-content strong { color: var(--color-primary); font-size: 1.05rem; display: block; margin-bottom: 5px;}
+
+        /* --- PRINT CSS --- */
+        @media print {
+            body { background: white; margin: 0; padding: 0; display: block; }
+            .a4-container {
+                width: 100%;
+                min-height: auto;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+            }
+            .section-title { margin-top: 30px; }
+            .doc-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .card, .action-box, .stat-box, .funnel-badge { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            
+            /* Add page breaks where logical */
+            h2 { page-break-after: avoid; }
+            .page-break { page-break-before: always; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="a4-container">
+        <!-- Header -->
+        <header class="doc-header">
+            <div class="brand-logo">
+                <img src="file:///E:/Shkang_Obsidian/04_Archive/Past_Works/%EB%8D%94_%EC%A1%B4_%ED%95%98%EC%9A%B0%EC%A7%95/01.Logo_ci/1x/2026-06-08_logo_wh.png" alt="DUJON LOGO" onerror="this.outerHTML='<h2 style=\'color:white; font-family:Outfit; letter-spacing:2px;\'><i class=\'fa-solid fa-house-chimney\' style=\'color:#B08D5B;\'></i> DUJON</h2>'">
+            </div>
+            <h1>2026 하반기 통합 마케팅·세일즈 O2O 전략안</h1>
+            <p style="color:#E2E8F0; font-size: 1.05rem;">마케팅 대행사 정기 미팅 및 내부 의사결정 보고용</p>
+            <div class="doc-meta">
+                <span><i class="fa-regular fa-calendar"></i> 작성일: 2026년 6월 15일</span>
+                <span><i class="fa-solid fa-user-pen"></i> 작성자: 기획부 마케팅 기획자</span>
+                <span><i class="fa-solid fa-file-contract"></i> 대상: 대행사(MARKETINGKID) & 내부 임원진</span>
+            </div>
+        </header>
+
+        <!-- SECTION 1: Targeting -->
+        <h2 class="section-title"><i class="fa-solid fa-bullseye"></i> 1. 하반기 타겟팅 점검 및 '신규 블루오션' 확장 제안</h2>
+        <p>현재 대행사는 '친환경(스마트홈) 애호가', '5060 은퇴 준비자', '골프/레저 관여자' 등 현금 보유력이 확인된 코어 타겟에 광고 예산을 집중하고 있습니다. 하지만 시장 확장을 위해서는 신규 타겟 발굴이 필수적입니다. 최근 제작 기획 중인 <strong>'지예은 숏폼 콜라보'</strong>를 무기로 삼아 공략할 3대 신규 타겟을 대행사에 역제안합니다.</p>
+
+        <h3 class="sub-title">💡 기획자 역제안: 3·4분기 확장 타겟 3선</h3>
+        <div class="grid-3">
+            <div class="card">
+                <h4>🐶 펫팸족 (반려견 가구) <span class="card-tag">수요 폭발</span></h4>
+                <ul>
+                    <li><strong>특징:</strong> 아파트 '층견소음'과 공간 부족에 지친 반려인들.</li>
+                    <li><strong>마케팅 지시:</strong> '펫 인테리어', '마당 있는 집' 키워드 선점 및 강사모 등 커뮤니티 정밀 타겟팅.</li>
+                </ul>
+                <div class="stat-box">
+                    <strong>📊 팩트체크:</strong> 전체 4가구 중 1가구가 펫팸족. 소득 상위 구간일수록 대형견 양육 및 전원주택 선호도가 급증(펫세권 트렌드).
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>💼 3040 영앤리치 <span class="card-tag">트렌드 주도</span></h4>
+                <ul>
+                    <li><strong>특징:</strong> 신도시 내 도심형 타운하우스나 주말 세컨하우스(5도2촌)를 찾는 고소득 전문직.</li>
+                    <li><strong>마케팅 지시:</strong> '신도시 단독주택' 키워드와 함께 <strong>'지예은 숏폼 영상'</strong>을 인스타그램 스폰서드로 집중 노출.</li>
+                </ul>
+                <div class="stat-box">
+                    <strong>📊 팩트체크:</strong> 1·2기 신도시 블록형 택지를 중심으로, 인프라를 포기하지 않고 프라이버시를 찾는 3040 실거주 수요 대폭 증가.
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>👨‍👩‍👧‍👦 합가 희망 가족 <span class="card-tag">객단가 상승</span></h4>
+                <ul>
+                    <li><strong>특징:</strong> 치솟는 부동산 비용을 나누기 위해 부모-자녀가 함께 땅을 사서 '2층집/듀플렉스'를 짓고자 하는 세대.</li>
+                    <li><strong>마케팅 지시:</strong> '세대분리형 전원주택', '합가 설계' 소구점으로 네이버 GFA 배너 전면 배치.</li>
+                </ul>
+                <div class="stat-box">
+                    <strong>📊 팩트체크:</strong> 30대 미혼 50%, 40대 40%가 부모와 동거(캥거루족). 주거비 절감과 프라이버시를 동시 해결하는 세대분리 설계 수요 급증.
+                </div>
+            </div>
+        </div>
+
+        <div class="action-box">
+            <h5><i class="fa-solid fa-microphone-lines"></i> [대행사 미팅 시 발언 가이드]</h5>
+            "기존 5060 은퇴자 코어 타겟은 현재의 CPA 최적화 전략을 유지해 주십시오. 단, 하반기에 당사에서 준비 중인 '지예은 콜라보 영상' 런칭 시점(Q3)에 맞춰, 해당 콘텐츠에 가장 폭발적으로 반응할 <strong>'3040 영앤리치'</strong>와 강력한 거주 동기를 가진 <strong>'펫팸족/합가족'</strong>으로 타겟 모수를 대폭 확장하여 구글(PMAX) 및 메타(Meta) 예산을 재분배해 주시기 바랍니다."
+        </div>
+
+        <!-- SECTION 2: Review -->
+        <h2 class="section-title"><i class="fa-solid fa-clipboard-list"></i> 2. 상반기 리포트 점검 및 대행사 요청사항 (Action Items)</h2>
+        <p>상반기 성과(전환수 234% 상승, CPA 20만 원 절감)는 인정하되, 3·4분기 성과 방어를 위해 대행사에 명확하게 요구해야 할 개선 사항입니다.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 20%;">구분</th>
+                    <th style="width: 40%;">상태 진단 및 이슈</th>
+                    <th style="width: 40%;">대행사 요청 및 지시 사항 (Action)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>SEO (검색 엔진 최적화)</strong></td>
+                    <td>홈페이지 메타태그 누락, 렌더링 차단 스크립트 등 총 32개 SEO 오류 발견. (특히 이미지 Alt 속성 99개 누락으로 이미지 검색 노출 불가)</td>
+                    <td>"단순 지적에 그치지 말고, 32개 오류에 대한 <strong>Raw Data(상세 가이드라인)를 이번 주 내로 전달해 주십시오.</strong> 당사 개발/퍼블리싱 팀에서 즉각 조치하겠습니다."</td>
+                </tr>
+                <tr>
+                    <td><strong>오프라인 모객 연계</strong></td>
+                    <td>상반기 안동 오픈하우스(아이숲) 모객이 저조했음. 이를 보완하기 위한 '랜딩 이원화 전략'이 제안됨.</td>
+                    <td>"안동 건의 실패를 반복하지 않기 위해, 제안하신 '랜딩 이원화 전략'의 <strong>구체적인 A/B 테스트 일정 및 예산 투입 계획안</strong>을 금주 금요일까지 보고해 주십시오."</td>
+                </tr>
+                <tr>
+                    <td><strong>CRM 예산 방어</strong></td>
+                    <td>카카오 메시지 발송(건당 약 6만원)을 통한 웜타겟(Warm Target) 터치 전환율이 준수함.</td>
+                    <td>"7-8월 휴가철 비수기에 대비하여, 카카오 메시지 예산을 방어적으로 어떻게 편성할 것인지? <strong>지예은 영상 런칭 시 카카오 푸시와 연계할 시나리오</strong>를 도출해 주십시오."</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECTION 3: 5대 누락 데이터 점검 (회의 필수 질문) -->
+        <h2 class="section-title"><i class="fa-solid fa-triangle-exclamation"></i> 3. [보완] 상반기 리포트 전문가 관점 5대 핵심 누락 분석</h2>
+        <p>상반기 성과(CPA 절감)는 인정하되, 실질적인 비즈니스 성과를 극대화하기 위해 대행사에 강력하게 확인 요청해야 할 5가지 핵심 데이터 누락사항입니다.</p>
+
+        <div class="grid-2" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+            <div class="card">
+                <h4>① 최종 매출액 및 ROAS (광고 대비 수익률) <span class="card-tag" style="background:#FEF3C7; color:#D97706;">재무 성과</span></h4>
+                <p>단독주택 시공은 계약 규모 편차가 큽니다. 단순 계약 수 외에 유입 매출 및 ROAS 데이터가 빠져 있습니다.</p>
+                <div class="stat-box" style="margin-top: 8px; background: #FEF2F2; color: #991B1B; border-color: #FCA5A5;">
+                    <strong>💬 질문:</strong> "상반기 문의/계약 수 외에 실제 유입을 통해 창출된 <strong>수주 매출액</strong>과 <strong>ROAS(광고비 대비 수익률)</strong>는 어떻게 집계되고 있습니까?"
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>② 다중 채널 기여도 및 고객 여정 분석 <span class="card-tag" style="background:#DBEAFE; color:#2563EB;">기여 분석</span></h4>
+                <p>고객이 계약 전 여러 매체를 거치는 '고객 여정'에 대한 채널별 교차/상호작용 기여도 분석이 없습니다.</p>
+                <div class="stat-box" style="margin-top: 8px; background: #FEF2F2; color: #991B1B; border-color: #FCA5A5;">
+                    <strong>💬 질문:</strong> "고객이 계약 전 여러 매체를 거치는 <strong>'고객 여정(Customer Journey)'</strong> 상에서 채널별 기여도 분석(Attribution) 자료가 있나요?"
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>③ 전환 고객의 상세 페르소나 분석 (사후 결과) <span class="card-tag" style="background:#F3E8FF; color:#9333EA;">타겟 정밀화</span></h4>
+                <p>광고 송출을 위한 설정 타겟과 별개로, 실제로 계약을 완료한 진성 고객들에 대한 사후 데이터 분석이 부족합니다.</p>
+                <div class="stat-box" style="margin-top: 8px; background: #FEF2F2; color: #991B1B; border-color: #FCA5A5;">
+                    <strong>💬 질문:</strong> "상반기 마케팅 결과로 실제 계약을 완료한 **진성 고객들의 실제 프로파일(평균 예산, 연령, 주요 관심 소구점)** 분석 자료가 있습니까?"
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>④ 홈페이지 이탈률 및 세부 행동 데이터 (CRO) <span class="card-tag" style="background:#FEE2E2; color:#EF4444;">전환 최적화</span></h4>
+                <p>홈페이지 유입량 외에, 유저들이 어느 페이지에서 가장 많이 이탈하는지(Bounce Rate) 등 CRO를 위한 세부 로그 분석이 없습니다.</p>
+                <div class="stat-box" style="margin-top: 8px; background: #FEF2F2; color: #991B1B; border-color: #FCA5A5;">
+                    <strong>💬 질문:</strong> "랜딩 유입 외에 유저들이 많이 이탈하는 지점(이탈률)이나 체류 시간 등 **웹로그 데이터**와 CRO 대책이 수립되어 있습니까?"
+                </div>
+            </div>
+
+            <div class="card" style="grid-column: span 2;">
+                <h4>⑤ 거시적 경쟁사 광고비 및 시장 점유율 (SOV) <span class="card-tag" style="background:#D1FAE5; color:#059669;">시장 점유율</span></h4>
+                <p>전체 온라인 전원주택 시장에서 경쟁사들의 추정 광고비 지출 규모와 우리의 핵심 검색 점유율(SOV) 데이터가 누락되어 있습니다.</p>
+                <div class="stat-box" style="margin-top: 8px; background: #FEF2F2; color: #991B1B; border-color: #FCA5A5;">
+                    <strong>💬 질문:</strong> "경쟁사의 AI 검색 노출 대응 외에, 당사와 경쟁사들의 **광고 점유율(SOV)**을 객관적으로 비교 분석한 자료가 있습니까?"
+                </div>
+            </div>
+        </div>
+
+        <div class="page-break"></div> <!-- Page Break for PDF/Print -->
+
+        <!-- SECTION 4: O2O Strategy -->
+        <h2 class="section-title"><i class="fa-solid fa-route"></i> 4. 하반기 O2O(Online to Offline) 옴니채널 마케팅 퍼널</h2>
+        <p>마케팅 전문가의 관점에서, 온라인 퍼포먼스 광고(대행사 업무)의 최종 목적은 클릭이 아니라 <strong>'자체 박람회', '오픈하우스', '코리아빌드'</strong> 등 오프라인 행사로 고객을 직접 방문하게 만드는 것입니다. 이를 위한 3단계 연계 전략입니다.</p>
+
+        <div class="funnel">
+            <div class="funnel-step">
+                <div class="funnel-badge">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    Phase 1<br>온라인 인지
+                </div>
+                <div class="funnel-content">
+                    <strong>초정밀 타겟팅 및 콘텐츠 후킹 (대행사 주도)</strong>
+                    <p>오픈하우스 및 건축 박람회가 열리는 행사장 반경 50km 이내의 고관여 타겟(친환경, 건축 관심자)에게 PMAX/GFA 광고를 집중 송출. 브랜드 인지도 제고를 위해 딱딱한 주택 사진 대신 <strong>'지예은 본사 접수기' 숏폼 코미디</strong>를 전면에 내세워 클릭률(CTR) 극대화.</p>
+                </div>
+            </div>
+            
+            <div class="funnel-step">
+                <div class="funnel-badge" style="background:#475569;">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    Phase 2<br>오프라인 경험
+                </div>
+                <div class="funnel-content">
+                    <strong>압도적인 현장 경험 설계 (기획부 주도)</strong>
+                    <p>단순한 관람을 넘어 네이버 플레이스 사전 예약을 통한 <strong>'엔지니어 1:1 도슨트 투어'</strong> 제공. 외부 건축 박람회에서는 타사가 흉내 낼 수 없는 <strong>'외벽 매립형 미디어 쇼케이스'</strong> 부스를 도입하여, Phase 1에서 유입된 온라인 고객들의 발걸음을 우리 부스로 흡수.</p>
+                </div>
+            </div>
+
+            <div class="funnel-step">
+                <div class="funnel-badge" style="background:#334155;">
+                    <i class="fa-solid fa-file-signature"></i>
+                    Phase 3<br>상담 및 계약
+                </div>
+                <div class="funnel-content">
+                    <strong>비수기 타파 프로모션 및 VIP 브랜딩 (영업/기획부 연계)</strong>
+                    <p>7~8월 방문객 한정 얼리버드 가계약 혜택 제시. 방문 상담을 완료한 고객에게 뻔한 판촉물이 아닌 대행사가 제안한 <strong>'프리미엄 하이엔드 건축 가이드북'</strong> 및 <strong>'지예은 콜라보 한정 패키지'</strong>를 증정하여 럭셔리 브랜드로 포지셔닝.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 5: Future Tech -->
+        <h2 class="section-title"><i class="fa-solid fa-lightbulb"></i> 5. 3·4분기 기획부 선제적 대응 무기 (대행사 전달용)</h2>
+        <p>미팅 시 우리가 선제적으로 준비 중인 마케팅 에셋을 공유하여, 대행사가 이를 바탕으로 하반기 매체 믹스를 기획하도록 지시합니다.</p>
+
+        <div class="card" style="border-top: 4px solid var(--color-accent); margin-bottom: 20px;">
+            <h4>🤖 1. AI 대화형 검색 완벽 대응 (FAQ형 랜딩 페이지 신규 구축)</h4>
+            <div style="margin-top: 10px;">
+                <p><strong><i class="fa-solid fa-circle-question" style="color:#6B7280;"></i> 왜(Why) 추진하는가? (시장 변화)</strong><br>
+                고객의 검색 패턴이 단순 키워드 중심에서 <strong>"전원주택 시공 잘하는 곳 어디야?"와 같은 '대화형 질문'</strong>으로 이동하고 있습니다 (네이버 Cue, Perplexity, ChatGPT 등 AI 검색 전면화). 단순 이미지 위주 홈페이지 구조로는 AI가 우리 정보를 긁어가서 정답으로 추천해 주지 않습니다.</p>
+                
+                <div class="action-box alert" style="margin: 12px 0; padding: 15px; border-left-color: #EF4444; background-color: #FEF2F2;">
+                    <strong style="color: #B91C1C; font-size: 0.95rem; display: block; margin-bottom: 8px;"><i class="fa-solid fa-triangle-exclamation"></i> [실제 AI 대화형 검색 결과 비교: Perplexity vs ChatGPT]</strong>
+                    <ul style="margin-left: 0; margin-bottom: 10px;">
+                        <li style="color: #B91C1C;"><strong>🚨 Perplexity 검색결과 누락:</strong> <em>"한국 전원주택 건설사 순위"</em> 질문 시, 압도적 1위(3,500동)인 '더존하우징'은 누락되고 경쟁사(윤성, 코원)가 먼저 추천됨. (원인: AI가 긁어갈 수 있는 텍스트 형태의 수상 내역 및 공식 FAQ 부재)</li>
+                        <li style="color: #059669;"><strong>✅ ChatGPT 최상단 추천:</strong> <em>"전원주택 어떻게 지어? 잘 짓는 곳 추천해 줘"</em>라는 대화형 질문에는 <strong>'더존하우징'을 가장 첫 번째로 추천</strong>하며, <strong>"설계-시공 원스톱 진행", "모델하우스 운영", "압도적 실적"</strong>을 근거로 명시함.</li>
+                    </ul>
+                    <p style="font-size: 0.85rem; color: #7F1D1D; margin-top: 5px;"><strong>[인사이트]</strong> AI는 홈페이지의 화려한 이미지가 아닌 '구조화된 텍스트(FAQ, 원스톱 시스템 설명 등)'를 학습하여 정답을 도출합니다. ChatGPT에서 증명된 우리의 강점을 모든 AI(네이버 Cue 등)가 학습하여 1순위로 대답하도록 텍스트 데이터베이스(AEO) 구축이 시급합니다.</p>
+                </div>
+
+                <p><strong><i class="fa-solid fa-crosshairs" style="color:#EF4444;"></i> 기획부 선제적 대응 (How)</strong><br>
+                대화형 검색어에 최적화된 <strong>'전문가 칼럼형 FAQ 랜딩 페이지'</strong>를 기획부가 자체적으로 신규 구축 중입니다. 검색 로봇이 가장 선호하는 Schema.org 마크업(데이터 구조화)을 적용하여, AI가 경쟁사보다 "더존하우징"을 가장 먼저 정답으로 도출(AEO: Answer Engine Optimization)하도록 설계합니다.</p>
+                <div class="action-box">
+                    <h5>[대행사 업무 지시사항]</h5>
+                    "단가 경쟁만 심해지는 기존 숏테일(Short-tail) 키워드 입찰에 의존하지 마십시오. 당사가 구축 중인 FAQ 랜딩 페이지를 기반으로, <strong>'문장형 롱테일(Long-tail) 키워드' 확장 전략</strong>과 하반기 <strong>AI SEO(검색엔진 최적화) 대응 매뉴얼</strong>을 수립하여 보고해 주십시오."
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="border-top: 4px solid var(--color-accent);">
+            <h4>💬 2. 지예은 콜라보 기반 '프리미엄 콘텐츠 CRM' 연계</h4>
+            <div style="margin-top: 10px;">
+                <p><strong><i class="fa-solid fa-circle-question" style="color:#6B7280;"></i> 왜(Why) 추진하는가? (효율 한계 극복)</strong><br>
+                대행사가 상반기에 진행한 카카오톡 채널 메시지는 효율은 나쁘지 않으나, 단순 텍스트와 분양/시공 이미지 위주의 뻔한 메시지는 결국 고객 피로도를 높이고 채널 차단율을 증가시킵니다. 카카오 채널에 모여있는 <strong>'웜타겟(관심은 있으나 아직 방문하지 않은 잠재고객)'의 마음을 열고 실제 액션을 유도하기 위해서는 심리적 허들을 낮추는 '압도적인 엔터테인먼트 요소'가 필요</strong>합니다.</p>
+                <p><strong><i class="fa-solid fa-crosshairs" style="color:#EF4444;"></i> 기획부 선제적 대응 (How)</strong><br>
+                단순 광고가 아닌, 최근 가장 트렌디한 예능인 <strong>'지예은'을 활용한 [맑눈광 인턴 예은이의 본사 방문기] 숏폼 코미디 영상</strong>을 런칭합니다. 딱딱한 건축 이야기가 아닌 유머와 밈(Meme)으로 포장된 프리미엄 숏폼 영상을 카카오 메시지로 다이렉트 발송하여 고객의 폭발적인 트래픽과 시청 런타임을 확보합니다.</p>
+                <div class="action-box">
+                    <h5>[대행사 업무 지시사항]</h5>
+                    "단순한 메시지 발송(Send)에서 끝내지 말고, 지예은 영상을 끝까지 시청한 고객에게 <strong>'가상 집들이 VVIP 체험권' 또는 '비대면 1:1 건축 컨설팅권'</strong>을 제공하는 리타겟팅 프로모션을 세팅해 주십시오. 텍스트 카피라이팅 역시 대행사에서 영상의 유머 코드에 맞춰 새롭게 기획하여 제안해 주시기 바랍니다."
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px; color: #9CA3AF; font-size: 0.85rem; border-top: 1px solid #E5E7EB; padding-top: 20px;">
+            ⓒ 2026 DUJON HOUSING. CONFIDENTIAL - FOR INTERNAL & AGENCY MEETINGS ONLY.
+        </div>
+
+    </div>
+
+</body>
+</html>

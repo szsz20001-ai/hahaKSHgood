@@ -1,0 +1,1593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MediaProfile xmlns="http://xmlns.sony.net/pro/metadata/mediaprofile" createdAt="2025-11-01T16:13:55+10:00" version="2.10">
+	<Properties>
+		<System systemId="D81068FFFE07FECB" systemKind="ILCE-7C" masterVersion="XAVC-M4@1.10.00"/>
+		<Attached mediaId="4828AA5D780906D7FECBD81068FFFE07" mediaKind="AffordableMemoryCard" mediaName=""/>
+	</Properties>
+	<Contents>
+		<Material uri="./CLIP/C4582.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="255" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000001AE20A53790906C2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4582M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4582T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4583.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="345" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000000E921B53790906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4583M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4583T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4585.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="420" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000367B8E56790906C5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4585M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4585T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4586.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="345" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000009A3CA556790906C2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4586M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4586T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4587.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="75" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000004A6B356790906DAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4587M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4587T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4588.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="540" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000209E8F57790906C5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4588M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4588T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4589.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="405" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C006B457790906D0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4589M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4589T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4590.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="315" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000000A93CE57790906C6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4590M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4590T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4591.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="450" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000A2BEDD57790906C4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4591M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4591T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4592.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="300" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000001CA21658790906D5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4592M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4592T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4593.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1020" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000003E142858790906C8D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4593M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4593T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4594.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="300" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000026744958790906DBD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4594M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4594T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4595.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="300" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000E6B96158790906D0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4595M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4595T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4596.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="195" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000A6FF7958790906CDD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4596M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4596T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4597.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="135" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000003E2B8958790906C0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4597M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4597T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4598.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="120" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000A2EC9F58790906DED81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4598M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4598T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4599.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="105" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000002AB5E558790906DCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4599M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4599T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4600.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="240" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005A0C0459790906D0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4600M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4600T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4603.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="210" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000FA8B8959790906C6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4603M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4603T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4604.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="420" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000F4E39159790906C6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4604M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4604T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4605.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="300" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000CE5EA659790906DAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4605M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4605T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4607.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="570" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005A3AC659790906D1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4607M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4607T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4608.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="330" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000E615E659790906C0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4608M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4608T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4609.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="120" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000001C15FC59790906D9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4609M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4609T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4610.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="615" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000002AFA085A790906CED81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4610M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4610T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4611.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="90" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000000BEC75B790906C3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4611M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4611T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4612.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="630" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000E0E0D35B790906C1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4612M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4612T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4613.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="525" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000044A2EA5B790906C3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4613M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4613T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4614.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="465" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000068A9195C790906DED81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4614M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4614T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4615.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="390" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000008A1B2B5C790906C8D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4615M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4615T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4616.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1350" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C01A415C790906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4616M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4616T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4617.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="720" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000006E68725C790906D7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4617M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4617T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4618.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="390" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000036EB9F5C790906CCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4618M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4618T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4619.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="330" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000FCD8AF5C790906D6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4619M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4619T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4620.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="990" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000107D155D790906C0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4620M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4620T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4621.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="585" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005C9E4D5D790906D0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4621M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4621T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4622.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="540" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000FC06725D790906CDD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4622M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4622T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4623.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="690" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000CA31975D790906D9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4623M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4623T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4624.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="390" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000084CFB75D790906DDD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4624M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4624T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4625.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="480" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000E890CE5D790906C5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4625M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4625T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4626.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="135" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000EA25EC5D790906CFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4626M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4626T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4628.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="285" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000166A305E790906C3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4628M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4628T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4629.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="90" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000001EA7455E790906D4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4629M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4629T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4630.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="300" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000D007515E790906CBD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4630M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4630T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4631.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="255" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000009CB4B95E790906C1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4631M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4631T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4632.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="465" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005CFAD15E790906CED81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4632M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4632T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4633.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="390" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000046EF105F790906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4633M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4633T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4634.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="105" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000082961E5F790906D7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4634M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4634T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4636.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="615" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000BA2A525F790906C8D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4636M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4636T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4637.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="735" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000004B76C5F790906CCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4637M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4637T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4638.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="210" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000963A845F790906D4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4638M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4638T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4643.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="405" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000002CFF3760790906C3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4643M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4643T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4644.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="465" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000003C796260790906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4644M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4644T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4645.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="585" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005EEB7360790906CDD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4645M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4645T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4646.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="585" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000BC049360790906C9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4646M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4646T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4647.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="630" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C441A860790906D0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4647M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4647T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4648.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="345" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000982B2661790906D5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4648M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4648T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4649.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="240" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000044E43961790906DCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4649M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4649T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4650.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="345" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C8824461790906D2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4650M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4650T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4651.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="135" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000060AE5361790906D8D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4651M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4651T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4652.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="150" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000006E936061790906DFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4652M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4652T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4653.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="120" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C46F6A61790906D1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4653M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4653T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4655.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="330" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000D4E99461790906CED81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4655M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4655T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4656.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="105" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000001091A261790906CCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4656M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4656T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4657.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="375" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000000AE9AA61790906D6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4657M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4657T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4660.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="405" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000EA221862790906D0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4660M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4660T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4661.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="585" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000D2823962790906CFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4661M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4661T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4662.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="510" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000FC316062790906DED81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4662M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4662T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4663.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1065" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000EA397962790906D2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4663M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4663T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4664.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="360" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000076159962790906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4664M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4664T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4665.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="120" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000D01BDE62790906C4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4665M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4665T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4666.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="225" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000CA73E662790906D4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4666M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4666T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4667.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="270" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005CF7FD62790906D6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4667M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4667T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4668.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="390" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000DAED1063790906CCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4668M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4668T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4669.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="810" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C24D3263790906DAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4669M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4669T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4670.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="405" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000009E5D6463790906D1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4670M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4670T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4671.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="450" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000008C657D63790906DFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4671M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4671T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4672.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="135" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000000A8A5264790906DBD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4672M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4672T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4673.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="405" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000008E285D64790906DCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4673M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4673T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4674.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="300" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000F8916B64790906DED81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4674M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4674T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4675.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="360" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000030269F64790906C8D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4675M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4675T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4676.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="780" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000009A8FAD64790906D5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4676M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4676T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4677.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="360" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000809FD465790906CDD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4677M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4677T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4678.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="90" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000026B0F065790906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4678M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4678T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4679.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="405" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000009EFE0B66790906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4679M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4679T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4680.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="60" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000DAA51966790906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4680M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4680T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4681.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="105" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000002C02266790906D7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4681M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4681T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4682.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="150" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000072D12866790906D4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4682M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4682T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4683.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="330" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000009AEB3166790906C2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4683M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4683T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4684.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="555" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000002C6F4966790906D9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4684M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4684T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4685.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="510" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000626E5F66790906D7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4685M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4685T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4686.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="195" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000D42BE466790906D6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4686M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4686T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4687.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="585" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000002A08EE66790906C7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4687M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4687T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4688.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1380" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005A5F0C67790906DBD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4688M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4688T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4689.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="240" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C65D3867790906D8D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4689M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4689T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4690.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="120" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000004A13A467790906D6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4690M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4690T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4691.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="360" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000BA24AA67790906C0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4691M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4691T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4692.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="540" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000AED4BA67790906DCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4692M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4692T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4693.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="645" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000074C2CA67790906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4693M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4693T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4694.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="270" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000004A2A0568790906C2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4694M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4694T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4695.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="540" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000065D4368790906C2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4695M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4695T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4696.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="510" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000F4645C68790906D1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4696M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4696T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4697.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="480" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000002A647268790906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4697M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4697T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4698.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="510" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000012C49368790906C6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4698M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4698T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4699.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="270" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000B22CB868790906C0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4699M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4699T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4700.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="180" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000DA5D2269790906C4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4700M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4700T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4701.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="60" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000001C65306C800906C6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4701M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4701T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4702.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="510" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000024A2456C800906D0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4702M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4702T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4703.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="870" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000000C02676C800906D2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4703M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4703T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4704.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="645" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000000E97846C800906D9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4704M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4704T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4705.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="165" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000008C8D976C800906DAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4705M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4705T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4706.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="225" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000002A619E6C800906CFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4706M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4706T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4707.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="900" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000AEFFA86C800906D8D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4707M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4707T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4708.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1125" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000F88BC36C800906C5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4708M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4708T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4709.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="105" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000098F4E76C800906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4709M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4709T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4710.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="690" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C00EF16C800906C9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4710M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4710T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4711.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="90" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000024D0076D800906CCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4711M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4711T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4712.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="630" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000094E10D6D800906DDD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4712M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4712T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4713.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="330" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000620C336D800906CFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4713M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4713T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4714.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="300" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000002EFEBE6E800906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4714M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4714T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4715.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="765" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005A42036F800906C9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4715M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4715T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4716.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="75" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000B6DD656F800906CDD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4716M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4716T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4717.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="195" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000000CBA6F6F800906D6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4717M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4717T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4718.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="330" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000058DBA76F800906DFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4718M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4718T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4719.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="270" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000326D1D70800906C8D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4719M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4719T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4720.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="720" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000003C3F5070800906DFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4720M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4720T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4721.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="645" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005C33A570800906CED81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4721M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4721T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4722.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="330" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000627C4473800906C0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4722M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4722T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4723.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="375" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000562C5573800906D1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4723M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4723T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4724.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="570" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000010CA7573800906DFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4724M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4724T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4725.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="585" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005A569073800906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4725M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4725T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4726.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="330" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000ECD9A773800906C7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4726M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4726T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4727.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="660" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000009892BB73800906DDD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4727M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4727T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4728.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="420" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000CE91D173800906DFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4728M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4728T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4729.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="135" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000066BDE073800906C5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4729M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4729T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4730.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="600" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000006015E973800906C9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4730M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4730T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4731.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="360" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000006852FE73800906C4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4731M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4731T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4732.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="975" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000E6481174800906CBD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4732M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4732T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4733.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="390" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000A8234774800906D8D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4733M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4733T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4735.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="345" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000488C6B74800906C4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4735M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4735T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4736.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="615" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000B2F57974800906D5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4736M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4736T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4737.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1395" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000BA328F74800906CFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4737M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4737T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4738.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="435" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000082B5BC74800906D9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4738M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4738T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4739.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="810" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000008C87EF74800906C9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4739M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4739T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4741.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="570" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000048BA2D75800906C3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4741M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4741T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4742.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="285" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000006E567A75800906C6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4742M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4742T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4743.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="390" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005C5E9375800906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4743M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4743T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4744.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="180" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000DC002576800906DAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4744M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4744T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4745.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="150" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000D0B03576800906DCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4745M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4745T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4746.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="360" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000268D3F76800906D0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4746M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4746T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4747.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="285" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000062344D76800906D6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4747M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4747T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4748.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="495" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000CC9D5B76800906CCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4748M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4748T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4749.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="870" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000004A946E76800906DDD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4749M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4749T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4750.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="390" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000004328F76800906CCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4750M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4750T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4751.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="465" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000001C003077800906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4751M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4751T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4752.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="375" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000032225277800906DDD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4752M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4752T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4753.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="825" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000CA64C277800906D1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4753M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4753T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4754.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1020" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000000E49E577800906C3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4754M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4754T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4755.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="615" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000009CD08378800906D2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4755M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4755T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4756.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="225" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000008430A578800906C4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4756M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4756T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4757.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="75" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000AC4AAE78800906C5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4757M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4757T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4758.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="300" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000004A1EB578800906D0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4758M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4758T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4759.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="375" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000FC7EC078800906DFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4759M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4759T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4760.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="750" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000000A64CD78800906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4760M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4760T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4761.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="330" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000014360079800906CCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4761M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4761T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4762.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="615" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000AC610F79800906C4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4762M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4762T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4763.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="555" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000044A47F79800906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4763M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4763T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4764.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="195" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000094D89179800906DFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4764M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4764T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4765.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="540" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000008E309A79800906D6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4765M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4765T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4766.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="285" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000F2F1B079800906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4766M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4766T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4767.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="840" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000004226C379800906D6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4767M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4767T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4768.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="210" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000BA74DE79800906DAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4768M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4768T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4769.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="390" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000A87CF779800906CCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4769M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4769T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4770.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="435" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000009C2C087A800906C0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4770M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4770T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4771.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="390" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000E6B8227A800906D6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4771M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4771T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4774.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="525" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000000C556F7A800906D2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4774M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4774T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4775.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="240" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000281F897A800906CDD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4775M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4775T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4776.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="465" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000001627A27A800906CBD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4776M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4776T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4777.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="870" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000F8DECB7A800906DED81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4777M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4777T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4778.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="375" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000F4CBF17A800906C4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4778M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4778T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4780.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="315" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000F0B8177B800906DDD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4780M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4780T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4781.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="450" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000009C712B7B800906DFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4781M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4781T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4782.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="540" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C620527B800906C9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4782M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4782T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4783.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="525" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000072D9657B800906C5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4783M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4783T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4784.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="690" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000007A167B7B800906C1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4784M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4784T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4786.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1140" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000E06CAF7B800906DAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4786M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4786T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4790.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="330" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000003C1F737C800906C8D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4790M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4790T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4791.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="255" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000078C6807C800906D2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4791M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4791T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4792.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="975" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000009A38927C800906C5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4792M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4792T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4793.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="765" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000054D6B27C800906D2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4793M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4793T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4795.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="405" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000CEB9EB7C800906DFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4795M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4795T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4796.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="930" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000094A7FB7C800906C4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4796M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4796T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4797.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="975" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000002E68287D800906C7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4797M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4797T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4798.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="240" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000E437927E800906C1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4798M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4798T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4799.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="180" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000068D69C7E800906D5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4799M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4799T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4800.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="150" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000090F0A57E800906DFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4800M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4800T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4801.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="240" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000001624CE7E800906C2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4801M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4801T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4802.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="150" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C884D97E800906C8D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4802M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4802T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4803.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="165" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C2DCE17E800906CED81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4803M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4803T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4804.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="150" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000DEA6FB7E800906D0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4804M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4804T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4805.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="90" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000E03B197F800906CCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4805M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4805T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4806.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="660" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000000856227F800906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4806M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4806T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4807.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="105" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000E2D0367F800906C0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4807M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4807T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4808.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="210" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000052E23C7F800906C8D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4808M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4808T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4809.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="150" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000007AFC457F800906DED81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4809M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4809T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4810.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="345" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000E465547F800906C4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4810M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4810T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4811.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="180" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000200D627F800906D9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4811M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4811T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4812.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="180" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000048276B7F800906C3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4812M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4812T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4813.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="150" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000007E26817F800906CBD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4813M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4813T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4814.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="300" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000004ABC887F800906C4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4814M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4814T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4815.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="975" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000008663967F800906D2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4815M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4815T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4816.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="735" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000002C74B27F800906D1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4816M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4816T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4817.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="195" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000BA12B280800906CFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4817M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4817T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4818.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="420" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000F6B9BF80800906C8D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4818M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4818T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4820.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="780" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000AA392F83800906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4820M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4820T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4821.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1020" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000ACCE4C83800906D9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4821M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4821T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4822.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1170" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C2F06E83800906C5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4822M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4822T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4823.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1665" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000B8359D83800906C8D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4823M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4823T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4824.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="945" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000009445CF83800906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4824M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4824T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4825.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="945" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000D829F283800906DCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4825M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4825T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4826.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="210" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000064051284800906D2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4826M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4826T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4827.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="750" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000072EA1E84800906DDD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4827M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4827T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4829.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="540" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005CDF5D84800906DCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4829M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4829T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4830.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="495" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000641C7384800906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4830M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4830T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4831.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="315" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000052248C84800906D6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4831M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4831T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4832.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="495" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000126AA484800906C7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4832M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4832T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4833.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="420" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000004869BA84800906D4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4833M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4833T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4834.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1875" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000989DCC84800906C4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4834M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4834T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4835.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="285" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005A780285800906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4835M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4835T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4836.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="855" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000007CEA1385800906DED81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4836M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4836T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4837.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="660" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000050BD3085800906C7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4837M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4837T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4838.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="570" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005A8F6385800906D9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4838M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4838T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4839.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="855" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000D8857685800906D0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4839M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4839T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4840.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="930" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000AC589385800906D0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4840M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4840T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4841.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="735" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000094B8B485800906DBD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4841M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4841T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4842.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="555" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000B082CE85800906C9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4842M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4842T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4843.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="405" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000FCE82987800906C3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4843M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4843T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4844.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="960" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000094143987800906C2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4844M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4844T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4845.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1725" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000A48E6387800906C4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4845M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4845T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4846.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="945" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000052DC9487800906C5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4846M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4846T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4847.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="210" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005471B287800906C5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4847M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4847T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4848.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="285" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000AA4DBC87800906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4848M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4848T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4849.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="375" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000009EFDCC87800906C1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4849M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4849T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4850.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="630" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005E43E587800906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4850M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4850T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4851.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="735" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000A8CFFF87800906DAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4851M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4851T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4852.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="810" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C4991988800906D2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4852M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4852T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4853.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1335" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000008C1C4788800906CFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4853M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4853T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4854.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="465" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000082617588800906C6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4854M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4854T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4857.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="720" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C09DA088800906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4857M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4857T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4858.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="915" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000007A3BC188800906C6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4858M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4858T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4859.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="795" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000629BE288800906CCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4859M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4859T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4860.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="915" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000092F20089800906DCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4860M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4860T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4861.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1140" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000004992489800906CCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4861M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4861T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4862.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="630" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000014134F89800906D6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4862M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4862T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4863.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="495" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005E9F6989800906DBD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4863M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4863T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4864.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="570" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000F44CBC89800906CDD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4864M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4864T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4865.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="165" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000004481CE89800906C7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4865M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4865T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4866.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="330" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000007EAA1F8A800906C8D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4866M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4866T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4867.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="555" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005ECD2B8A800906D1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4867M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4867T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4868.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="465" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000A859468A800906C2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4868M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4868T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4870.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="375" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005C4F6F8A800906D9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4870M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4870T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4871.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1095" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000E82A8F8A800906D9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4871M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4871T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4872.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="465" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005AD1B28A800906DCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4872M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4872T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4873.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="525" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000004E81C38A800906C7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4873M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4873T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4874.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="765" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000EEE9E78A800906D9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4874M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4874T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4875.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="660" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000000010918B800906DED81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4875M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4875T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4876.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="645" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000A620AD8B800906C5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4876M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4876T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4877.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="855" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000006666C58B800906CDD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4877M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4877T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4878.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="960" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000096BDE38B800906DFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4878M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4878T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4879.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="930" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C8A91F8C800906C6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4879M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4879T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4880.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="675" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000F258468C800906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4880M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4880T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4881.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="225" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000363D698C800906D0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4881M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4881T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4882.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="315" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000058AF7A8C800906D5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4882M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4882T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4883.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="765" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000038D2868C800906CDD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4883M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4883T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4884.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="675" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000F26FA78C800906C6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4884M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4884T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4885.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="660" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000F404C58C800906D6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4885M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4885T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4886.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1215" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000001823558D800906D0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4886M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4886T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4888.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="495" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000003699ED8D800906D5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4888M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4888T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4892.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="150" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000A0195D8E800906CBD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4892M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4892T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4893.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1320" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000803C698E800906DCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4893M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4893T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4894.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="660" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000002E8A9A8E800906D6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4894M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4894T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4896.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1095" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000003E04C58E800906CCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4896M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4896T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4897.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="315" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000CADFE48E800906DED81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4897M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4897T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4898.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="705" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000A45AF98E800906C1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4898M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4898T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4899.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="705" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000081C108F800906D9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4899M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4899T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4900.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="240" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000003E1B268F800906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4900M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4900T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4901.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1575" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000608D378F800906C2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4901M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4901T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4902.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="765" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000018F2BE90800906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4902M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4902T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4904.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="135" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000016740291800906D8D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4904M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4904T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4906.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="300" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000BC841E91800906D4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4906M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4906T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4908.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1185" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000AEB67291800906C0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4908M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4908T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4910.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="600" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000CC15AA91800906C2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4910M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4910T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4913.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="375" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000DE24F291800906CDD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4913M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4913T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4914.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1335" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000076500192800906CFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4914M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4914T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4915.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="600" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000002A462A92800906D9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4915M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4915T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4918.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="570" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000004A3A7F92800906D4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4918M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4918T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4919.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="705" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000052779492800906D8D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4919M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4919T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4920.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="855" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000E4FAAB92800906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4920M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4920T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4921.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1215" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000003C6CD392800906C7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4921M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4921T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4922.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="240" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000AE571A94800906CCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4922M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4922T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4923.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="150" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000DEDCFA94800906D9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4923M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4923T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4924.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="615" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000B2C67895800906D1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4924M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4924T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4925.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="435" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000B45B9695800906DCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4925M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4925T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4926.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="510" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000008ED6AA95800906D4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4926M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4926T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4927.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="435" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000003A8FBE95800906D5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4927M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4927T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4929.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="915" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C66ADE95800906DAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4929M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4929T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4930.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="345" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005246FE95800906C4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4930M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4930T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4931.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="210" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000A27A1096800906DBD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4931M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4931T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4932.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="690" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000034FE2796800906CBD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4932M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4932T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4933.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="75" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000003C3B3D96800906CCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4933M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4933T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4934.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="825" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000AC4C4396800906CDD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4934M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4934T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4935.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="180" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000F6D85D96800906C1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4935M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4935T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4936.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="315" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000032806B96800906C0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4936M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4936T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4937.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="750" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000009CE97996800906C6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4937M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4937T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4938.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="870" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000014389596800906D6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4938M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4938T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4940.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="300" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000008873D696800906C9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4940M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4940T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4941.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="720" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000009658E396800906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4941M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4941T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4942.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="465" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000569EFB96800906DBD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4942M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4942T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4943.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="885" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000072681597800906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4943M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4943T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4945.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="705" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000009EAC5997800906D7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4945M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4945T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4946.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="750" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000030307197800906C2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4946M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4946T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4947.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="675" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000094F18797800906DED81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4947M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4947T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4948.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="210" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000B0BBA197800906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4948M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4948T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4949.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="615" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005C74B597800906CBD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4949M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4949T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4950.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1260" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000009273CB97800906C9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4950M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4950T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4951.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="885" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000BC22F297800906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4951M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4951T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4952.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="375" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000090F50E98800906D4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4952M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4952T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4953.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="705" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000028211E98800906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4953M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4953T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4954.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="810" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000010813F98800906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4954M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4954T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4955.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="615" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000000C6E6598800906DED81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4955M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4955T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4956.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="945" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C622E798800906C9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4956M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4956T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4957.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="735" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000008EBC7599800906D2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4957M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4957T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4958.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="840" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000000E48A699800906DED81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4958M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4958T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4959.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="300" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000D44C179A800906C8D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4959M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4959T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4960.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="720" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000066D02E9A800906CFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4960M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4960T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4961.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="345" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000CA91459A800906D5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4961M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4961T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4963.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="90" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005C155D9A800906C8D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4963M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4963T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4964.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="285" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000566D659A800906D7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4964M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4964T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4965.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="105" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C0D6739A800906C0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4965M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4965T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4966.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="255" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000100B869A800906C1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4966M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4966T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4967.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="225" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000F02D929A800906C3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4967M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4967T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4968.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1095" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000008859A19A800906D4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4968M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4968T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4970.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="480" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000BA45DD9A800906D9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4970M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4970T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4971.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="225" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000AEF5ED9A800906C7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4971M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4971T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4972.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="480" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000004621FD9A800906DED81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4972M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4972T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4973.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="555" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000AAE2139B800906D5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4973M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4973T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4974.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1350" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000000EA42A9B800906D6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4974M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4974T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4976.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="450" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000F2F0719B800906D4D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4976M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4976T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4977.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="660" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000CC6B869B800906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4977M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4977T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4978.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1050" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000D4A89B9B800906D7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4978M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4978T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4979.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="585" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000D63DB99B800906C3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4979M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4979T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4980.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1395" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000009683D19B800906CBD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4980M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4980T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4982.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="855" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C45C339C800906D9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4982M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4982T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4983.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="480" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000F0A0779C800906CBD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4983M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4983T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4984.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="540" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000CA1B8C9C800906D9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4984M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4984T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4985.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="435" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000B823A59C800906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4985M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4985T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4987.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="360" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000088E3E79C800906C1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4987M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4987T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4988.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="630" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C48AF59C800906DBD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4988M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4988T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4989.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="435" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000E0540F9D800906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4989M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4989T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4990.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1050" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005E4B229D800906C7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4990M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4990T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4991.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1695" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000008EA2409D800906D2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4991M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4991T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4992.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="840" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000AC01789D800906C7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4992M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4992T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4993.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="90" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000A0C8E99D800906C1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4993M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4993T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4994.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="345" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000740EEC9F800906D7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4994M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4994T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4995.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="465" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000001CE2E7A0800906C7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4995M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4995T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4996.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="510" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000AE65FFA0800906C6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4996M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4996T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4997.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="240" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000FE9911A1800906D6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4997M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4997T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4998.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="630" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000054761BA1800906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4998M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4998T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C4999.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="435" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C20965A1800906D2D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C4999M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C4999T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5000.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1125" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000000470CBA1800906D6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5000M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5000T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5001.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="690" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000A4D8EFA1800906CFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5001M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5001T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5002.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="435" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000720315A2800906DCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5002M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5002T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5003.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="270" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000E4A938A2800906D9D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5003M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5003T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5004.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="780" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000F28E45A2800906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5004M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5004T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5006.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="345" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000058E579A2800906C1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5006M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5006T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5007.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="450" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000060228FA2800906D6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5007M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5007T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5008.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="255" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000054D29FA2800906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5008M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5008T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5009.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="105" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000644CCAA2800906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5009M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5009T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5011.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="330" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000066E1E7A2800906CDD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5011M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5011T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5012.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="1170" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000009CE0FDA2800906C3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5012M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5012T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5013.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="675" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000004A2E2FA3800906D0D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5013M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5013T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5014.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="450" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000004CC4FA3800906C6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5014M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5014T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5016.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="585" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000222B87A3800906CAD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5016M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5016T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5017.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="360" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000094FF6CA4800906DFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5017M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5017T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5018.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="525" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000ACCD0DA5800906DCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5018M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5018T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5019.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="450" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000000C7C4AA5800906CCD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5019M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5019T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5020.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="450" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D43130000005CB05CA5800906CBD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5020M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5020T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5021.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="780" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C07173A5800906D5D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5021M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5021T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5022.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="435" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000052F58AA5800906C6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5022M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5022T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5023.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="585" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D431300000018E39AA5800906C3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5023M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5023T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5024.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="345" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C49BAEA5800906D1D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5024M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5024T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5025.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="435" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000B84BBFA5800906D3D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5025M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5025T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5026.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="4335" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000C630CCA5800906C7D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5026M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5026T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5027.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="27495" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000F02416A7800906DFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5027M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5027T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5028.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="8415" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000827797AA800906DFD81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5028M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5028T01.JPG" type="JPG"/>
+		</Material>
+		<Material uri="./CLIP/C5029.MP4" type="MP4" videoType="AVC_3840_2160_HP@L51" audioType="LPCM16" fps="29.97p" dur="16545" ch="2" aspectRatio="16:9" offset="0" umid="060A2B340101010501010D4313000000AC5480AB800906C6D81068FFFE07FECB">
+			<RelevantInfo uri="./CLIP/C5029M01.XML" type="XML"/>
+			<RelevantInfo uri="./THMBNL/C5029T01.JPG" type="JPG"/>
+		</Material>
+	</Contents>
+</MediaProfile>

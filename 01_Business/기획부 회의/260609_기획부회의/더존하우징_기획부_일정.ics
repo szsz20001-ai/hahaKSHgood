@@ -1,0 +1,133 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Dujon Housing//Planning Dept Calendar//KO
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:uid-cheongju-exhibit-2026@dujon.com
+DTSTART;VALUE=DATE:20260610
+DTEND;VALUE=DATE:20260615
+SUMMARY:[박람회] 청주 박람회 진행
+DESCRIPTION:청주 박람회 진행 (블록 부스 버전, 조명 및 안내데스크(인포) 보완 현장 체크, 강승훈 과장/김기훈 과장 출장)
+LOCATION:청주 박람회장
+END:VEVENT
+BEGIN:VEVENT
+UID:uid-buyeo-shoot-2026@dujon.com
+DTSTART;VALUE=DATE:20260611
+DTEND;VALUE=DATE:20260612
+SUMMARY:[촬영] 부여 완공 현장 촬영
+DESCRIPTION:부여 현장 완공 주택 촬영 (강승훈 과장)
+LOCATION:충남 부여
+END:VEVENT
+BEGIN:VEVENT
+UID:uid-yangju-deadline-2026@dujon.com
+DTSTART;VALUE=DATE:20260612
+DTEND;VALUE=DATE:20260613
+SUMMARY:[마감] 양주 남방동 조명 완료 / 촬영 리스트 마감
+DESCRIPTION:양주 남방동 조명 설치 및 최종 설계 변경 마무리, 주택 촬영 후보지 리스트 업데이트 마감
+LOCATION:양주 남방동 현장
+END:VEVENT
+BEGIN:VEVENT
+UID:uid-kimwonhoon-garden-2026@dujon.com
+DTSTART;VALUE=DATE:20260615
+DTEND;VALUE=DATE:20260716
+SUMMARY:[공사] 김원훈 건축주 조경 공사
+DESCRIPTION:개그맨 김원훈 건축주 현장 조경 공사 진행 (6/15 ~ 7/15)
+LOCATION:김원훈 건축주 현장
+END:VEVENT
+BEGIN:VEVENT
+UID:uid-baeknyeon-plan-2026@dujon.com
+DTSTART;VALUE=DATE:20260615
+DTEND;VALUE=DATE:20260620
+SUMMARY:[기획] 백년손님 추가 콘텐츠 기획안 작성
+DESCRIPTION:백년손님 3-5년 거주 고객 대상 추가 콘텐츠 기획 및 타 부서 협업 진행 (6/15 ~ 6/19)
+LOCATION:기획부 본사
+END:VEVENT
+BEGIN:VEVENT
+UID:uid-marketing-meeting-2026@dujon.com
+DTSTART:20260616T100000
+DTEND:20260616T120000
+SUMMARY:[회의] 마케팅 협력사 주간 회의
+DESCRIPTION:마케팅 협력업체 주간 정기 회의 (이사님 복귀 및 주재)
+LOCATION:본사 대회의실
+END:VEVENT
+BEGIN:VEVENT
+UID:uid-dongtan-meeting-2026@dujon.com
+DTSTART:20260616T140000
+DTEND:20260616T160000
+SUMMARY:[회의] 동탄 더힐 모델하우스 기획 회의
+DESCRIPTION:동탄 더힐 모델하우스 건립 기획 및 단지 브랜딩 사내 회의 (사장님 보고)
+LOCATION:본사 소회의실
+END:VEVENT
+BEGIN:VEVENT
+UID:uid-jiyeeeun-contract-2026@dujon.com
+DTSTART:20260616T130000
+DTEND:20260616T140000
+SUMMARY:[회의] 지예은 미팅 (13:00)
+DESCRIPTION:방송인 지예은 조건 협의 및 기획안 피드백 수렴 미팅
+LOCATION:본사 미팅룸
+END:VEVENT
+BEGIN:VEVENT
+UID:uid-gimpo-openhouse-2026@dujon.com
+DTSTART;VALUE=DATE:20260627
+DTEND;VALUE=DATE:20260629
+SUMMARY:[오픈하우스] 김포 운양동 오픈하우스
+DESCRIPTION:김포 운양동 오픈하우스 진행 (2세대 거주, 외벽 벽돌 하이엔드 마감, 인테리어 일반 모던형, 엘리베이터/포치/중정/뒷마당 등 마케팅 포인트 강조)
+LOCATION:김포 운양동 현장
+END:VEVENT
+BEGIN:VEVENT
+UID:uid-gimkiri-meeting-2026@dujon.com
+DTSTART;VALUE=DATE:20260629
+DTEND;VALUE=DATE:20260630
+SUMMARY:[미팅] 김기리 건축주 미팅
+DESCRIPTION:개그맨 김기리 건축주 촬영 및 기획 사전 미팅 진행
+LOCATION:본사 미팅룸
+END:VEVENT
+BEGIN:VEVENT
+UID:uid-kimwonhoon-meeting-2026@dujon.com
+DTSTART;VALUE=DATE:20260630
+DTEND;VALUE=DATE:20260701
+SUMMARY:[미팅/마감] 김원훈 미팅 / 시공도표 리뉴얼 마감
+DESCRIPTION:김원훈 건축주 촬영 콘티 미팅 (서울 이동, 김 과장/강 과장), 영업 지원용 시공 프로세스 도표 가독성 리뉴얼 마감
+LOCATION:서울 미팅장소
+END:VEVENT
+BEGIN:VEVENT
+UID:uid-jiyeeeun-shoot-2026@dujon.com
+DTSTART;VALUE=DATE:20260706
+DTEND;VALUE=DATE:20260716
+SUMMARY:[촬영] 지예은 유튜브 및 브랜딩 콘텐츠 촬영
+DESCRIPTION:방송인 지예은 유튜브 예능 영상 및 브랜드 콘텐츠 본사 촬영 (집 노출 없음)
+LOCATION:더존하우징 본사
+END:VEVENT
+BEGIN:VEVENT
+UID:uid-gimkiri-build-2026@dujon.com
+DTSTART;VALUE=DATE:20260723
+DTEND;VALUE=DATE:20260724
+SUMMARY:[착공] 김기리 건축주 착공 및 촬영 개시
+DESCRIPTION:개그맨 김기리 건축주 현장 착공, 부부 동반 출연 및 실거주 주택 노출 촬영 시작
+LOCATION:김기리 건축주 현장
+END:VEVENT
+BEGIN:VEVENT
+UID:uid-daegu-exhibit-2026@dujon.com
+DTSTART;VALUE=DATE:20260910
+DTEND;VALUE=DATE:20260914
+SUMMARY:[박람회] 대구 박람회 진행
+DESCRIPTION:대구 박람회 참가 (라이트 배너 부스 사용 예정)
+LOCATION:대구 엑스코
+END:VEVENT
+BEGIN:VEVENT
+UID:uid-busan-exhibit-2026@dujon.com
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261005
+SUMMARY:[박람회] 부산 코리아빌드 진행
+DESCRIPTION:부산 코리아빌드 참가 (게이트 조명 양 옆 보완 및 화이트 조명 통일)
+LOCATION:부산 벡스코
+END:VEVENT
+BEGIN:VEVENT
+UID:uid-gwangju-exhibit-2026@dujon.com
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261130
+SUMMARY:[박람회] 광주 박람회 진행
+DESCRIPTION:광주 박람회 참가
+LOCATION:광주 김대중컨벤션센터
+END:VEVENT
+END:VCALENDAR

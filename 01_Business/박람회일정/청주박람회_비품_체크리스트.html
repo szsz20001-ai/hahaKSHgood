@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>더존하우징 청주 박람회 비품 체크리스트</title>
+    <!-- Google Fonts: Inter & Noto Sans KR -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #2d2d2d;
+            --accent: #C3003B;
+            --accent-light: #fef2f2;
+            --border: #cbd5e1;
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --bg-page: #f1f5f9;
+            --bg-card: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.5;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* A4 Page Container */
+        .a4-container {
+            width: 210mm;
+            min-height: 297mm;
+            background-color: var(--bg-card);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            padding: 20mm 15mm;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* Document Header */
+        .doc-header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .doc-meta {
+            text-align: right;
+            font-size: 11px;
+            color: var(--text-muted);
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        /* Document Titles */
+        .doc-title {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+
+        .doc-subtitle {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Controls Panel (No Print) */
+        .control-panel {
+            width: 210mm;
+            background-color: #1e293b;
+            color: #cbd5e1;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .control-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .add-form {
+            display: flex;
+            gap: 8px;
+            flex: 1;
+        }
+
+        .add-input {
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid #475569;
+            background-color: #0f172a;
+            color: white;
+            font-size: 12.5px;
+            font-family: inherit;
+        }
+
+        .add-input:focus {
+            outline: 2px solid var(--accent);
+            border-color: transparent;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: none;
+            font-weight: 700;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #a80032;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #334155;
+        }
+
+        /* Checklist Table */
+        .checklist-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .checklist-table th {
+            background-color: #f8fafc;
+            border-top: 1px solid var(--primary);
+            border-bottom: 2px solid var(--primary);
+            padding: 10px 8px;
+            font-weight: 800;
+            font-size: 12px;
+            color: var(--primary);
+            text-align: left;
+        }
+
+        .checklist-table td {
+            border-bottom: 1px solid var(--border);
+            padding: 8px;
+            font-size: 12px;
+            vertical-align: middle;
+        }
+
+        .checklist-table tr:hover {
+            background-color: #fafafa;
+        }
+
+        /* Table Checkbox Column */
+        .col-check { width: 45px; text-align: center; }
+        .col-no { width: 45px; text-align: center; color: var(--text-muted); }
+        .col-item { font-weight: 600; }
+        .col-qty { width: 90px; font-weight: 700; }
+        .col-remarks { color: #334155; }
+        .col-actions { width: 50px; text-align: center; }
+
+        /* Custom Checkbox */
+        .chk-container {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            font-size: 20px;
+            user-select: none;
+            width: 18px;
+            height: 18px;
+        }
+
+        .chk-container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 18px;
+            width: 18px;
+            background-color: #fff;
+            border: 2px solid #94a3b8;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .chk-container:hover input ~ .checkmark {
+            border-color: var(--accent);
+        }
+
+        .chk-container input:checked ~ .checkmark {
+            background-color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .chk-container input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        .chk-container .checkmark:after {
+            left: 5px;
+            top: 1px;
+            width: 4px;
+            height: 8px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        /* Group Rows */
+        .group-header {
+            background-color: #f1f5f9;
+            font-weight: 700;
+            font-size: 11.5px;
+            color: #334155;
+            padding: 6px 10px !important;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Delete Button */
+        .btn-delete {
+            background: none;
+            border: none;
+            color: #ef4444;
+            cursor: pointer;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .btn-delete:hover {
+            background-color: #fee2e2;
+        }
+
+        /* Blank Row (For Handwriting) */
+        .blank-row td {
+            height: 32px;
+        }
+
+        .blank-line {
+            width: 90%;
+            border-bottom: 1px dashed #cbd5e1;
+            display: inline-block;
+            height: 15px;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: auto;
+            text-align: center;
+            font-size: 10px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: 15px;
+        }
+
+        /* Print Media Styles */
+        @media print {
+            body {
+                background-color: white;
+                color: black;
+                padding: 0;
+                margin: 0;
+            }
+
+            .control-panel, .btn-delete, .no-print {
+                display: none !important;
+            }
+
+            .a4-container {
+                box-shadow: none;
+                border: none;
+                margin: 0;
+                padding: 10mm 10mm;
+                width: 210mm;
+                height: 297mm;
+                box-sizing: border-box;
+            }
+
+            .chk-container {
+                border: 1px solid #000;
+                border-radius: 4px;
+            }
+
+            .checkmark {
+                border: none;
+            }
+
+            .checklist-table th {
+                background-color: #f8fafc !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .group-header {
+                background-color: #e2e8f0 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Controls Panel (Hidden on Print) -->
+    <div class="control-panel">
+        <div class="control-row">
+            <span style="font-weight: 800; font-size: 14px;">🛠️ 체크리스트 편집기</span>
+            <button class="btn btn-secondary" onclick="window.print()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                인쇄하기 / PDF 저장
+            </button>
+        </div>
+        <div class="control-row" style="border-top: 1px solid #334155; padding-top: 10px;">
+            <div class="add-form">
+                <input type="text" id="add-name" placeholder="새 품명 입력" class="add-input" style="flex:2;">
+                <input type="text" id="add-qty" placeholder="수량 (예: 2개)" class="add-input" style="flex:1;">
+                <input type="text" id="add-remarks" placeholder="적재위치 / 비고" class="add-input" style="flex:2;">
+                <button class="btn btn-primary" onclick="addCustomRow()">추가하기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Printable A4 Container -->
+    <div class="a4-container">
+        
+        <!-- Header -->
+        <div class="doc-header">
+            <div class="logo-area">
+                <!-- Dujon Custom Logo -->
+                <svg width="120" height="26" viewBox="0 0 149 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M59.0015 15.1655C59.0015 17.5381 58.2693 19.7282 56.8659 21.7358C55.4015 23.7434 53.5711 25.1427 51.3745 25.9336C50.2152 26.3594 48.9949 26.5419 47.7746 26.5419H38.9272V3.78906H47.7135C49.8491 3.78906 51.8626 4.39743 53.6931 5.55332C55.4626 6.70921 56.8659 8.23013 57.8422 10.1769C58.5744 11.8195 59.0015 13.4621 59.0015 15.1655ZM52.8389 15.1655C52.8389 13.5837 52.4118 12.2453 51.4965 11.0286C50.3372 9.44686 48.5678 8.71682 46.2492 8.71682H44.9068V21.6142H46.2492C48.5678 21.6142 50.3372 20.8233 51.4965 19.3024C52.3507 18.0856 52.8389 16.7472 52.8389 15.1655Z" fill="#2D2D2D"></path>
+                    <path d="M81.3333 16.9297C81.3333 18.329 81.2113 19.4849 81.0282 20.4583C80.6621 21.9792 79.8689 23.3176 78.5266 24.5951C76.6961 26.3594 74.1944 27.2111 71.0826 27.2111C67.9098 27.2111 65.4692 26.2986 63.6997 24.5343C62.7845 23.6218 62.1133 22.405 61.7472 21.0058C61.5031 20.0324 61.3811 18.6332 61.3811 16.9906V3.78906H67.2996V16.1389C67.2996 17.1123 67.2996 17.8423 67.3607 18.329C67.4827 19.8499 68.1539 20.945 69.4962 21.5533C70.0454 21.7967 70.5945 21.9183 71.2657 21.9183C72.7301 21.9183 73.8284 21.4316 74.5605 20.3974C75.1097 19.6674 75.3537 18.2073 75.3537 16.078V3.78906H81.2723V16.9297H81.3333Z" fill="#2D2D2D"></path>
+                    <path d="M96.0381 19.5475C96.0381 20.4601 95.9771 21.2509 95.8551 21.7985C95.611 23.076 94.9398 24.1711 93.8415 25.2053C92.3772 26.5437 90.6687 27.1521 88.5942 27.1521C86.1535 27.1521 84.14 26.057 82.6146 23.8061L86.5196 19.8517C86.7027 21.3118 87.3739 22.1027 88.4722 22.1027C89.6315 22.1027 90.1806 21.2509 90.1196 19.4867V3.79087H96.0381V19.5475Z" fill="#C3003B"></path>
+                    <path d="M123.739 15.2281C123.739 18.3308 122.702 21.0684 120.628 23.3802C118.248 26.057 115.075 27.3954 111.048 27.3954C107.021 27.3954 103.848 26.057 101.53 23.3802C99.455 21.0684 98.4177 18.3308 98.4177 15.2281C98.4177 13.8289 98.7228 12.3688 99.272 10.8479C99.8211 9.38783 100.553 8.11027 101.53 7.01521C103.909 4.3384 107.082 3 111.109 3C115.136 3 118.309 4.3384 120.689 7.01521C122.702 9.38783 123.739 12.1255 123.739 15.2281ZM117.577 15.2281C117.577 13.6464 117.089 12.2471 116.051 11.0304C114.709 9.50951 113.062 8.77947 111.109 8.77947C109.767 8.77947 108.485 9.14449 107.387 9.93536C106.289 10.7262 105.496 11.6996 105.007 12.9772C104.763 13.7072 104.58 14.4373 104.58 15.1673C104.58 16.6882 105.068 18.0875 106.106 19.3042C107.387 20.8251 109.035 21.5551 111.048 21.5551C113.062 21.5551 114.709 20.8251 115.99 19.3042C117.089 18.2091 117.577 16.8099 117.577 15.2281Z" fill="#C3003B"></path>
+                    <path d="M149 26.5437H143.02L132.099 12.5513V26.5437H126.18V3.79087H132.099L143.02 17.7224V3.79087H148.939V26.5437H149Z" fill="#C3003B"></path>
+                    <path d="M26.8469 7.91016V22.7543C26.8469 24.9444 25.0165 26.7695 22.8199 26.7695H21.2335C20.2572 28.8987 18.7318 30.7238 16.8403 32.0014H22.8809C28.0062 32.0014 32.1553 27.8645 32.1553 22.7543V7.91016H26.8469Z" fill="#C4003B"></path>
+                    <path d="M9.27442 0C4.14908 0 0 4.13688 0 9.24715V9.42966H5.24737V9.24715C5.24737 7.05703 7.01683 5.23194 9.27442 5.23194H24.0403V0H9.27442Z" fill="#C4003B"></path>
+                    <path d="M9.94559 11.5589H0V16.7909H9.94559C12.6913 16.7909 14.9489 19.0418 14.9489 21.7795C14.9489 24.5171 12.6913 26.7681 9.94559 26.7681H5.24737V18.8593H0V32H9.94559C15.6201 32 20.1963 27.4373 20.1963 21.7795C20.1963 16.1217 15.5591 11.5589 9.94559 11.5589Z" fill="#2D2D2D"></path>
+                    <path d="M32.1554 0H26.725V5.1711H32.1554V0Z" fill="#2D2D2D"></path>
+                </svg>
+            </div>
+            <div class="doc-meta">
+                작성일자: 2026.06.10<br>
+                작성자: 기획본부 기획부
+            </div>
+        </div>
+
+        <!-- Title -->
+        <h1 class="doc-title">청주 박람회 비품 체크리스트</h1>
+        <div class="doc-subtitle">
+            <span>⛺</span> 2026_충청경향하우징페어 준비 비품 현황
+        </div>
+
+        <!-- Table -->
+        <table class="checklist-table">
+            <thead>
+                <tr>
+                    <th class="col-check no-print">체크</th>
+                    <th class="col-no">NO</th>
+                    <th class="col-item">품명</th>
+                    <th class="col-qty">수량</th>
+                    <th class="col-remarks">적재 위치 / 비고</th>
+                    <th class="col-actions no-print">삭제</th>
+                </tr>
+            </thead>
+            <tbody id="checklist-body">
+                <!-- Rows will be dynamically loaded via JavaScript -->
+            </tbody>
+        </table>
+
+        <!-- Footer -->
+        <div class="footer">
+            더존하우징 기획본부 기획부 | 청주 박람회 비품 체크리스트
+        </div>
+
+    </div>
+
+    <!-- Script to manage rows dynamically -->
+    <script>
+        const defaultEquipmentItems = [
+            { id: 1, category: "🛋️ 상담 및 부스 운영 비품", name: "상담테이블 & 테이블보", qty: "8개", remarks: "", completed: false },
+            { id: 2, category: "🛋️ 상담 및 부스 운영 비품", name: "상담용 의자", qty: "32개", remarks: "+@ 여유분 체크", completed: false },
+            { id: 3, category: "🛋️ 상담 및 부스 운영 비품", name: "인포의자", qty: "3개", remarks: "", completed: false },
+            
+            { id: 4, category: "📂 계약 및 사무 기기", name: "종건 & 하우징 카드리더기", qty: "-", remarks: "", completed: false },
+            { id: 5, category: "📂 계약 및 사무 기기", name: "대봉투 & 소봉투", qty: "-", remarks: "", completed: false },
+            { id: 6, category: "📂 계약 및 사무 기기", name: "상담신청서", qty: "-", remarks: "", completed: false },
+            { id: 7, category: "📂 계약 및 사무 기기", name: "이벤트계약서", qty: "-", remarks: "", completed: false },
+            
+            { id: 8, category: "📖 책자 및 배포 인쇄물", name: "가이드북", qty: "300권", remarks: "기존 박람회 & 오픈하우스 잔여 박스 포함 (잔여 사인물 우선 소진)", completed: false },
+            { id: 9, category: "📖 책자 및 배포 인쇄물", name: "회사 브로슈어", qty: "2박스", remarks: "", completed: false },
+            { id: 10, category: "📖 책자 및 배포 인쇄물", name: "회사비닐", qty: "0.5포대", remarks: "", completed: false },
+            
+            { id: 11, category: "🏢 본사 3층 보관 비품", name: "X베너대", qty: "4개", remarks: "본사 3층 보관", completed: false },
+            { id: 12, category: "🏢 본사 3층 보관 비품", name: "리유저블백", qty: "1박스", remarks: "본사 3층 보관", completed: false },
+            { id: 13, category: "🏢 본사 3층 보관 비품", name: "배너사인물", qty: "@ (여유분)", remarks: "본사 3층 보관", completed: false },
+            
+            { id: 14, category: "🚗 기획부 차량 적재 (별도 출발)", name: "인포비품 + 회사외투", qty: "1박스", remarks: "기획부 차량 적재", completed: false },
+            { id: 15, category: "🚗 기획부 차량 적재 (별도 출발)", name: "스피커 & 앰프", qty: "1박스", remarks: "기획부 차량 적재", completed: false },
+            { id: 16, category: "🚗 기획부 차량 적재 (별도 출발)", name: "목업(단면도) + 이중배관 + 창호모형 등", qty: "-", remarks: "기획부 차량 적재 (나무 바인더 X)", completed: false },
+            
+            { id: 17, category: "☕ 식음료 및 공통 비품", name: "커피포트", qty: "-", remarks: "", completed: false },
+            { id: 18, category: "☕ 식음료 및 공통 비품", name: "생수", qty: "-", remarks: "", completed: false }
+        ];
+
+        let eqItems = [];
+
+        function loadItems() {
+            const saved = localStorage.getItem('cheongjuEquipmentList');
+            if (saved) {
+                try {
+                    eqItems = JSON.parse(saved);
+                } catch(e) {
+                    eqItems = JSON.parse(JSON.stringify(defaultEquipmentItems));
+                }
+            } else {
+                eqItems = JSON.parse(JSON.stringify(defaultEquipmentItems));
+                saveItems();
+            }
+            renderTable();
+        }
+
+        function saveItems() {
+            localStorage.setItem('cheongjuEquipmentList', JSON.stringify(eqItems));
+        }
+
+        function toggleItem(id, completed) {
+            // Find in local memory
+            const item = eqItems.find(i => String(i.id) === String(id));
+            if (item) {
+                item.completed = completed;
+                saveItems();
+            }
+        }
+
+        function addCustomRow() {
+            const nameInput = document.getElementById('add-name');
+            const qtyInput = document.getElementById('add-qty');
+            const remarksInput = document.getElementById('add-remarks');
+
+            const name = nameInput.value.trim();
+            const qty = qtyInput.value.trim() || "-";
+            const remarks = remarksInput.value.trim();
+
+            if (!name) {
+                alert("품명을 입력해주세요.");
+                return;
+            }
+
+            const newId = 'custom-' + Date.now();
+            eqItems.push({
+                id: newId,
+                category: "➕ 별도 추가 비품 (현장 추가)",
+                name: name,
+                qty: qty,
+                remarks: remarks,
+                completed: false,
+                isCustom: true
+            });
+
+            saveItems();
+            renderTable();
+
+            // Clear inputs
+            nameInput.value = "";
+            qtyInput.value = "";
+            remarksInput.value = "";
+        }
+
+        function deleteCustomRow(id) {
+            eqItems = eqItems.filter(i => String(i.id) !== String(id));
+            saveItems();
+            renderTable();
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('checklist-body');
+            tbody.innerHTML = '';
+
+            // Group items by category
+            const categories = [
+                "🛋️ 상담 및 부스 운영 비품",
+                "📂 계약 및 사무 기기",
+                "📖 책자 및 배포 인쇄물",
+                "🏢 본사 3층 보관 비품",
+                "🚗 기획부 차량 적재 (별도 출발)",
+                "☕ 식음료 및 공통 비품",
+                "➕ 별도 추가 비품 (현장 추가)"
+            ];
+
+            let rowNo = 1;
+
+            categories.forEach(cat => {
+                const catItems = eqItems.filter(i => i.category === cat);
+                if (catItems.length === 0 && cat !== "➕ 별도 추가 비품 (현장 추가)") {
+                    return;
+                }
+                if (cat === "➕ 별도 추가 비품 (현장 추가)" && catItems.length === 0) {
+                    return;
+                }
+
+                // Render group header
+                const headerTr = document.createElement('tr');
+                headerTr.innerHTML = `<td colspan="6" class="group-header">${cat}</td>`;
+                tbody.appendChild(headerTr);
+
+                // Render items
+                catItems.forEach(item => {
+                    const tr = document.createElement('tr');
+                    if (item.isCustom) {
+                        tr.id = `custom-row-${item.id}`;
+                    }
+                    tr.innerHTML = `
+                        <td class="col-check no-print">
+                            <label class="chk-container">
+                                <input type="checkbox" ${item.completed ? 'checked' : ''} onchange="toggleItem('${item.id}', this.checked)">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td class="col-no">${rowNo++}</td>
+                        <td class="col-item">${item.name}</td>
+                        <td class="col-qty">${item.qty}</td>
+                        <td class="col-remarks">${item.remarks}</td>
+                        <td class="col-actions no-print">
+                            ${item.isCustom ? `<button class="btn-delete" onclick="deleteCustomRow('${item.id}')">삭제</button>` : ''}
+                        </td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            });
+
+            // Render handwriting rows (Print Only)
+            const hwHeader = document.createElement('tr');
+            hwHeader.innerHTML = `<td colspan="6" class="group-header no-print">✍️ 자필 추가 작성용 (인쇄 여백)</td>`;
+            tbody.appendChild(hwHeader);
+
+            for (let i = 0; i < 5; i++) {
+                const tr = document.createElement('tr');
+                tr.className = 'blank-row';
+                tr.innerHTML = `
+                    <td class="col-check no-print"></td>
+                    <td class="col-no">${rowNo++}</td>
+                    <td class="col-item"><span class="blank-line"></span></td>
+                    <td class="col-qty"><span class="blank-line" style="width: 70%;"></span></td>
+                    <td class="col-remarks"><span class="blank-line"></span></td>
+                    <td class="col-actions no-print"></td>
+                `;
+                tbody.appendChild(tr);
+            }
+        }
+
+        // Listen for storage updates
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'cheongjuEquipmentList') {
+                loadItems();
+            }
+        });
+
+        // Initialize on load
+        window.addEventListener('DOMContentLoaded', () => {
+            loadItems();
+        });
+    </script>
+</body>
+</html>

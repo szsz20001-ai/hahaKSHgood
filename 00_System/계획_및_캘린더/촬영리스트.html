@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>촬영 리스트 관리</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --text-color: #0f172a;
+            --border-color: #e2e8f0;
+            --primary: #3b82f6;
+            --primary-hover: #2563eb;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-actions button {
+            background-color: #64748b;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .header-actions button:hover {
+            background-color: #475569;
+        }
+
+        .table-container {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+            color: #475569;
+        }
+
+        tbody tr:hover {
+            background-color: #f8fafc;
+        }
+
+        select, input[type="text"], input[type="date"] {
+            padding: 6px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 13px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        select.status-대기 { background-color: #e2e8f0; }
+        select.status-완료 { background-color: #d1fae5; color: #065f46; }
+        select.status-good { background-color: #cffafe; color: #164e63; }
+        select.status-확정 { background-color: #bfdbfe; color: #1e3a8a; }
+        select.status-보류 { background-color: #fef3c7; color: #92400e; }
+        select.status-불가 { background-color: #fee2e2; color: #991b1b; }
+
+        .btn-sync {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .btn-sync:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-sync:disabled {
+            background-color: #cbd5e1;
+            cursor: not-allowed;
+        }
+        
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .controls {
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .controls input {
+            max-width: 300px;
+            padding: 8px 12px;
+        }
+        
+        /* Toast notification */
+        #toast {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 4px;
+            padding: 12px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 14px;
+        }
+
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>
+        <span>📷 촬영 리스트 관리 시스템</span>
+        <div class="header-actions">
+            <button onclick="saveAll()">변경사항 전체 저장</button>
+            <button onclick="location.href='캘린더_인쇄용.html'">달력으로 돌아가기</button>
+        </div>
+    </h1>
+    
+    <div class="controls">
+        <input type="text" id="searchInput" placeholder="주소, 비고 검색..." onkeyup="renderTable()">
+        <select id="filterStatus" style="max-width: 150px;" onchange="renderTable()">
+            <option value="all">전체 상태</option>
+            <option value="대기">대기</option>
+            <option value="확정">확정</option>
+            <option value="완료">완료</option>
+            <option value="good">good</option>
+            <option value="보류">보류</option>
+            <option value="불가">불가</option>
+        </select>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th width="5%">No</th>
+                    <th width="22%">주소 및 건축주</th>
+                    <th width="8%">상태</th>
+                    <th width="12%">영상 담당</th>
+                    <th width="12%">사진/드론 담당</th>
+                    <th width="16%">특이사항 (비고)</th>
+                    <th width="5%">링크</th>
+                    <th width="12%">촬영일 지정</th>
+                    <th width="8%">캘린더 연동</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Data will be rendered here -->
+            </tbody>
+        </table>
+    </div>
+    
+    <div id="toast"></div>
+
+    <script src="shoot_list.js"></script>
+    <script>
+        // Ensure data is loaded
+        let data = typeof shootListData !== 'undefined' ? shootListData : [];
+        
+        function showToast(message) {
+            const toast = document.getElementById("toast");
+            toast.innerText = message;
+            toast.className = "show";
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('table-body');
+            tbody.innerHTML = '';
+            
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const filter = document.getElementById('filterStatus').value;
+            
+            data.forEach((row, index) => {
+                if (filter !== 'all' && row.status !== filter) return;
+                
+                const searchStr = (row.address + " " + (row.note||"")).toLowerCase();
+                if (search && !searchStr.includes(search)) return;
+                
+                const tr = document.createElement('tr');
+                
+                // Formulate the status class
+                const statusClass = `status-${row.status}`;
+                
+                let linkHtml = row.link ? `<a href="${row.link}" target="_blank">밴드 링크</a>` : '';
+                
+                tr.innerHTML = `
+                    <td>${row.id}</td>
+                    <td><input type="text" value="${row.address}" onchange="updateData(${index}, 'address', this.value)"></td>
+                    <td>
+                        <select class="${statusClass}" onchange="updateData(${index}, 'status', this.value); this.className='status-'+this.value; renderTable(); saveAll();">
+                            <option value="대기" ${row.status==='대기'?'selected':''}>대기</option>
+                            <option value="확정" ${row.status==='확정'?'selected':''}>확정</option>
+                            <option value="완료" ${row.status==='완료'?'selected':''}>완료</option>
+                            <option value="good" ${row.status==='good'?'selected':''}>good</option>
+                            <option value="보류" ${row.status==='보류'?'selected':''}>보류</option>
+                            <option value="불가" ${row.status==='불가'?'selected':''}>불가</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select onchange="updateData(${index}, 'video_assignee', this.value); saveAll();">
+                            <option value="">선택</option>
+                            <option value="강승훈 과장" ${row.video_assignee==='강승훈 과장'?'selected':''}>강승훈</option>
+                            <option value="김기훈 과장" ${row.video_assignee==='김기훈 과장'?'selected':''}>김기훈</option>
+                            <option value="외주" ${row.video_assignee==='외주'?'selected':''}>외주</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select onchange="updateData(${index}, 'photo_assignee', this.value); saveAll();">
+                            <option value="">선택</option>
+                            <option value="강승훈 과장" ${row.photo_assignee==='강승훈 과장'?'selected':''}>강승훈</option>
+                            <option value="김기훈 과장" ${row.photo_assignee==='김기훈 과장'?'selected':''}>김기훈</option>
+                            <option value="외주" ${row.photo_assignee==='외주'?'selected':''}>외주</option>
+                        </select>
+                    </td>
+                    <td><input type="text" value="${row.note || ''}" placeholder="비고 입력" onchange="updateData(${index}, 'note', this.value); saveAll();"></td>
+                    <td>${linkHtml}</td>
+                    <td>
+                        <input type="date" value="${row.date || ''}" onchange="updateData(${index}, 'date', this.value); renderTable(); saveAll();">
+                    </td>
+                    <td>
+                        <button class="btn-sync" 
+                            ${(row.status === '확정' && row.date) ? '' : 'disabled'}
+                            onclick="syncToCalendar(${index})">
+                            일정 등록
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+        
+        function updateData(index, field, value) {
+            data[index][field] = value;
+        }
+
+        async function saveAll() {
+            try {
+                const res = await fetch('/api/save_shoot_list', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                if (!res.ok) {
+                    console.error('저장 실패!');
+                }
+            } catch (e) {
+                console.error('서버 오류: ' + e);
+            }
+        }
+
+        async function syncToCalendar(index) {
+            const row = data[index];
+            if (!row.date) {
+                alert('촬영일이 지정되어야 합니다.');
+                return;
+            }
+            // format date to YYYYMMDD
+            const d = new Date(row.date);
+            const dateStr = d.getFullYear() + String(d.getMonth()+1).padStart(2,'0') + String(d.getDate()).padStart(2,'0');
+            
+            // Format task text
+            const titleParts = row.address.split(' ');
+            const title = (titleParts[0]||"") + " " + (titleParts[1]||"") + " 촬영";
+            const videoText = row.video_assignee ? row.video_assignee : '미정';
+            const photoText = row.photo_assignee ? row.photo_assignee : '미정';
+            const text = `${title} [담당: 영상(${videoText}), 사진/드론(${photoText})]`;
+            
+            try {
+                const res = await fetch('/api/add_shoot_event', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        date: dateStr,
+                        text: text
+                    })
+                });
+                
+                if (res.ok) {
+                    showToast(`달력 ${row.date} 에 연동 완료!`);
+                } else {
+                    showToast('연동 실패!');
+                }
+            } catch (e) {
+                showToast('서버 오류: ' + e);
+            }
+        }
+
+        // Initialize table
+        renderTable();
+    </script>
+</body>
+</html>

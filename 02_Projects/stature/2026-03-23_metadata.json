@@ -1,0 +1,9 @@
+{
+  "name": "STATURE (스테이처)",
+  "description": "리얼라이프 역량 게이미피케이션 플랫폼 - 현실의 성취를 10대 스탯으로 수치화하고 상대평가로 성장시키는 서비스",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}

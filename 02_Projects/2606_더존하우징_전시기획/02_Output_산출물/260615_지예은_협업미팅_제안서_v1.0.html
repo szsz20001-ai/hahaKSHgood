@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지예은 X 더존하우징 협업 미팅 제안서</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --color-bg: #FCFCFD;
+            --color-card-bg: #FFFFFF;
+            --color-card-bg-hover: #FAFAFB;
+            --color-border: #F1F5F9;
+            --color-border-hover: #E2E8F0;
+            --color-text-primary: #0F172A;
+            --color-text-secondary: #475569;
+            --color-text-muted: #94A3B8;
+            --color-accent: #C5A880;
+            --color-accent-hover: #B2936B;
+            --color-dujon-blue: #11223F;
+            --color-ye-eun-pink: #F26C84;
+            
+            --font-main: 'Noto Sans KR', sans-serif;
+            --font-title: 'Playfair Display', serif;
+            --font-ui: 'Outfit', sans-serif;
+            
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            
+            --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.02);
+            --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.04);
+            --shadow-gold: 0 15px 35px rgba(197, 168, 128, 0.08);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text-primary);
+            font-family: var(--font-main);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        .layout-wrapper { display: flex; min-height: 100vh; position: relative; }
+
+        /* Sidebar */
+        .profile-sidebar {
+            width: 420px;
+            background: rgba(255, 255, 255, 0.95);
+            border-right: 1px solid var(--color-border);
+            padding: 60px 45px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            top: 0; bottom: 0; left: 0;
+            z-index: 10;
+        }
+        .profile-img-container {
+            width: 100%; aspect-ratio: 3 / 4;
+            border-radius: var(--radius-md);
+            overflow: hidden; border: 1px solid rgba(197, 168, 128, 0.15);
+            margin-bottom: 35px;
+        }
+        .profile-img-container img {
+            width: 100%; height: 100%; object-fit: cover;
+            object-position: center top; transition: var(--transition);
+        }
+        .profile-img-container:hover img { transform: scale(1.04); }
+        .artist-title { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600; letter-spacing: 4px; color: var(--color-accent); margin-bottom: 12px; }
+        .artist-name-kr { font-size: 2.4rem; font-weight: 800; color: var(--color-text-primary); margin-bottom: 6px; }
+        .artist-name-en { font-family: var(--font-title); font-size: 1.4rem; color: var(--color-text-secondary); margin-bottom: 30px; letter-spacing: 1px; }
+        .agency-logo { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600; letter-spacing: 3px; color: var(--color-text-muted); border-top: 1px solid var(--color-border); padding-top: 25px; width: 100%; text-align: center; }
+
+        /* Content Area */
+        .content-area { margin-left: 420px; flex: 1; padding: 60px 80px; min-height: 100vh; }
+        
+        /* Nav */
+        .nav-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--color-border); padding-bottom: 25px; margin-bottom: 60px; }
+        .nav-menu { display: flex; gap: 40px; }
+        .nav-item { font-family: var(--font-ui); font-size: 0.95rem; font-weight: 700; color: var(--color-text-secondary); cursor: pointer; position: relative; padding: 10px 0; transition: var(--transition); letter-spacing: 1px; }
+        .nav-item::after { content: ''; position: absolute; bottom: -26px; left: 0; width: 0; height: 3px; background: linear-gradient(90deg, var(--color-accent), var(--color-ye-eun-pink)); transition: var(--transition); border-radius: 2px; }
+        .nav-item.active { color: var(--color-text-primary); }
+        .nav-item.active::after { width: 100%; }
+
+        /* Tabs */
+        .tab-block { display: none; animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .tab-block.active { display: block; }
+        @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        .section-title { font-family: var(--font-title); font-size: 2.5rem; font-weight: 700; margin-bottom: 40px; position: relative; }
+        .section-title span { color: var(--color-accent); font-style: italic; font-weight: 400; }
+
+        /* Grid & Cards */
+        .grid-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 35px; margin-bottom: 40px; }
+        .grid-full { grid-column: span 2; }
+        .card { background-color: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 45px; transition: var(--transition); box-shadow: var(--shadow-sm); position: relative; overflow: hidden; }
+        .card:hover { transform: translateY(-5px); border-color: rgba(197, 168, 128, 0.25); box-shadow: var(--shadow-gold); }
+        .card-title-container { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
+        .card-title-container i { font-size: 1.4rem; color: var(--color-accent); background: rgba(197, 168, 128, 0.08); width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border-radius: 50%; }
+        .card-title { font-size: 1.3rem; font-weight: 800; color: var(--color-text-primary); letter-spacing: -0.5px; }
+        
+        .desc-text { font-size: 0.95rem; color: var(--color-text-secondary); margin-bottom: 20px; line-height: 1.7; }
+        
+        .brand-list { list-style: none; display: flex; flex-direction: column; gap: 20px; }
+        .brand-list-item { border-bottom: 1px solid #F1F5F9; padding-bottom: 20px; }
+        .brand-list-item:last-child { border-bottom: none; padding-bottom: 0; }
+        .brand-list-title { font-size: 1.05rem; font-weight: 800; color: var(--color-dujon-blue); margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+        .brand-list-desc { font-size: 0.92rem; color: var(--color-text-secondary); line-height: 1.7; padding-left: 20px; }
+
+        /* Concept Cards */
+        .concept-card { background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 45px; cursor: pointer; transition: var(--transition); display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; position: relative; box-shadow: var(--shadow-sm); }
+        .concept-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 6px; background: linear-gradient(90deg, var(--color-accent), var(--color-ye-eun-pink)); }
+        .concept-card:hover { transform: translateY(-8px); border-color: rgba(197, 168, 128, 0.3); box-shadow: var(--shadow-gold); }
+        .concept-label { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 700; color: var(--color-accent); letter-spacing: 2px; margin-bottom: 20px; border-bottom: 1px solid rgba(197, 168, 128, 0.2); padding-bottom: 5px; display: inline-block; }
+        .concept-title { font-size: 1.6rem; font-weight: 800; color: var(--color-text-primary); margin-bottom: 20px; letter-spacing: -0.5px; }
+        .concept-desc { font-size: 0.95rem; color: var(--color-text-secondary); margin-bottom: 35px; flex-grow: 1; }
+
+        /* Modal */
+        .modal-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(12px); z-index: 100; display: none; align-items: center; justify-content: center; padding: 40px; opacity: 0; transition: opacity 0.5s; }
+        .modal-overlay.active { display: flex; opacity: 1; }
+        .modal-container { background: #FFFFFF; border-radius: var(--radius-lg); width: 100%; max-width: 1000px; max-height: 85vh; overflow-y: auto; padding: 50px; position: relative; transform: scale(0.95); transition: transform 0.5s; }
+        .modal-overlay.active .modal-container { transform: scale(1); }
+        .modal-close { position: absolute; top: 35px; right: 35px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--color-border); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); }
+        .modal-close:hover { background: var(--color-text-primary); color: #fff; transform: rotate(90deg); }
+
+        .modal-cuesheet-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 30px 0; border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; }
+        .modal-cuesheet-table th, .modal-cuesheet-table td { padding: 18px 22px; text-align: left; border-bottom: 1px solid var(--color-border); }
+        .modal-cuesheet-table th { background: #FAFAFB; color: var(--color-dujon-blue); font-weight: 700; font-size: 0.9rem; }
+        .modal-cuesheet-table td { font-size: 0.92rem; color: var(--color-text-secondary); line-height: 1.6; }
+
+        .script-bubble { border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 24px 28px; max-width: 85%; margin-bottom: 20px; }
+        .script-bubble.ye-eun { align-self: flex-start; border-left: 5px solid var(--color-ye-eun-pink); background: rgba(242, 108, 132, 0.03); margin-right: auto; }
+        .script-bubble.partner { align-self: flex-end; border-right: 5px solid var(--color-accent); background: rgba(197, 168, 128, 0.03); margin-left: auto; }
+        .speaker { font-weight: 800; font-size: 0.95rem; margin-bottom: 8px; }
+        .ye-eun .speaker { color: var(--color-ye-eun-pink); }
+        .partner .speaker { color: var(--color-accent-hover); }
+
+        /* Timeline */
+        .timeline { position: relative; padding-left: 30px; margin-top: 20px; }
+        .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--color-border); }
+        .timeline-item { position: relative; margin-bottom: 30px; }
+        .timeline-item::before { content: ''; position: absolute; left: -35px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: var(--color-accent); border: 2px solid #fff; box-shadow: 0 0 0 3px rgba(197, 168, 128, 0.2); }
+        .time { font-family: var(--font-ui); font-weight: 700; color: var(--color-accent); margin-bottom: 5px; display: block; }
+        .time-title { font-size: 1.1rem; font-weight: 800; color: var(--color-text-primary); margin-bottom: 8px; }
+        .time-desc { font-size: 0.92rem; color: var(--color-text-secondary); }
+
+    </style>
+</head>
+<body>
+
+<div class="layout-wrapper">
+    <aside class="profile-sidebar">
+        <div class="profile-img-container">
+            <img src="https://i.namu.wiki/i/QwKrlRWaA7DdK37kpYqX_q2JnvnLglKn-FBwIsW33Pvi6DiPhQkn2HyTrHxPHx5zoE1h8qJwHIZNa6qzNbWe_DkhANJA3wIrpOHJYWIDF8ji8Xhkzm9UNoIzTWuYaySHFiOBRGExp3mIJbHG4p6MkA.webp" 
+                 onerror="this.src='../01_Assets_작업소스/mockup_생성이미지/ai_booth_mockup_v1.png';" alt="지예은 프로필">
+        </div>
+        <div class="profile-info">
+            <p class="artist-title">EXCLUSIVE COLLABORATION</p>
+            <h1 class="artist-name-kr">지예은 & 더존하우징</h1>
+            <p class="artist-name-en">PARTNERSHIP PITCH</p>
+            <div class="agency-logo">CP ENTERTAINMENT X DUJON HOUSING</div>
+        </div>
+    </aside>
+
+    <main class="content-area">
+        <nav class="nav-header">
+            <div class="nav-menu">
+                <span class="nav-item active" onclick="changeTab('tab-proposal')">01. PROPOSAL</span>
+                <span class="nav-item" onclick="changeTab('tab-concepts')">02. CONCEPTS</span>
+                <span class="nav-item" onclick="changeTab('tab-schedule')">03. SCHEDULE</span>
+            </div>
+        </nav>
+
+        <!-- 01. PROPOSAL -->
+        <div id="tab-proposal" class="tab-block active">
+            <h2 class="section-title">Collaboration <span>Proposal</span></h2>
+            <div class="grid-container">
+                <div class="card grid-full">
+                    <div class="card-title-container">
+                        <i class="fa-solid fa-handshake"></i>
+                        <h3 class="card-title">협업 기획 배경 및 상호 시너지</h3>
+                    </div>
+                    <p class="desc-text">대세 예능인이신 지예은 님 측에서 더존하우징에 먼저 긍정적인 협업을 제안해 주신 점 깊은 감사의 말씀을 드립니다. 아티스트의 긍정적이고 트렌디한 이미지와 더존하우징의 브랜드 파워가 만나 큰 시너지를 창출할 것을 기대합니다.</p>
+                    <ul class="brand-list">
+                        <li class="brand-list-item">
+                            <span class="brand-list-title"><i class="fa-solid fa-house-lock"></i> 사생활 보호(Privacy)를 최우선으로 한 '전시장 세트장' 솔루션</span>
+                            <span class="brand-list-desc">지예은 님의 실제 거주 공간 노출에 대한 부담감을 최우선으로 배려하였습니다. 아티스트의 사생활은 100% 안전하게 보호하면서도 고품질 영상을 확보할 수 있도록, <strong>더존하우징의 1,500평 화성 본사 종합전시장을 단독 세트장처럼 활용</strong>하는 기획을 제안합니다.</span>
+                        </li>
+                        <li class="brand-list-item">
+                            <span class="brand-list-title"><i class="fa-solid fa-crown"></i> 아티스트의 품격에 맞는 프리미엄 촬영 환경</span>
+                            <span class="brand-list-desc">화성 본사의 최고급 모델하우스(라포레 등)와 인테리어 쇼룸을 대관하여, 외부의 방해 없이 안전하고 프라이빗한 환경에서 원활한 촬영을 지원합니다.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 02. CONCEPTS -->
+        <div id="tab-concepts" class="tab-block">
+            <h2 class="section-title">Creative <span>Concepts</span></h2>
+            <div class="grid-container">
+                <div class="concept-card" onclick="openModal('modal-hq1')">
+                    <div>
+                        <div class="concept-label">CONCEPT 01 / OFFICE COMEDY</div>
+                        <h3 class="concept-title">맑눈광 인턴 예은이의 '본사 접수기'</h3>
+                        <p class="concept-desc">지예은이 더존하우징 기획실 인턴으로 출근하여 전시장을 구경하다가 상무님의 철저한 팩트 설명에 당황하는 유쾌한 오피스 상황극입니다.</p>
+                    </div>
+                    <div class="concept-arrow"><i class="fa-solid fa-plus"></i></div>
+                </div>
+
+                <div class="concept-card" onclick="openModal('modal-hq2')">
+                    <div>
+                        <div class="concept-label">CONCEPT 02 / SITUATION COMEDY</div>
+                        <h3 class="concept-title">지예은의 '가상 신혼집 집들이'</h3>
+                        <p class="concept-desc">더존하우징 모델하우스를 자신의 예쁜 신혼집이라며 카메라에 온라인 집들이를 하던 중, 전시관 마감을 알리는 상무님에게 적발되는 상황극입니다.</p>
+                    </div>
+                    <div class="concept-arrow"><i class="fa-solid fa-plus"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 03. SCHEDULE -->
+        <div id="tab-schedule" class="tab-block">
+            <h2 class="section-title">Relaxed <span>Schedule (6H)</span></h2>
+            <div class="card grid-full">
+                <div class="card-title-container">
+                    <i class="fa-solid fa-clock"></i>
+                    <h3 class="card-title">아티스트 맞춤형 1DAY 촬영 동선 (총 6시간)</h3>
+                </div>
+                <p class="desc-text">타이트한 방송 스케줄에 무리가 가지 않으시도록, 편안하게 준비하실 수 있는 여유로운 6시간 스케줄을 제안합니다.</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="time">11:00 - 12:00 (1.0H)</span>
+                        <h4 class="time-title">본사 도착 및 사전 인터뷰 진행</h4>
+                        <p class="time-desc">지예은 님 본사 도착 직후, 상무님 및 제작진과 함께 가벼운 사전 인터뷰와 스크립트 리딩을 바로 진행합니다.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">12:00 - 14:30 (2.5H)</span>
+                        <h4 class="time-title">본 촬영 PART 1. (쇼룸 및 상담실)</h4>
+                        <p class="time-desc">인터뷰 직후 전시장 3층 쇼룸과 1층 공간으로 이동하여 1부 상황극 촬영을 곧바로 시작합니다.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">14:30 - 15:00 (0.5H)</span>
+                        <h4 class="time-title">휴식 (Coffee Break)</h4>
+                        <p class="time-desc">철저히 아티스트의 컨디션을 고려하여 30분간의 달콤한 휴식과 커피 타임을 가집니다.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="time">15:00 - 17:00 (2.0H)</span>
+                        <h4 class="time-title">본 촬영 PART 2. (모델하우스) & 종료</h4>
+                        <p class="time-desc">메인 모델하우스 내부에서 2부 촬영을 마치고 정시(17:00)에 기분 좋게 퇴근합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- Modal 1 -->
+<div id="modal-hq1" class="modal-overlay" onclick="closeModalOnBg(event)">
+    <div class="modal-container">
+        <span class="modal-close" onclick="closeModal('modal-hq1')"><i class="fa-solid fa-xmark"></i></span>
+        <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 20px;">맑눈광 인턴 예은이의 '본사 접수기'</h2>
+        
+        <div class="script-bubble ye-eun" style="max-width: 100%;">
+            <p class="speaker">지예은</p>
+            <p class="line">오 마이 갓~! 상무님~! 여기 회사 맞아요? 무슨 리조트 같아요! 저 여기서 일하면 3일 만에 대표이사님 자리까지 올라갈 것 같아요!</p>
+        </div>
+        <div class="script-bubble partner" style="max-width: 100%;">
+            <p class="speaker">상무님</p>
+            <p class="line">반갑습니다. 대표이사가 되시기 전에 우선 저희 화성 주택전시장의 핵심인 '원스톱 직영 시스템'부터 마스터하셔야 합니다. 150명이 넘는 본사 상주 전문가가 직접 설계부터 시공, 감리까지 책임집니다.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2 -->
+<div id="modal-hq2" class="modal-overlay" onclick="closeModalOnBg(event)">
+    <div class="modal-container">
+        <span class="modal-close" onclick="closeModal('modal-hq2')"><i class="fa-solid fa-xmark"></i></span>
+        <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 20px;">지예은의 '가상 신혼집 집들이'</h2>
+        
+        <div class="script-bubble ye-eun" style="max-width: 100%;">
+            <p class="speaker">지예은</p>
+            <p class="line">자~! 남편아(카메라), 여기가 바로 우리 미래 상견례 장소인 우리집 2층 다락방이야! 어때? 완전 대박이지!</p>
+        </div>
+        <div class="script-bubble partner" style="max-width: 100%;">
+            <p class="speaker">상무님</p>
+            <p class="line">고객님, 실례합니다. 가상 집들이 상황극을 하시는 건 좋은데, 본사 주택전시장 폐관 시간이 임박하여 이제 퇴장 준비를 도와드리겠습니다.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function changeTab(tabId) {
+        document.querySelectorAll('.tab-block').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+    function openModal(id) {
+        const m = document.getElementById(id);
+        m.style.display = 'flex';
+        setTimeout(() => m.classList.add('active'), 10);
+    }
+    function closeModal(id) {
+        const m = document.getElementById(id);
+        m.classList.remove('active');
+        setTimeout(() => m.style.display = 'none', 400);
+    }
+    function closeModalOnBg(e) {
+        if (e.target === e.currentTarget) closeModal(e.target.id);
+    }
+</script>
+</body>
+</html>

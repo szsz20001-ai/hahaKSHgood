@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025-2026 더존하우징 마케팅 유입 분석 및 외주업체 미팅 전략</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0b0f19;
+            --bg-secondary: #111827;
+            --card-bg: rgba(17, 24, 39, 0.7);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent-glow: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --accent-cyan: #06b6d4;
+            --accent-rose: #f43f5e;
+            --accent-green: #10b981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--accent-glow);
+            border-radius: 2px;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: var(--accent-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .meta-info {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* 3대 핵심 요약 카드 */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            backdrop-filter: blur(12px);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .summary-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-glow);
+        }
+
+        .summary-card.rose::before {
+            background: var(--accent-rose);
+        }
+
+        .summary-card.cyan::before {
+            background: var(--accent-cyan);
+        }
+
+        .summary-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .card-title {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .card-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffffff;
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+
+        .card-growth {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-green);
+        }
+
+        .card-growth.rose {
+            color: #f43f5e;
+        }
+
+        .card-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+
+        /* 메인 레이아웃: 대시보드 데이터 + 분석 리포트 */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 1024px) {
+            .main-layout {
+                grid-template-columns: 3fr 2fr;
+            }
+        }
+
+        .panel {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(12px);
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 1rem;
+        }
+
+        .panel-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .panel-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* 유입비교 표 이미지 컨테이너 */
+        .image-container {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 1.5rem;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 데이터 테이블 */
+        .data-table-container {
+            overflow-x: auto;
+            margin-top: 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background-color: rgba(255, 255, 255, 0.03);
+            color: #ffffff;
+            font-weight: 600;
+            padding: 0.75rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        td {
+            padding: 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+        }
+
+        tr:hover td {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .growth-badge {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background-color: rgba(16, 185, 129, 0.15);
+            color: var(--accent-green);
+        }
+
+        .growth-badge.cyan {
+            background-color: rgba(6, 182, 212, 0.15);
+            color: var(--accent-cyan);
+        }
+
+        .growth-badge.rose {
+            background-color: rgba(244, 63, 94, 0.15);
+            color: var(--accent-rose);
+        }
+
+        /* 분석 정보 및 외주업체 가이드 */
+        .agenda-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .agenda-item {
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 4px solid var(--accent-cyan);
+            padding: 1.2rem;
+            border-radius: 0 12px 12px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            border-right: 1px solid rgba(255, 255, 255, 0.03);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .agenda-item.rose {
+            border-left-color: var(--accent-rose);
+        }
+
+        .agenda-item.violet {
+            border-left-color: #8b5cf6;
+        }
+
+        .agenda-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .agenda-num {
+            font-size: 0.75rem;
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            color: var(--text-secondary);
+        }
+
+        .agenda-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .agenda-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        .action-point {
+            background: rgba(6, 182, 212, 0.06);
+            border: 1px dashed rgba(6, 182, 212, 0.2);
+            border-radius: 8px;
+            padding: 0.75rem;
+            font-size: 0.85rem;
+            color: #e5e7eb;
+        }
+
+        .agenda-item.rose .action-point {
+            background: rgba(244, 63, 94, 0.06);
+            border-color: rgba(244, 63, 94, 0.2);
+        }
+
+        .agenda-item.violet .action-point {
+            background: rgba(139, 92, 246, 0.06);
+            border-color: rgba(139, 92, 246, 0.2);
+        }
+
+        /* 말머리 가이드 & 스피치 시나리오 */
+        .speech-section {
+            margin-top: 3rem;
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.8) 0%, rgba(30, 41, 59, 0.8) 100%);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .speech-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .speech-bubble {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 1.25rem;
+            font-size: 0.92rem;
+            color: #e5e7eb;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent-cyan);
+        }
+
+        .speech-bubble strong {
+            color: #ffffff;
+        }
+
+        .speech-meta {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-align: right;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="tag">더존하우징 마케팅 리포트</span>
+            <h1>2025-2026 마케팅 유입 성과 및 미팅 전략</h1>
+            <div class="meta-info">
+                <span>작성부서: 기획부</span> | <span>작성자: 강승훈 과장</span> | <span>작성일자: 2026년 6월 12일</span>
+            </div>
+        </header>
+
+        <!-- 3대 핵심 지표 요약 -->
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="card-title">홈페이지 방문예약 성장률</div>
+                <div class="card-value">
+                    156%
+                    <span class="card-growth">▲ 56%p</span>
+                </div>
+                <div class="card-desc">25년 1~5월 누계 352건 → 26년 누계 550건으로 최대 성장폭 기록</div>
+            </div>
+            <div class="summary-card cyan">
+                <div class="card-title">최종 계약 성과 성장률</div>
+                <div class="card-value">
+                    140%
+                    <span class="card-growth">▲ 40%p</span>
+                </div>
+                <div class="card-desc">25년 1~5월 누계 68건 → 26년 누계 95건으로 유의미한 계약 증대 실현</div>
+            </div>
+            <div class="summary-card rose">
+                <div class="card-title">본사 오프라인 텔인(전화유입)</div>
+                <div class="card-value">
+                    102%
+                    <span class="card-growth rose">▼ - (정체)</span>
+                </div>
+                <div class="card-desc">25년 1~5월 누계 493건 → 26년 누계 502건으로 작년 대비 보합 수준</div>
+            </div>
+        </div>
+
+        <div class="main-layout">
+            <!-- 왼쪽: 데이터 차트 및 원본 자료 -->
+            <div class="panel">
+                <div class="panel-header">
+                    <div>
+                        <div class="panel-title">📊 전년 동기 대비 유입 데이터 비교표</div>
+                        <div class="panel-subtitle">25년 vs 26년 (1월~5월) 데이터</div>
+                    </div>
+                </div>
+
+                <!-- 업로드된 이미지 렌더링 -->
+                <div class="image-container">
+                    <img src="25_26_유입비교표.jpg" alt="25년 대비 26년 1~5월 월별 유입관련 자료">
+                </div>
+
+                <!-- 데이터 분석 서머리 테이블 -->
+                <div class="data-table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th rowspan="2">구분</th>
+                                <th colspan="2">홈페이지</th>
+                                <th colspan="3">본사 오프라인</th>
+                                <th rowspan="2">계약</th>
+                            </tr>
+                            <tr>
+                                <th>문의</th>
+                                <th>방문예약</th>
+                                <th>텔인</th>
+                                <th>당일예약</th>
+                                <th>로드</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>25년 1-5월</strong></td>
+                                <td>462</td>
+                                <td>352</td>
+                                <td>493</td>
+                                <td>86</td>
+                                <td>90</td>
+                                <td>68</td>
+                            </tr>
+                            <tr>
+                                <td><strong>26년 1-5월</strong></td>
+                                <td>583</td>
+                                <td>550</td>
+                                <td>502</td>
+                                <td>124</td>
+                                <td>108</td>
+                                <td>95</td>
+                            </tr>
+                            <tr>
+                                <td><strong>성장률</strong></td>
+                                <td><span class="growth-badge cyan">126%</span></td>
+                                <td><span class="growth-badge">156%</span></td>
+                                <td><span class="growth-badge cyan">102%</span></td>
+                                <td><span class="growth-badge">144%</span></td>
+                                <td><span class="growth-badge">120%</span></td>
+                                <td><span class="growth-badge">140%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 오른쪽: 외주대행사 미팅 가이드 & 아젠다 -->
+            <div class="panel">
+                <div class="panel-header">
+                    <div>
+                        <div class="panel-title">🎯 대외 마케팅 외주업체 미팅 전략</div>
+                        <div class="panel-subtitle">강 과장이 주도하는 3대 핵심 아젠다</div>
+                    </div>
+                </div>
+
+                <div class="agenda-list">
+                    <!-- 아젠다 1 -->
+                    <div class="agenda-item">
+                        <div class="agenda-header">
+                            <span class="agenda-title">1. 방문예약 성장 대비 계약 전환 갭(Gap)</span>
+                            <span class="agenda-num">핵심 이슈</span>
+                        </div>
+                        <p class="agenda-desc">
+                            홈페이지 방문예약은 <strong>156%</strong> 증가하며 최대 성장세를 보였으나, 최종 계약 성장은 <strong>140%</strong>로 전환율 차이가 존재합니다. 리드의 품질 필터링이 필요한 시점입니다.
+                        </p>
+                        <div class="action-point">
+                            <strong>대행사 요구사항:</strong> 타겟 세그먼트 고도화를 통해 허수 예약자(단순 호기심)를 필터링하고 실제 계약 의사가 높은 진성 리드를 확보하기 위한 광고 최적화 방안 리포트 제출 요구.
+                        </div>
+                    </div>
+
+                    <!-- 아젠다 2 -->
+                    <div class="agenda-item rose">
+                        <div class="agenda-header">
+                            <span class="agenda-title">2. 오프라인 텔인(전화유입) 정체 원인 규명</span>
+                            <span class="agenda-num">보완 사항</span>
+                        </div>
+                        <p class="agenda-desc">
+                            전체 온라인 유입은 폭증했으나 텔인(전화 문의)은 <strong>102%</strong>로 거의 보합 상태입니다. 소비자들이 전화보다 온라인 예약 폼을 훨씬 선호하는 경향이 뚜렷하게 확인됩니다.
+                        </p>
+                        <div class="action-point">
+                            <strong>대행사 요구사항:</strong> 광고 랜딩페이지 내 온라인 간편 예약 UI를 더욱 간소화하고, 모바일 전화 연결 버튼 클릭 수와 실제 유입 전화를 추적할 수 있는 콜트래킹 시스템의 정상 작동 여부 재점검 지시.
+                        </div>
+                    </div>
+
+                    <!-- 아젠다 3 -->
+                    <div class="agenda-item violet">
+                        <div class="agenda-header">
+                            <span class="agenda-title">3. 5월 방문예약 급증 요인 내재화</span>
+                            <span class="agenda-num">모멘텀 극대화</span>
+                        </div>
+                        <p class="agenda-desc">
+                            5월의 방문예약이 전년 68건 대비 <strong>155건(228% 성장)</strong>으로 대폭 증가했습니다. 특정 매체 광고 캠페인 효과인지 프로모션 때문인지 명확한 요인 파악이 필요합니다.
+                        </p>
+                        <div class="action-point">
+                            <strong>대행사 요구사항:</strong> 5월 유입량 증가에 가장 크게 기여한 광고 소재 및 매체(블로그, 인스타, 유튜브 등) 기여도를 개별 분석해줄 것을 요청하고, 이를 6~8월 여름 휴가철 비수기 방어 전략에 반영할 것.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 강 과장의 스피치 시나리오 -->
+        <div class="speech-section">
+            <div class="speech-title">🗣️ 미팅 현장 발언 시나리오 (강승훈 과장 주도)</div>
+            
+            <div class="speech-bubble">
+                "저희가 취합한 1~5월 데이터를 전년 동기와 비교해 보면, 홈페이지 문의와 특히 **방문예약이 156%까지 폭발적으로 증가**한 것은 매우 긍정적입니다. 그간 온라인 마케팅 유입을 늘리기 위해 외주업체에서 매체 다변화나 예산 재분배에 집중해 주신 성과라고 생각하고 감사드립니다."
+            </div>
+
+            <div class="speech-bubble">
+                "다만, 저희가 깊게 들여다봐야 할 수치는 **방문예약 증가율(156%) 대비 실제 최종 계약 성장율(140%) 간의 괴리**입니다. 즉, 예약하고 내방하는 고객 수는 대폭 늘었지만 계약으로 골인하는 전환율은 그 속도를 따라가지 못하고 있습니다. 
+                이것이 내부 영업 대응 리소스의 한계 때문인지, 아니면 애초에 들어온 리드의 의사결정 가능 수준(예산 규모, 시공 시기 구체성 등)이 낮아진 탓인지 확인하고 싶습니다. 외주사 측에서는 **광고 타겟을 좁히더라도 진성 고객 위주로 전환시키는 세그멘테이션 고도화 계획**을 준비해 주시기 바랍니다."
+            </div>
+
+            <div class="speech-bubble">
+                "더불어, 오프라인 **전화 유입(텔인)이 2% 수준으로 정체**되어 있는 점도 주목해야 합니다. 고객 행동 패턴이 모바일 기기에서의 '전화 문의'에서 '웹 예약 폼 작성'으로 완전히 이동한 것으로 보입니다. 이번에 홈페이지 개편 시 예약 작성을 방해하는 UX 허들이 없는지 함께 검수하고, 5월의 급증 요인을 그대로 흡수하여 다가올 여름 비수기에 예산 낭비 없이 안정적인 예약을 뽑아낼 방안을 6/16 미팅 때 논의하도록 하겠습니다."
+            </div>
+            
+            <div class="speech-meta">
+                * 본 분석 보고서는 미팅 시 빔 프로젝터로 띄우거나 출력하여 가이드 자료로 즉시 활용 가능합니다.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

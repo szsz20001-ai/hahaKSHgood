@@ -1,0 +1,84 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "User's basic information and current percentile stats",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "job": { "type": "string" },
+        "stats": {
+          "type": "object",
+          "properties": {
+            "execution": { "type": "number", "description": "Percentile 0-99.9" },
+            "mastery": { "type": "number", "description": "Percentile 0-99.9" },
+            "vitality": { "type": "number", "description": "Percentile 0-99.9" },
+            "strategy": { "type": "number", "description": "Percentile 0-99.9" },
+            "vision": { "type": "number", "description": "Percentile 0-99.9" },
+            "influence": { "type": "number", "description": "Percentile 0-99.9" },
+            "finesse": { "type": "number", "description": "Percentile 0-99.9" },
+            "adaptive": { "type": "number", "description": "Percentile 0-99.9" },
+            "fortune": { "type": "number", "description": "Percentile 0-99.9" },
+            "synergy": { "type": "number", "description": "Percentile 0-99.9" }
+          }
+        },
+        "rawScores": {
+          "type": "object",
+          "description": "Raw points used to calculate percentiles"
+        },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "displayName", "stats"]
+    },
+    "Quest": {
+      "title": "Quest",
+      "description": "Challenges for users to grow their stats",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "targetStat": { "type": "string" },
+        "expectedDelta": { "type": "number", "description": "Expected percentile increase" },
+        "difficulty": { "type": "string", "enum": ["EASY", "NORMAL", "HARD", "ELITE"] },
+        "participantsCount": { "type": "number" },
+        "successRate": { "type": "number" }
+      }
+    },
+    "Evaluation": {
+      "title": "Peer Evaluation",
+      "description": "Blind swipe evaluation for Finesse and Synergy stats",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "evaluatorUid": { "type": "string" },
+        "targetUid": { "type": "string" },
+        "statType": { "type": "string" },
+        "score": { "type": "number" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      }
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles and stats"
+    },
+    "/quests/{questId}": {
+      "schema": "Quest",
+      "description": "Available quests"
+    },
+    "/evaluations/{evalId}": {
+      "schema": "Evaluation",
+      "description": "Peer review records"
+    },
+    "/stats_global/distribution": {
+      "schema": "object",
+      "description": "Global score distribution for percentile calculation"
+    }
+  }
+}

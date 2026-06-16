@@ -1,0 +1,1975 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <!-- Google Fonts: Inter & Noto Sans KR -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary: #0f172a;
+            --primary-light: #334155;
+            --accent: #2563eb;
+            --accent-bg: #eff6ff;
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --border: #cbd5e1;
+            --bg-page: #f1f5f9;
+            --bg-card: #ffffff;
+            
+            /* Event Colors */
+            --color-exhibit: #10b981;
+            --color-exhibit-bg: #ecfdf5;
+            --color-shoot: #8b5cf6;
+            --color-shoot-bg: #f5f3ff;
+            --color-meeting: #ef4444;
+            --color-meeting-bg: #fef2f2;
+            --color-build: #f59e0b;
+            --color-build-bg: #fffbeb;
+            --color-open: #3b82f6;
+            --color-open-bg: #eff6ff;
+            --color-task: #0f766e;
+            --color-task-bg: #f0fdfa;
+            --color-edit: #4338ca;
+            --color-edit-bg: #e0e7ff;
+            --color-plan: #0891b2;
+            --color-plan-bg: #ecfeff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Instructions Panel (Screen Only) */
+        .sidebar {
+            width: 300px;
+            background-color: var(--primary);
+            color: #cbd5e1;
+            padding: 30px 24px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            overflow-y: auto;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 100;
+        }
+
+        .sidebar-title {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 24px;
+        }
+
+        .sidebar-section h3 {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .sidebar-section p, .sidebar-section li {
+            font-size: 12.5px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .sidebar-section ul {
+            padding-left: 16px;
+        }
+
+        .print-btn {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 8px;
+            width: 100%;
+            cursor: pointer;
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .print-btn:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .btn-side-action {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #cbd5e1;
+            padding: 10px 14px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 6px;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .btn-side-action:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+            color: white;
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Mode Indicator */
+        .mode-indicator {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 6px 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .mode-server {
+            background-color: #dcfce7;
+            color: #15803d;
+        }
+
+        .mode-local {
+            background-color: #ffedd5;
+            color: #c2410c;
+        }
+
+        /* Main Scrollable Area */
+        .main-content {
+            margin-left: 300px;
+            margin-right: 320px;
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto;
+            transition: margin-right 0.3s ease;
+        }
+        .main-content.full-width {
+            margin-right: 0;
+        }
+
+        /* Printable Page */
+        .a4-page {
+            width: 210mm;
+            min-height: 297mm;
+            background-color: var(--bg-card);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            padding: 20mm 20mm;
+            margin-bottom: 40px;
+            border: 1px solid #e2e8f0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page-header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .doc-title {
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--primary);
+            letter-spacing: -1px;
+        }
+
+        .doc-meta {
+            font-size: 11px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .calendar-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Calendar Grid */
+        .calendar-grid {
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid var(--border);
+            border-left: 1px solid var(--border);
+            margin-bottom: 20px;
+            flex: 1;
+            min-height: 0;
+        }
+
+        .cal-header-row {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            width: 100%;
+            background-color: #f8fafc;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .cal-header-cell {
+            text-align: center;
+            font-weight: 800;
+            font-size: 11px;
+            padding: 10px 0;
+            border-right: 1px solid var(--border);
+            color: var(--primary-light);
+        }
+
+        .cal-week-row {
+            display: flex;
+            flex: 1;
+            position: relative;
+            min-height: 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .cal-week-bg-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .cal-week-events-grid {
+            position: absolute;
+            top: 24px; /* Space for day numbers */
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-auto-rows: 13px; /* Height of each event bar */
+            row-gap: 2px;
+            padding: 0 4px;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .cal-day-cell {
+            background-color: var(--bg-card);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 6px;
+            box-sizing: border-box;
+            cursor: pointer;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .cal-day-cell.today {
+            background-color: #fef3c7; /* Warm amber light bg */
+            outline: 2px solid var(--accent);
+            outline-offset: -2px;
+            z-index: 5;
+        }
+
+        .cal-day-cell.empty {
+            background-color: #f8fafc;
+        }
+
+        .cal-day-num {
+            font-size: 11px;
+            font-weight: 800;
+            color: var(--text-muted);
+            text-align: right;
+            margin-bottom: 4px;
+        }
+
+        /* Continuous Event Bar Styles */
+        .cal-event-bar {
+            font-size: 8px;
+            font-weight: 700;
+            padding: 1px 4px;
+            line-height: 1.1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            pointer-events: auto; /* Allow hovering/clicks */
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            height: 13px;
+            margin-top: 0px;
+            position: relative;
+            z-index: 10;
+            cursor: pointer;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        /* Completed Event Bar Style */
+        .cal-event-bar.completed {
+            opacity: 0.55 !important;
+            text-decoration: line-through;
+            border-style: dotted !important;
+        }
+
+        /* Event Types mapping */
+        .bar-exhibit { background-color: var(--color-exhibit-bg); color: var(--color-exhibit); border: 1px solid var(--color-exhibit); border-left-width: 3px; }
+        .bar-shoot { background-color: var(--color-shoot-bg); color: var(--color-shoot); border: 1px solid var(--color-shoot); border-left-width: 3px; }
+        .bar-meeting { background-color: var(--color-meeting-bg); color: var(--color-meeting); border: 1px solid var(--color-meeting); border-left-width: 3px; }
+        .bar-build { background-color: var(--color-build-bg); color: var(--color-build); border: 1px solid var(--color-build); border-left-width: 3px; }
+        .bar-open { background-color: var(--color-open-bg); color: var(--color-open); border: 1px solid var(--color-open); border-left-width: 3px; }
+        .bar-task { background-color: var(--color-task-bg); color: var(--color-task); border: 1px solid var(--color-task); border-left-width: 3px; }
+        .bar-edit { background-color: var(--color-edit-bg); color: var(--color-edit); border: 1px solid var(--color-edit); border-left-width: 3px; }
+        .bar-plan { background-color: var(--color-plan-bg); color: var(--color-plan); border: 1px solid var(--color-plan); border-left-width: 3px; }
+
+        /* Left/Right Rounded corners for start/end of event */
+        .bar-start {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            border-left-width: 3px !important;
+        }
+        .bar-not-start {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-left-style: dashed;
+            border-left-width: 1px;
+            padding-left: 10px;
+        }
+        .bar-not-start::before {
+            content: "?";
+            font-size: 7px;
+            margin-right: 3px;
+            opacity: 0.7;
+        }
+
+        .bar-end {
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            border-right-width: 1px;
+        }
+        .bar-not-end {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-right-style: dashed;
+            border-right-width: 1px;
+            padding-right: 10px;
+        }
+        .bar-not-end::after {
+            content: "▶";
+            font-size: 7px;
+            margin-left: 3px;
+            opacity: 0.7;
+            position: absolute;
+            right: 4px;
+        }
+
+        /* Legend */
+        .cal-legend {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            font-size: 11px;
+            margin-bottom: 10px;
+            background-color: #f8fafc;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 600;
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+        }
+
+        .page-footer {
+            margin-top: auto;
+            text-align: center;
+            font-size: 10px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: 10px;
+        }
+
+        /* Interactive Editing Styles */
+        .cal-day-cell:not(.empty) {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .cal-day-cell:not(.empty):hover {
+            background-color: #f8fafc;
+            border: 1px solid var(--accent);
+            box-shadow: inset 0 0 0 1px var(--accent);
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            border-radius: 12px;
+            width: 450px;
+            max-width: 90%;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h3 {
+            font-size: 15px;
+            font-weight: 800;
+            margin: 0;
+            border: none;
+            padding: 0;
+        }
+
+        .modal-close {
+            font-size: 24px;
+            font-weight: 700;
+            cursor: pointer;
+            color: #94a3b8;
+            transition: color 0.2s;
+        }
+
+        .modal-close:hover {
+            color: white;
+        }
+
+        .modal-body {
+            padding: 20px;
+            overflow-y: auto;
+            max-height: 400px;
+        }
+
+        .existing-events-title, .form-title {
+            font-size: 12.5px;
+            font-weight: 800;
+            color: var(--primary-light);
+            margin-bottom: 10px;
+        }
+
+        .modal-event-list {
+            margin-bottom: 20px;
+            background-color: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 10px;
+            min-height: 50px;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        .modal-event-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 8px;
+            background-color: white;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            margin-bottom: 6px;
+        }
+
+        .modal-event-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .modal-event-text {
+            font-size: 12px;
+            font-weight: 600;
+            flex: 1;
+            margin-right: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .btn-del-evt {
+            background: none;
+            border: none;
+            color: #ef4444;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 3px;
+            transition: background 0.2s;
+        }
+
+        .btn-del-evt:hover {
+            background-color: #fee2e2;
+        }
+
+        .new-event-form {
+            border-top: 1px solid var(--border);
+            padding-top: 15px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .form-input {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        .form-select {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 13px;
+            background-color: white;
+        }
+
+        .btn-add-evt {
+            background-color: var(--primary-light);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .btn-add-evt:hover {
+            background-color: var(--primary);
+        }
+
+        .modal-footer {
+            padding: 15px 20px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            background-color: #f8fafc;
+        }
+
+        .btn-save {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .btn-save:hover {
+            background-color: #1d4ed8;
+        }
+
+        .btn-cancel {
+            background-color: white;
+            border: 1px solid var(--border);
+            color: var(--primary-light);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .btn-cancel:hover {
+            background-color: #f1f5f9;
+        }
+
+        /* Right Sidebar Task Panel (Screen Only) */
+        .task-panel {
+            width: 320px;
+            background-color: var(--primary);
+            color: #cbd5e1;
+            padding: 30px 20px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            overflow: visible;
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .task-panel.collapsed {
+            transform: translateX(100%);
+        }
+
+        .task-toggle-btn {
+            position: absolute;
+            left: -32px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 32px;
+            height: 60px;
+            background-color: var(--primary);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-right: none;
+            border-radius: 8px 0 0 8px;
+            color: #cbd5e1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            z-index: 101;
+            transition: all 0.2s ease;
+            outline: none;
+        }
+
+        .task-toggle-btn:hover {
+            color: #ffffff;
+            background-color: var(--primary-light);
+        }
+
+        .task-panel-title {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .task-date-selector {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .task-date-selector button {
+            background: none;
+            border: none;
+            color: #cbd5e1;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .task-date-selector button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+
+        .task-date-selector span {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Task Progress Bar */
+        .task-progress-container {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 20px;
+        }
+
+        .task-progress-track {
+            height: 6px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .task-progress-bar {
+            height: 100%;
+            background-color: var(--color-exhibit);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .task-progress-text {
+            font-size: 12px;
+            font-weight: 700;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Task List */
+        .task-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+
+        .task-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .task-list::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .task-list::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+        }
+
+        .task-list::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .task-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 10px 12px;
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 6px;
+            margin-bottom: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .task-item:hover {
+            background-color: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .task-item.completed {
+            opacity: 0.5;
+            background-color: rgba(255, 255, 255, 0.01);
+        }
+
+        .task-checkbox-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+            cursor: pointer;
+            margin-top: 2px;
+        }
+
+        .task-checkbox {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #94a3b8;
+            border-radius: 4px;
+            background-color: transparent;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .task-checkbox:checked {
+            background-color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .task-checkbox:checked::after {
+            content: "▶";
+            color: white;
+            font-size: 10px;
+            font-weight: 900;
+        }
+
+        .task-text {
+            font-size: 12.5px;
+            line-height: 1.4;
+            color: #cbd5e1;
+            word-break: break-all;
+            flex: 1;
+            transition: all 0.2s;
+        }
+
+        .task-item.completed .task-text {
+            text-decoration: line-through;
+            color: #64748b;
+        }
+
+        .btn-task-del {
+            background: none;
+            border: none;
+            color: #f1f5f9;
+            opacity: 0.3;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 0 4px;
+            margin-left: 8px;
+            line-height: 1;
+            transition: all 0.2s;
+        }
+
+        .task-item:hover .btn-task-del {
+            opacity: 0.7;
+        }
+
+        .btn-task-del:hover {
+            color: #ef4444 !important;
+            opacity: 1 !important;
+        }
+
+        /* Task Add Form */
+        .task-add-form {
+            display: flex;
+            gap: 8px;
+            margin-top: auto;
+            background-color: rgba(255, 255, 255, 0.03);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+        }
+
+        .task-add-form input {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid #475569;
+            border-radius: 6px;
+            background-color: #1e293b;
+            color: #ffffff;
+            font-size: 13px;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .task-add-form input:focus {
+            border-color: var(--accent);
+        }
+
+        .task-add-form button {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 13px;
+            transition: background 0.2s;
+        }
+
+        .task-add-form button:hover {
+            background-color: #1d4ed8;
+        }
+
+
+
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 0;
+            }
+
+            body {
+                background-color: white;
+                color: black;
+                padding: 0;
+                margin: 0;
+            }
+
+            .sidebar, .task-panel {
+                display: none !important;
+            }
+
+            .main-content {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                padding: 0;
+            }
+
+            .a4-page {
+                box-shadow: none;
+                border: none;
+                margin: 0;
+                padding: 20mm 20mm;
+                width: 210mm;
+                height: 297mm;
+                box-sizing: border-box;
+                page-break-after: always;
+                break-after: page;
+            }
+
+            .a4-page:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+
+            .cal-header-cell {
+                background-color: #f8fafc !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .cal-day-cell.empty {
+                background-color: #f8fafc !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .cal-legend {
+                background-color: #f8fafc !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            /* Print colors */
+            .cal-event-bar {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .cal-event-bar.completed {
+                opacity: 0.55 !important;
+                text-decoration: line-through;
+            }
+            .bar-exhibit { background-color: #ecfdf5 !important; color: #10b981 !important; border-color: #10b981 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .bar-shoot { background-color: #f5f3ff !important; color: #8b5cf6 !important; border-color: #8b5cf6 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .bar-meeting { background-color: #fef2f2 !important; color: #ef4444 !important; border-color: #ef4444 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .bar-build { background-color: #fffbeb !important; color: #f59e0b !important; border-color: #f59e0b !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .bar-open { background-color: #eff6ff !important; color: #3b82f6 !important; border-color: #3b82f6 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .bar-task { background-color: #f0fdfa !important; color: #0f766e !important; border-color: #0f766e !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .bar-edit { background-color: #e0e7ff !important; color: #4338ca !important; border-color: #4338ca !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .bar-plan { background-color: #ecfeff !important; color: #0891b2 !important; border-color: #0891b2 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .cal-day-cell.today {
+                background-color: #fef3c7 !important;
+                outline: 2px solid var(--accent) !important;
+                outline-offset: -2px !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Instructions (Hidden on Print) -->
+    <div class="sidebar">
+                    <h2 class="sidebar-title">📅 일정관리 및 연동</h2>
+        
+        <!-- Mode Indicator Widget -->
+        <div id="mode-widget" class="mode-indicator mode-local">
+                        <span></span> 로컬 모드 (임시 저장)
+        </div>
+
+        <div class="sidebar-section">
+            <h3>📅 일정 수정/추가</h3>
+                <p><strong>날짜 셀을 클릭</strong>하면 일정을 즉시 추가/삭제할 수 있는 창이 나타납니다.</p>
+        </div>
+
+        <!-- External ICS Sync Section -->
+        <div class="sidebar-section" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top:15px; margin-top:15px;">
+            <h3>🔗 외부 일정 (ICS) 연동</h3>
+            <div style="margin-bottom: 10px;">
+                <label style="display:block; font-size:10px; font-weight:700; color:#94a3b8; margin-bottom:4px; text-transform:uppercase;">로컬 ICS 파일 경로 / 원격 URL:</label>
+                <input type="text" id="ics-path-input" style="width:100%; padding:6px 8px; border-radius:4px; border:1px solid #475569; background-color:#1e293b; color:#ffffff; font-size:11.5px; font-family:inherit;" placeholder="../기획부 회의/260609_기획부회의/더존하우징_기획부_일정.ics">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label style="display:block; font-size:10px; font-weight:700; color:#94a3b8; margin-bottom:4px; text-transform:uppercase;">인터넷 ICS URL (구글/아웃룩):</label>
+                <input type="text" id="ics-url-input" style="width:100%; padding:6px 8px; border-radius:4px; border:1px solid #475569; background-color:#1e293b; color:#ffffff; font-size:11.5px; font-family:inherit;" placeholder="https://calendar.google.com/calendar/ical/...">
+            </div>
+            <button class="btn-side-action" style="background-color: var(--accent); color: white; border: none; font-weight: 700; margin-bottom: 8px; transition: background 0.2s;" onclick="syncFromIcsSources()">
+                🔄 외부 일정 불러오기
+            </button>
+            <div style="font-size:10px; color:#64748b; line-height:1.4;">
+                <li style="margin-bottom:6px; color:#cbd5e1;">* 설정한 ICS 주소는 브라우저에 저장되며, 로드 시 자동으로 병합되어 막대바 형태로 표시됩니다.</li>
+            </div>
+        </div>
+
+        <div class="sidebar-section" id="save-info-section" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top:15px;">
+                <h3 style="margin:0 0 10px 0; font-size:14px; color:#f1f5f9; border-bottom:1px solid #334155; padding-bottom:6px;">💾 일정 저장 방법</h3>
+            <p><strong>방법 A (서버 연동 - 권장):</strong></p>
+                <p>폴더 안의 <code>일정인쇄기_실행.bat</code> 파일을 실행하면 바탕화면 달력의 <code>events.js</code> 파일에 자동으로 즉시 저장됩니다.</p>
+            <p><strong>방법 B (수동 내보내기):</strong></p>
+            <p>로컬 모드로 수정한 후 아래 버튼을 클릭하여 다운로드된 파일로 기존 <code>events.js</code>를 덮어쓰기 하세요.</p>
+        </div>
+
+        <button class="print-btn" onclick="window.print()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                달력 인쇄 / PDF 저장
+        </button>
+
+        <button class="btn-side-action" onclick="exportEventsFile()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            일정 파일(events.js) 내보내기
+            <li style="margin-top:20px;">
+                <button class="btn-side-action" onclick="window.location.href='촬영리스트.html'" style="background-color:#4f46e5; font-size:14px; padding:12px; font-weight:700;">
+                    📷 촬영 리스트 관리 이동
+                </button>
+            </li>
+        </button>
+
+        <button class="btn-side-action" onclick="exportToIcsFile()" style="border-color: #10b981; color: #10b981; background-color: rgba(16, 185, 129, 0.05);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                구글캘린더용 ICS 파일 내보내기
+        </button>
+
+        <button class="btn-side-action" id="btn-sync-desktopcal" onclick="syncWithDesktopCal()" style="border-color: #f59e0b; color: #f59e0b; background-color: rgba(245, 158, 11, 0.05); display: none;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            바탕화면 달력(DesktopCal) 동기화
+        </button>
+
+        <button class="btn-side-action" onclick="resetToDefault()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
+            수정 내용 초기화
+        </button>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        
+        <!-- Page 1: 6??罹섎┛??-->
+        <div class="a4-page">
+            <div class="page-header">
+            <div class="doc-title" style="display:flex; align-items:center; gap:12px;"><svg width="149" height="32" viewBox="0 0 149 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M59.0015 15.1655C59.0015 17.5381 58.2693 19.7282 56.8659 21.7358C55.4015 23.7434 53.5711 25.1427 51.3745 25.9336C50.2152 26.3594 48.9949 26.5419 47.7746 26.5419H38.9272V3.78906H47.7135C49.8491 3.78906 51.8626 4.39743 53.6931 5.55332C55.4626 6.70921 56.8659 8.23013 57.8422 10.1769C58.5744 11.8195 59.0015 13.4621 59.0015 15.1655ZM52.8389 15.1655C52.8389 13.5837 52.4118 12.2453 51.4965 11.0286C50.3372 9.44686 48.5678 8.71682 46.2492 8.71682H44.9068V21.6142H46.2492C48.5678 21.6142 50.3372 20.8233 51.4965 19.3024C52.3507 18.0856 52.8389 16.7472 52.8389 15.1655Z" fill="#2D2D2D" class="cl2"></path><path d="M81.3333 16.9297C81.3333 18.329 81.2113 19.4849 81.0282 20.4583C80.6621 21.9792 79.8689 23.3176 78.5266 24.5951C76.6961 26.3594 74.1944 27.2111 71.0826 27.2111C67.9098 27.2111 65.4692 26.2986 63.6997 24.5343C62.7845 23.6218 62.1133 22.405 61.7472 21.0058C61.5031 20.0324 61.3811 18.6332 61.3811 16.9906V3.78906H67.2996V16.1389C67.2996 17.1123 67.2996 17.8423 67.3607 18.329C67.4827 19.8499 68.1539 20.945 69.4962 21.5533C70.0454 21.7967 70.5945 21.9183 71.2657 21.9183C72.7301 21.9183 73.8284 21.4316 74.5605 20.3974C75.1097 19.6674 75.3537 18.2073 75.3537 16.078V3.78906H81.2723V16.9297H81.3333Z" fill="#2D2D2D" class="cl2"></path><path d="M96.0381 19.5475C96.0381 20.4601 95.9771 21.2509 95.8551 21.7985C95.611 23.076 94.9398 24.1711 93.8415 25.2053C92.3772 26.5437 90.6687 27.1521 88.5942 27.1521C86.1535 27.1521 84.14 26.057 82.6146 23.8061L86.5196 19.8517C86.7027 21.3118 87.3739 22.1027 88.4722 22.1027C89.6315 22.1027 90.1806 21.2509 90.1196 19.4867V3.79087H96.0381V19.5475Z" fill="#C3003B" class="cl1"></path><path d="M123.739 15.2281C123.739 18.3308 122.702 21.0684 120.628 23.3802C118.248 26.057 115.075 27.3954 111.048 27.3954C107.021 27.3954 103.848 26.057 101.53 23.3802C99.455 21.0684 98.4177 18.3308 98.4177 15.2281C98.4177 13.8289 98.7228 12.3688 99.272 10.8479C99.8211 9.38783 100.553 8.11027 101.53 7.01521C103.909 4.3384 107.082 3 111.109 3C115.136 3 118.309 4.3384 120.689 7.01521C122.702 9.38783 123.739 12.1255 123.739 15.2281ZM117.577 15.2281C117.577 13.6464 117.089 12.2471 116.051 11.0304C114.709 9.50951 113.062 8.77947 111.109 8.77947C109.767 8.77947 108.485 9.14449 107.387 9.93536C106.289 10.7262 105.496 11.6996 105.007 12.9772C104.763 13.7072 104.58 14.4373 104.58 15.1673C104.58 16.6882 105.068 18.0875 106.106 19.3042C107.387 20.8251 109.035 21.5551 111.048 21.5551C113.062 21.5551 114.709 20.8251 115.99 19.3042C117.089 18.2091 117.577 16.8099 117.577 15.2281Z" fill="#C3003B" class="cl1"></path><path d="M149 26.5437H143.02L132.099 12.5513V26.5437H126.18V3.79087H132.099L143.02 17.7224V3.79087H148.939V26.5437H149Z" fill="#C3003B" class="cl1"></path><path d="M26.8469 7.91016V22.7543C26.8469 24.9444 25.0165 26.7695 22.8199 26.7695H21.2335C20.2572 28.8987 18.7318 30.7238 16.8403 32.0014H22.8809C28.0062 32.0014 32.1553 27.8645 32.1553 22.7543V7.91016H26.8469Z" fill="#C4003B" class="cl1"></path><path d="M9.27442 0C4.14908 0 0 4.13688 0 9.24715V9.42966H5.24737V9.24715C5.24737 7.05703 7.01683 5.23194 9.27442 5.23194H24.0403V0H9.27442Z" fill="#C4003B" class="cl1"></path><path d="M9.94559 11.5589H0V16.7909H9.94559C12.6913 16.7909 14.9489 19.0418 14.9489 21.7795C14.9489 24.5171 12.6913 26.7681 9.94559 26.7681H5.24737V18.8593H0V32H9.94559C15.6201 32 20.1963 27.4373 20.1963 21.7795C20.1963 16.1217 15.5591 11.5589 9.94559 11.5589Z" fill="#2D2D2D" class="cl2"></path><path d="M32.1554 0H26.725V5.1711H32.1554V0Z" fill="#2D2D2D" class="cl2"></path></svg><span style="font-size: 16px; font-weight: 800; color: var(--primary); margin-left: 8px;">기획부 일정</span></div>
+            <div class="doc-meta" id="page1-title">2026년 6월 기획부 일정표 (A4 가로형)</div>
+            </div>
+            
+            <div class="calendar-title" id="page1-title">📅 2026년 6월(June)</div>
+            
+            <!-- Legend -->
+            <div class="cal-legend">
+                <div class="legend-item"><div class="legend-color" style="background-color: var(--color-exhibit);"></div><span>박람회(Green)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background-color: var(--color-open);"></div><span>모델하우스(Blue)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background-color: var(--color-shoot);"></div><span>촬영/출장 (Purple)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background-color: var(--color-edit);"></div><span>인쇄/편집 (Indigo)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background-color: var(--color-plan);"></div><span>기획/완료 (Cyan)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background-color: var(--color-build);"></div><span>공사/착공 (Orange)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background-color: var(--color-meeting);"></div><span>내부/마감 (Red)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background-color: var(--color-task);"></div><span>완료된 할일</span></div>
+            </div>
+
+            <div class="calendar-grid">
+            <!-- 요일 헤더 -->
+                <div class="cal-header-row">
+                    <div class="cal-header-cell" style="color: #b91c1c;">일(SUN)</div>
+                    <div class="cal-header-cell">월(MON)</div>
+                    <div class="cal-header-cell">화(TUE)</div>
+                    <div class="cal-header-cell">수(WED)</div>
+                    <div class="cal-header-cell">목(THU)</div>
+                    <div class="cal-header-cell">금(FRI)</div>
+                    <div class="cal-header-cell" style="color: #2563eb;">토(SAT)</div>
+                </div>
+
+            <!-- 6월 캘린더 그리드 영역 -->
+                <div id="june-grid" style="display: flex; flex-direction: column; flex: 1; min-height: 0;"></div>
+            </div>
+            
+            <div class="page-footer" id="page1-footer">
+            <div class="doc-footer" id="page1-footer">더존하우징 기획본부 기획부 | 작성일자: 2026년 6월 9일</div>
+            </div>
+        </div>
+
+        <!-- Page 2: 7??罹섎┛??-->
+        <div class="a4-page">
+            <div class="page-header">
+            <div class="doc-title" style="display:flex; align-items:center; gap:12px;"><svg width="149" height="32" viewBox="0 0 149 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M59.0015 15.1655C59.0015 17.5381 58.2693 19.7282 56.8659 21.7358C55.4015 23.7434 53.5711 25.1427 51.3745 25.9336C50.2152 26.3594 48.9949 26.5419 47.7746 26.5419H38.9272V3.78906H47.7135C49.8491 3.78906 51.8626 4.39743 53.6931 5.55332C55.4626 6.70921 56.8659 8.23013 57.8422 10.1769C58.5744 11.8195 59.0015 13.4621 59.0015 15.1655ZM52.8389 15.1655C52.8389 13.5837 52.4118 12.2453 51.4965 11.0286C50.3372 9.44686 48.5678 8.71682 46.2492 8.71682H44.9068V21.6142H46.2492C48.5678 21.6142 50.3372 20.8233 51.4965 19.3024C52.3507 18.0856 52.8389 16.7472 52.8389 15.1655Z" fill="#2D2D2D" class="cl2"></path><path d="M81.3333 16.9297C81.3333 18.329 81.2113 19.4849 81.0282 20.4583C80.6621 21.9792 79.8689 23.3176 78.5266 24.5951C76.6961 26.3594 74.1944 27.2111 71.0826 27.2111C67.9098 27.2111 65.4692 26.2986 63.6997 24.5343C62.7845 23.6218 62.1133 22.405 61.7472 21.0058C61.5031 20.0324 61.3811 18.6332 61.3811 16.9906V3.78906H67.2996V16.1389C67.2996 17.1123 67.2996 17.8423 67.3607 18.329C67.4827 19.8499 68.1539 20.945 69.4962 21.5533C70.0454 21.7967 70.5945 21.9183 71.2657 21.9183C72.7301 21.9183 73.8284 21.4316 74.5605 20.3974C75.1097 19.6674 75.3537 18.2073 75.3537 16.078V3.78906H81.2723V16.9297H81.3333Z" fill="#2D2D2D" class="cl2"></path><path d="M96.0381 19.5475C96.0381 20.4601 95.9771 21.2509 95.8551 21.7985C95.611 23.076 94.9398 24.1711 93.8415 25.2053C92.3772 26.5437 90.6687 27.1521 88.5942 27.1521C86.1535 27.1521 84.14 26.057 82.6146 23.8061L86.5196 19.8517C86.7027 21.3118 87.3739 22.1027 88.4722 22.1027C89.6315 22.1027 90.1806 21.2509 90.1196 19.4867V3.79087H96.0381V19.5475Z" fill="#C3003B" class="cl1"></path><path d="M123.739 15.2281C123.739 18.3308 122.702 21.0684 120.628 23.3802C118.248 26.057 115.075 27.3954 111.048 27.3954C107.021 27.3954 103.848 26.057 101.53 23.3802C99.455 21.0684 98.4177 18.3308 98.4177 15.2281C98.4177 13.8289 98.7228 12.3688 99.272 10.8479C99.8211 9.38783 100.553 8.11027 101.53 7.01521C103.909 4.3384 107.082 3 111.109 3C115.136 3 118.309 4.3384 120.689 7.01521C122.702 9.38783 123.739 12.1255 123.739 15.2281ZM117.577 15.2281C117.577 13.6464 117.089 12.2471 116.051 11.0304C114.709 9.50951 113.062 8.77947 111.109 8.77947C109.767 8.77947 108.485 9.14449 107.387 9.93536C106.289 10.7262 105.496 11.6996 105.007 12.9772C104.763 13.7072 104.58 14.4373 104.58 15.1673C104.58 16.6882 105.068 18.0875 106.106 19.3042C107.387 20.8251 109.035 21.5551 111.048 21.5551C113.062 21.5551 114.709 20.8251 115.99 19.3042C117.089 18.2091 117.577 16.8099 117.577 15.2281Z" fill="#C3003B" class="cl1"></path><path d="M149 26.5437H143.02L132.099 12.5513V26.5437H126.18V3.79087H132.099L143.02 17.7224V3.79087H148.939V26.5437H149Z" fill="#C3003B" class="cl1"></path><path d="M26.8469 7.91016V22.7543C26.8469 24.9444 25.0165 26.7695 22.8199 26.7695H21.2335C20.2572 28.8987 18.7318 30.7238 16.8403 32.0014H22.8809C28.0062 32.0014 32.1553 27.8645 32.1553 22.7543V7.91016H26.8469Z" fill="#C4003B" class="cl1"></path><path d="M9.27442 0C4.14908 0 0 4.13688 0 9.24715V9.42966H5.24737V9.24715C5.24737 7.05703 7.01683 5.23194 9.27442 5.23194H24.0403V0H9.27442Z" fill="#C4003B" class="cl1"></path><path d="M9.94559 11.5589H0V16.7909H9.94559C12.6913 16.7909 14.9489 19.0418 14.9489 21.7795C14.9489 24.5171 12.6913 26.7681 9.94559 26.7681H5.24737V18.8593H0V32H9.94559C15.6201 32 20.1963 27.4373 20.1963 21.7795C20.1963 16.1217 15.5591 11.5589 9.94559 11.5589Z" fill="#2D2D2D" class="cl2"></path><path d="M32.1554 0H26.725V5.1711H32.1554V0Z" fill="#2D2D2D" class="cl2"></path></svg><span style="font-size: 16px; font-weight: 800; color: var(--primary); margin-left: 8px;">기획부 일정</span></div>
+            <div class="doc-meta" id="page2-title">2026년 7월 기획부 일정표 (A4 가로형)</div>
+            </div>
+            
+            <div class="calendar-title" id="page2-title">📅 2026년 7월(July)</div>
+            
+            <!-- Legend -->
+            <div class="cal-legend">
+                <div class="legend-item"><div class="legend-color" style="background-color: var(--color-exhibit);"></div><span>박람회(Green)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background-color: var(--color-open);"></div><span>모델하우스(Blue)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background-color: var(--color-shoot);"></div><span>촬영/출장 (Purple)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background-color: var(--color-edit);"></div><span>인쇄/편집 (Indigo)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background-color: var(--color-plan);"></div><span>기획/완료 (Cyan)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background-color: var(--color-build);"></div><span>공사/착공 (Orange)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background-color: var(--color-meeting);"></div><span>내부/마감 (Red)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background-color: var(--color-task);"></div><span>완료된 할일</span></div>
+            </div>
+
+            <div class="calendar-grid">
+            <!-- 요일 헤더 -->
+                <div class="cal-header-row">
+                    <div class="cal-header-cell" style="color: #b91c1c;">일(SUN)</div>
+                    <div class="cal-header-cell">월(MON)</div>
+                    <div class="cal-header-cell">화(TUE)</div>
+                    <div class="cal-header-cell">수(WED)</div>
+                    <div class="cal-header-cell">목(THU)</div>
+                    <div class="cal-header-cell">금(FRI)</div>
+                    <div class="cal-header-cell" style="color: #2563eb;">토(SAT)</div>
+                </div>
+
+            <!-- 7월 캘린더 그리드 영역 -->
+                <div id="july-grid" style="display: flex; flex-direction: column; flex: 1; min-height: 0;"></div>
+            </div>
+            
+            <div class="page-footer" id="page2-footer">
+            <div class="doc-footer" id="page2-footer">더존하우징 기획본부 기획부 | 작성일자: 2026년 6월 9일</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Task Checklist Panel (Hidden on Print) -->
+    <div class="task-panel">
+        <!-- Collapse/Expand Button -->
+        <button class="task-toggle-btn" onclick="toggleTaskPanel()" title="오늘 할일 열기/닫기>
+            <span id="task-panel-toggle-icon"></span>
+        </button>
+
+        <h2 class="task-panel-title">📋 오늘 할일</h2>
+        
+        <!-- Date Selector -->
+        <div class="task-date-selector" id="task-date-selector-wrapper">
+            <button onclick="navigateTaskDate(-1)">◀</button>
+            <span id="task-date-display">2026-06-10</span>
+            <button onclick="navigateTaskDate(1)">▶</button>
+        </div>
+        
+        <!-- Progress Bar -->
+        <div class="task-progress-container">
+            <div class="task-progress-text">
+                <span>진행률</span>
+                <span id="task-progress-percent">0%</span>
+            </div>
+            <div class="task-progress-track">
+                <div class="task-progress-bar" id="task-progress-bar" style="width: 0%;"></div>
+            </div>
+            <div style="font-size: 11px; text-align: center; margin-top: 6px; color: #cbd5e1;" id="task-progress-count">
+                0 / 0 완료
+            </div>
+        </div>
+        
+        <!-- Checklist -->
+        <ul class="task-list" id="task-list">
+            <!-- Items loaded dynamically -->
+        </ul>
+        
+        <!-- Add Task Form -->
+        <form class="task-add-form" id="today-add-form" onsubmit="addTaskFromForm(event)">
+            <input type="text" id="new-task-text" placeholder="새 할일을 입력..." required autocomplete="off">
+            <button type="submit">추가</button>
+        </form>
+        
+        <button class="btn-side-action" id="task-refresh-btn" onclick="fetchTasks()" style="margin-top: 15px; margin-bottom: 0;">
+            🔄 동기화 및 새로고침
+        </button>
+    </div>
+
+    <!-- Edit Modal Overlay -->
+    <div id="editor-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-date-title">일정 편집</h3>
+                <span class="modal-close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="existing-events-title">등록된 일정:</div>
+                <div id="modal-event-list" class="modal-event-list">
+                    <!-- Events will be listed here -->
+                </div>
+                <div class="new-event-form">
+                    <div class="form-title">새 일정 추가:</div>
+                    <div class="form-row">
+                        <input type="text" id="new-event-text" placeholder="일정 내용을 입력하세요" class="form-input">
+                    </div>
+                    <div class="form-row">
+                        <select id="new-event-type" class="form-select">
+                            <option value="exhibit">박람회(초록색)</option>
+                            <option value="open">모델하우스(파란색)</option>
+                            <option value="shoot">촬영/출장 (보라색)</option>
+                            <option value="build">공사/착공 (주황색)</option>
+                            <option value="meeting">내부회의/마감 (빨간색)</option>
+                            <option value="edit">인쇄/편집작업 (남색)</option>
+                            <option value="plan">기획/완료작업 (청록색)</option>
+                        </select>
+                        <button onclick="addEventFromForm()" class="btn-add-evt">추가</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button onclick="saveChanges()" class="btn-save">저장</button>
+                <button onclick="closeModal()" class="btn-cancel">취소</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 로컬 일정 데이터 가져오기 -->
+    <script src="events.js"></script>
+    <!-- 오늘 할일 데이터 (파일 직접 열기 모드 지원) -->
+    <script src="tasks.js"></script>
+
+    <script>
+        let isServerMode = false;
+        let activeEvents = {};
+        let externalIcsEvents = [];
+        let editingDateStr = "";
+        let editingEvents = [];
+        let taskDate = new Date();
+        let tasks = [];
+
+        async function initScheduleData() {
+            const savedData = localStorage.getItem('localCalendarEvents');
+            activeEvents = savedData ? JSON.parse(savedData) : (typeof calendarEvents !== 'undefined' ? JSON.parse(JSON.stringify(calendarEvents)) : {});
+            
+            let icsConfig = { path: "../기획부 회의/260609_기획부회의/더존하우징_기획부_일정.ics", url: "" };
+            const savedConfig = localStorage.getItem('calendarIcsConfig');
+            if (savedConfig) try { icsConfig = JSON.parse(savedConfig); } catch (e) {}
+            document.getElementById('ics-path-input').value = icsConfig.path || "";
+            document.getElementById('ics-url-input').value = icsConfig.url || "";
+            
+            checkServerStatus();
+            await syncFromIcsSources(false);
+        }
+
+        function checkServerStatus() {
+            fetch('/api/save', { method: 'OPTIONS' })
+                .then(() => {
+                    isServerMode = true;
+                    const widget = document.getElementById('mode-widget');
+                    if (widget) {
+                        widget.className = 'mode-indicator mode-server';
+                        widget.innerHTML = '<span></span> 서버 모드 (실시간 연동 중)';
+                    }
+                    const syncBtn = document.getElementById('btn-sync-desktopcal');
+                    if (syncBtn) syncBtn.style.display = 'flex';
+                    
+                    // Sync events from server database dynamically to bypass browser caching
+                    fetch('/api/load_events?t=' + Date.now())
+                        .then(res => res.json())
+                        .then(data => {
+                            activeEvents = data;
+                            localStorage.setItem('localCalendarEvents', JSON.stringify(activeEvents));
+                            renderAllCalendars();
+                        })
+                        .catch(err => {
+                            console.error("Failed to load events from server:", err);
+                        });
+                    
+                    // 서버 모드 확인 후 오늘 할일 자동 불러오기
+                    fetchTasks();
+                })
+                .catch(() => {
+                    isServerMode = false;
+                    const widget = document.getElementById('mode-widget');
+                    if (widget) {
+                        widget.className = 'mode-indicator mode-local';
+                        widget.innerHTML = '<span></span> 로컬 모드 (임시 저장)';
+                    }
+                });
+        }
+
+        async function syncFromIcsSources(alertOnSuccess = true) {
+            const pathVal = document.getElementById('ics-path-input').value.trim();
+            const urlVal = document.getElementById('ics-url-input').value.trim();
+            localStorage.setItem('calendarIcsConfig', JSON.stringify({ path: pathVal, url: urlVal }));
+            externalIcsEvents = [];
+            
+            if (pathVal) {
+                try {
+                    const res = await fetch(isServerMode ? `/api/read_local_ics?path=${encodeURIComponent(pathVal)}` : pathVal);
+                    if (res.ok) externalIcsEvents = externalIcsEvents.concat(parseICS(await res.text()));
+                } catch (e) {}
+            }
+            if (urlVal) {
+                try {
+                    const res = await fetch(`/api/fetch_ics?url=${encodeURIComponent(urlVal)}`);
+                    if (res.ok) externalIcsEvents = externalIcsEvents.concat(parseICS(await res.text()));
+                } catch (e) {}
+            }
+            renderAllCalendars();
+            if (alertOnSuccess) alert("외부 일정 연동 처리 완료.");
+        }
+
+        function parseICS(icsText) {
+            const events = [];
+            const veventRegex = /BEGIN:VEVENT([\s\S]*?)END:VEVENT/g;
+            let match;
+            while ((match = veventRegex.exec(icsText)) !== null) {
+                const event = {};
+                match[1].split(/\r?\n/).forEach(line => {
+                    const idx = line.indexOf(':');
+                    if (idx > -1) event[line.substring(0, idx).split(';')[0].toUpperCase()] = line.substring(idx + 1).trim();
+                });
+                if (event.DTSTART && event.SUMMARY) {
+                    const start = parseICSDate(event.DTSTART);
+                    const end = event.DTEND ? parseICSDate(event.DTEND) : new Date(start);
+                    if (!event.DTSTART.includes('T') && event.DTEND) end.setDate(end.getDate() - 1);
+                    events.push({ type: "meeting", text: event.SUMMARY.replace(/^\[[^\]]+\]\s*/, ''), start: normalizeDate(start), end: normalizeDate(end) });
+                }
+            }
+            return events;
+        }
+
+        function parseICSDate(d) {
+            return new Date(d.substring(0,4), parseInt(d.substring(4,6))-1, d.substring(6,8), d.split('T')[1]?.substring(0,2)||0, d.split('T')[1]?.substring(2,4)||0);
+        }
+
+        function normalizeDate(d) {
+            const nd = new Date(d); nd.setHours(0,0,0,0); return nd;
+        }
+
+        function processActiveEvents() {
+            const singleEvents = [];
+            for (const [dateStr, evts] of Object.entries(activeEvents)) {
+                evts.forEach(evt => singleEvents.push({ date: new Date(dateStr.substring(0,4), parseInt(dateStr.substring(4,6))-1, dateStr.substring(6,8)), ...evt }));
+            }
+            
+            const taskDates = new Set();
+            for (let i=0; i<localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key.startsWith('tasks_')) taskDates.add(key.replace('tasks_', ''));
+            }
+            if (typeof savedTasks !== 'undefined') {
+                Object.keys(savedTasks).forEach(k => taskDates.add(k));
+            }
+            const curTaskDateStr = taskDate.getFullYear() + '-' + String(taskDate.getMonth()+1).padStart(2,'0') + '-' + String(taskDate.getDate()).padStart(2,'0');
+            taskDates.add(curTaskDateStr);
+            
+            taskDates.forEach(dateStr => {
+                let dayTasks = [];
+                const saved = localStorage.getItem('tasks_' + dateStr);
+                const jsTasks = (typeof savedTasks !== 'undefined' && savedTasks[dateStr]) ? savedTasks[dateStr] : null;
+                
+                if (saved) {
+                    const localTasks = JSON.parse(saved);
+                    if (jsTasks && jsTasks.length > localTasks.length) dayTasks = jsTasks;
+                    else dayTasks = localTasks;
+                } else if (jsTasks) {
+                    dayTasks = jsTasks;
+                }
+                
+                if (dateStr === curTaskDateStr) {
+                    dayTasks = tasks;
+                }
+                
+                if (!dayTasks || !Array.isArray(dayTasks)) return;
+                
+                const y = parseInt(dateStr.substring(0,4));
+                const m = parseInt(dateStr.substring(5,7)) - 1;
+                const d = parseInt(dateStr.substring(8,10));
+                
+                dayTasks.filter(t => t.completed).forEach(t => {
+                    singleEvents.push({
+                        date: new Date(y, m, d),
+                        type: 'task',
+                        text: t.text.replace(/\*\*(.*?)\*\*/g, '$1'),
+                        completed: true
+                    });
+                });
+            });
+
+            return singleEvents.map((item, idx) => ({ ...item, id: "local-" + idx, start: item.date, end: item.date }));
+        }
+
+        function getMergedEvents() {
+            const merged = JSON.parse(JSON.stringify(activeEvents));
+            const taskDates = new Set();
+            for (let i=0; i<localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key.startsWith('tasks_')) taskDates.add(key.replace('tasks_', ''));
+            }
+            if (typeof savedTasks !== 'undefined') {
+                Object.keys(savedTasks).forEach(k => taskDates.add(k));
+            }
+            const curTaskDateStr = taskDate.getFullYear() + '-' + String(taskDate.getMonth()+1).padStart(2,'0') + String(taskDate.getDate()).padStart(2,'0');
+            taskDates.add(curTaskDateStr);
+            
+            taskDates.forEach(dateStr => {
+                let dayTasks = [];
+                const saved = localStorage.getItem('tasks_' + dateStr);
+                const jsTasks = (typeof savedTasks !== 'undefined' && savedTasks[dateStr]) ? savedTasks[dateStr] : null;
+                
+                if (saved) {
+                    const localTasks = JSON.parse(saved);
+                    if (jsTasks && jsTasks.length > localTasks.length) dayTasks = jsTasks;
+                    else dayTasks = localTasks;
+                } else if (jsTasks) {
+                    dayTasks = jsTasks;
+                }
+                
+                if (dateStr === curTaskDateStr) {
+                    dayTasks = tasks;
+                }
+                
+                if (!dayTasks || !Array.isArray(dayTasks)) return;
+                
+                const dateKey = dateStr.replace(/-/g, '');
+                
+                dayTasks.filter(t => t.completed).forEach(t => {
+                    if (!merged[dateKey]) {
+                        merged[dateKey] = [];
+                    }
+                    const exists = merged[dateKey].some(e => e.type === 'task' && e.text === t.text);
+                    if (!exists) {
+                        merged[dateKey].push({
+                            type: 'task',
+                            text: t.text.replace(/\*\*(.*?)\*\*/g, '$1'),
+                            completed: true
+                        });
+                    }
+                });
+            });
+            
+            return merged;
+        }
+
+        function renderMonth(year, month, containerId) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            const firstDay = new Date(year, month - 1, 1).getDay();
+            const totalDays = new Date(year, month, 0).getDate();
+            const today = new Date();
+            const todayY = today.getFullYear(), todayM = today.getMonth()+1, todayD = today.getDate();
+            const localEvts = processActiveEvents();
+            const allEvts = localEvts.concat(externalIcsEvents);
+            let gridHtml = '';
+            const numWeeks = Math.ceil((firstDay + totalDays) / 7);
+            for (let w = 0; w < numWeeks; w++) {
+                const weekStart = new Date(year, month-1, 1-firstDay+w*7); weekStart.setHours(0,0,0,0);
+                const weekEnd   = new Date(year, month-1, 1-firstDay+w*7+6); weekEnd.setHours(23,59,59,999);
+                gridHtml += '<div class="cal-week-row">';
+                // 배경 날짜 셀
+                gridHtml += '<div class="cal-week-bg-grid">';
+                for (let d = 0; d < 7; d++) {
+                    const cellDate = new Date(year, month-1, 1-firstDay+w*7+d);
+                    const cY = cellDate.getFullYear(), cM = cellDate.getMonth()+1, cD = cellDate.getDate();
+                    const dateKey = `${cY}${String(cM).padStart(2,'0')}${String(cD).padStart(2,'0')}`;
+                    const isCurrentMonth = cellDate.getMonth() === month-1;
+                    const isToday = cY===todayY && cM===todayM && cD===todayD;
+                    let cls = 'cal-day-cell';
+                    if (!isCurrentMonth) cls += ' empty';
+                    else if (isToday) cls += ' today';
+                    const dow = cellDate.getDay();
+                    let dStyle = dow===0 ? 'color:#b91c1c;' : dow===6 ? 'color:#2563eb;' : '';
+                    if (!isCurrentMonth) dStyle += 'opacity:0.3;';
+                    const click = isCurrentMonth ? `onclick="openModal('${dateKey}',${cY},${cM},${cD})"` : '';
+                    gridHtml += `<div class="${cls}" ${click}>`;
+                    if (isCurrentMonth && isToday) {
+                        gridHtml += `<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><span style="background:var(--accent);color:white;font-size:8px;font-weight:800;padding:2px 4px;border-radius:3px;">TODAY</span><span class="cal-day-num" style="${dStyle}margin:0;">${cD}</span></div>`;
+                    } else {
+                        gridHtml += `<div class="cal-day-num" style="${dStyle}">${isCurrentMonth ? cD : cD}</div>`;
+                    }
+                    gridHtml += '</div>';
+                }
+                gridHtml += '</div>'; // .cal-week-bg-grid
+                // 이벤트 바 오버레이
+                const weekEvts = [];
+                allEvts.forEach(evt => {
+                    if (evt.start <= weekEnd && evt.end >= weekStart) {
+                        const ss = evt.start < weekStart ? weekStart : evt.start;
+                        const se = evt.end > weekEnd ? weekEnd : evt.end;
+                        weekEvts.push({ event:evt, startCol:ss.getDay()+1, endCol:se.getDay()+1, isStart:evt.start>=weekStart, isEnd:evt.end<=weekEnd });
+                    }
+                });
+                weekEvts.sort((a,b) => (b.event.end-b.event.start)-(a.event.end-a.event.start));
+                const tracks = [];
+                weekEvts.forEach(item => {
+                    let t = tracks.findIndex(tr => !tr.some(e => item.startCol<=e.endCol && item.endCol>=e.startCol));
+                    if (t===-1) { t = tracks.length; tracks.push([]); }
+                    tracks[t].push(item); item.track = t+1;
+                });
+                gridHtml += '<div class="cal-week-events-grid">';
+                weekEvts.forEach(item => {
+                    const e = item.event;
+                    let bc = `cal-event-bar bar-${e.type}`;
+                    bc += item.isStart ? ' bar-start' : ' bar-not-start';
+                    bc += item.isEnd ? ' bar-end' : ' bar-not-end';
+                    if (e.completed) bc += ' completed';
+                    const displayText = e.completed ? '✓ ' + e.text : e.text;
+                    const st = `grid-column:${item.startCol}/${item.endCol+1};grid-row:${item.track};`;
+                    const ca = e.id && e.id.startsWith('local-') ? `onclick="event.stopPropagation();openModal('${e.start.getFullYear()}${String(e.start.getMonth()+1).padStart(2,'0')}${String(e.start.getDate()).padStart(2,'0')}',${e.start.getFullYear()},${e.start.getMonth()+1},${e.start.getDate()})"` : '';
+                    let linkIconHtml = '';
+                    if (e.link) {
+                        linkIconHtml = `<span style="background: rgba(255, 255, 255, 0.85); border-radius: 2px; padding: 0 2px; margin-right: 3px; font-size: 7.5px; color: var(--primary); font-weight: 800; display: inline-block; cursor: pointer; border: 1px solid rgba(0,0,0,0.15); line-height: 1;" onclick="event.stopPropagation(); window.open('${e.link}', '_blank');" title="회의록 보기">📎 회의록</span>`;
+                    }
+                    gridHtml += `<div class="${bc}" style="${st}" title="${displayText}" ${ca}><span>${linkIconHtml}${displayText}</span></div>`;
+                });
+                gridHtml += '</div>'; // .cal-week-events-grid
+                gridHtml += '</div>'; // .cal-week-row
+            }
+            container.innerHTML = gridHtml;
+        }
+
+        function renderAllCalendars() {
+            const today = new Date();
+            const cy = today.getFullYear();
+            const cm = today.getMonth() + 1;
+            const ny = cm === 12 ? cy + 1 : cy;
+            const nm = cm === 12 ? 1 : cm + 1;
+            const enNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+            document.getElementById('page1-title').innerText = `📅 ${cy}년 ${cm}월(${enNames[cm-1]})`;
+            document.getElementById('page2-title').innerText = `📅 ${ny}년 ${nm}월(${enNames[nm-1]})`;
+            const printDateStr = `${cy}년 ${cm}월 ${today.getDate()}일`;
+            document.getElementById('page1-footer').innerText = `더존하우징 기획본부 기획부 | 출력일자: ${printDateStr}`;
+            document.getElementById('page2-footer').innerText = `더존하우징 기획본부 기획부 | 출력일자: ${printDateStr}`;
+            renderMonth(cy, cm, 'june-grid');
+            renderMonth(ny, nm, 'july-grid');
+        }
+
+        function openModal(dateStr, y, m, d) {
+            editingDateStr = dateStr;
+            editingEvents = activeEvents[dateStr] ? JSON.parse(JSON.stringify(activeEvents[dateStr])) : [];
+            document.getElementById('modal-date-title').innerText = `${y}년 ${m}월 ${d}일 편집`;
+            updateModalEventList();
+            document.getElementById('editor-modal').style.display = 'flex';
+        }
+
+        function updateModalEventList() {
+            document.getElementById('modal-event-list').innerHTML = editingEvents.map((evt, i) => {
+                const isCompleted = evt.completed ? true : false;
+                const textStyle = isCompleted ? 'text-decoration: line-through; color: #94a3b8;' : '';
+                const linkHtml = evt.link ? `<a href="${evt.link}" target="_blank" style="margin-left: 6px; padding: 2px 6px; background: var(--accent); color: white; border-radius: 4px; font-size: 10px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 2px;" onclick="event.stopPropagation();">📎 회의록 보기</a>` : '';
+                return `<div class="modal-event-item" style="gap: 8px;">
+                    <input type="checkbox" onchange="toggleEventCompleted(${i}, this.checked)" ${isCompleted ? 'checked' : ''} style="cursor: pointer; width: 14px; height: 14px;">
+                    <span class="modal-event-text" style="${textStyle}">${evt.text}${linkHtml}</span>
+                    <button class="btn-del-evt" onclick="deleteEvent(${i})">삭제</button>
+                </div>`;
+            }).join('');
+        }
+
+        function toggleEventCompleted(i, isChecked) {
+            editingEvents[i].completed = isChecked;
+            updateModalEventList();
+        }
+
+        function addEventFromForm() {
+            const text = document.getElementById('new-event-text').value;
+            if (text) { editingEvents.push({ type: document.getElementById('new-event-type').value, text }); updateModalEventList(); }
+        }
+
+        function deleteEvent(i) { editingEvents.splice(i, 1); updateModalEventList(); }
+
+        async function saveChanges() {
+            if (editingEvents.length > 0) activeEvents[editingDateStr] = editingEvents;
+            else delete activeEvents[editingDateStr];
+            localStorage.setItem('localCalendarEvents', JSON.stringify(activeEvents));
+            renderAllCalendars(); closeModal();
+            if (isServerMode) {
+                try {
+                    await fetch('/api/save', {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify(activeEvents)
+                    });
+                } catch(e) { console.error("Failed to save events to server:", e); }
+            }
+        }
+
+        function closeModal() { document.getElementById('editor-modal').style.display = 'none'; }
+
+        function initTasksData() {
+            const isCollapsed = localStorage.getItem('taskPanelCollapsed') === 'true';
+            const panel = document.querySelector('.task-panel');
+            const content = document.querySelector('.main-content');
+            const btn = document.getElementById('task-panel-toggle-icon');
+            if (panel && content && btn) {
+                if (isCollapsed) {
+                    panel.classList.add('collapsed'); content.classList.add('full-width'); btn.innerText = '\u25c0';
+                } else {
+                    panel.classList.remove('collapsed'); content.classList.remove('full-width'); btn.innerText = '\u25b6';
+                }
+            }
+            updateTaskDateDisplay();
+            // isServerMode 결정 이전이므로 서버 직접 시도 후 fallback
+            fetchTasks();
+        }
+
+        function updateTaskDateDisplay() {
+            const d = taskDate;
+            document.getElementById('task-date-display').innerText =
+                d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+        }
+
+        function navigateTaskDate(offset) {
+            taskDate.setDate(taskDate.getDate() + offset);
+            updateTaskDateDisplay();
+            fetchTasks();
+        }
+        async function fetchTasks() {
+            const d = taskDate;
+            const dateStr = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+
+            // 1순위: 서버 API (localhost 서버 실행 중일 때)
+            try {
+                const res = await fetch('/api/get_tasks?date=' + dateStr);
+                if (res.ok) {
+                    const serverTasks = await res.json();
+                    if (Array.isArray(serverTasks)) {
+                        tasks = serverTasks;
+                        localStorage.setItem('tasks_' + dateStr, JSON.stringify(tasks));
+                        await carryOverUncompletedTasks(dateStr);
+                        renderTasks();
+                        return;
+                    }
+                }
+            } catch(e) { /* 서버 없을 때 다음으로 */ }
+
+            // tasks.js 데이터 확인
+            const jsTasks = (typeof savedTasks !== 'undefined' && savedTasks[dateStr])
+                ? JSON.parse(JSON.stringify(savedTasks[dateStr]))
+                : null;
+
+            // 2순위: localStorage와 tasks.js 비교 후 더 많은 항목을 가진 쪽 우선
+            const saved = localStorage.getItem('tasks_' + dateStr);
+            if (saved) {
+                const localTasks = JSON.parse(saved);
+                if (jsTasks && jsTasks.length > localTasks.length) {
+                    tasks = jsTasks;
+                    localStorage.setItem('tasks_' + dateStr, JSON.stringify(tasks));
+                } else {
+                    tasks = localTasks;
+                }
+                await carryOverUncompletedTasks(dateStr);
+                renderTasks();
+                return;
+            }
+
+            // 3순위: tasks.js 파일 (file:// 모드 지원)
+            if (jsTasks) {
+                tasks = jsTasks;
+                await carryOverUncompletedTasks(dateStr);
+                renderTasks();
+                return;
+            }
+
+            // 없으면 빈 목록
+            tasks = [];
+            await carryOverUncompletedTasks(dateStr);
+            renderTasks();
+        }
+
+        async function carryOverUncompletedTasks(currentDateStr) {
+            const allDates = new Set();
+            for (let i=0; i<localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key.startsWith('tasks_')) {
+                    allDates.add(key.replace('tasks_', ''));
+                }
+            }
+            if (typeof savedTasks !== 'undefined') {
+                Object.keys(savedTasks).forEach(k => allDates.add(k));
+            }
+            
+            const sortedDates = Array.from(allDates).sort();
+            let currentTasksChanged = false;
+            
+            for (const prevDateStr of sortedDates) {
+                if (prevDateStr >= currentDateStr) continue;
+                
+                let prevTasks = [];
+                const saved = localStorage.getItem('tasks_' + prevDateStr);
+                const jsTasks = (typeof savedTasks !== 'undefined' && savedTasks[prevDateStr]) 
+                    ? JSON.parse(JSON.stringify(savedTasks[prevDateStr])) 
+                    : null;
+                    
+                if (saved) {
+                    const localTasks = JSON.parse(saved);
+                    if (jsTasks && jsTasks.length > localTasks.length) prevTasks = jsTasks;
+                    else prevTasks = localTasks;
+                } else if (jsTasks) {
+                    prevTasks = jsTasks;
+                }
+                
+                if (!prevTasks || !Array.isArray(prevTasks) || prevTasks.length === 0) continue;
+                
+                const uncompleted = prevTasks.filter(t => !t.completed);
+                const completed = prevTasks.filter(t => t.completed);
+                
+                if (uncompleted.length > 0) {
+                    // Update previous day (only keep completed)
+                    localStorage.setItem('tasks_' + prevDateStr, JSON.stringify(completed));
+                    if (isServerMode) {
+                        try {
+                            await fetch('/api/save_tasks', {
+                                method: 'POST',
+                                headers: {'Content-Type': 'application/json'},
+                                body: JSON.stringify({ date: prevDateStr, tasks: completed })
+                            });
+                        } catch (e) { console.error("Failed to update prev date tasks on server:", e); }
+                    }
+                    
+                    // Add uncompleted to current day
+                    uncompleted.forEach(task => {
+                        const exists = tasks.some(t => t.text === task.text);
+                        if (!exists) {
+                            tasks.push({ text: task.text, completed: false });
+                            currentTasksChanged = true;
+                        }
+                    });
+                }
+            }
+            
+            if (currentTasksChanged) {
+                localStorage.setItem('tasks_' + currentDateStr, JSON.stringify(tasks));
+                if (isServerMode) {
+                    try {
+                        await fetch('/api/save_tasks', {
+                            method: 'POST',
+                            headers: {'Content-Type': 'application/json'},
+                            body: JSON.stringify({ date: currentDateStr, tasks: tasks })
+                        });
+                    } catch (e) { console.error("Failed to save current tasks on server:", e); }
+                }
+                renderAllCalendars();
+            }
+        }
+
+        async function saveTasks() {
+            const d = taskDate;
+            const dateStr = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+            localStorage.setItem('tasks_' + dateStr, JSON.stringify(tasks));
+            renderTasks();
+            renderAllCalendars(); // Update calendar in real-time
+            try {
+                await fetch('/api/save_tasks', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ date: dateStr, tasks: tasks })
+                });
+            } catch(e) { /* 서버 없을 경우 localStorage만 사용 */ }
+        }
+
+        function renderTasks() {
+            const listContainer = document.getElementById('task-list');
+            listContainer.innerHTML = '';
+            if (tasks.length === 0) {
+                listContainer.innerHTML = '<li style="color:#94a3b8; font-size:12.5px; text-align:center; padding:30px 10px; line-height:1.5;">등록된 할일이 없습니다.<br><span style="font-size:11px; opacity:0.7;">아래에서 추가해보세요.</span></li>';
+                updateTaskProgress(0, 0);
+                return;
+            }
+            let completedCount = 0;
+            tasks.forEach((t, index) => {
+                if (t.completed) completedCount++;
+                const li = document.createElement('li');
+                li.className = 'task-item' + (t.completed ? ' completed' : '');
+                let displayText = escapeHtml(t.text).replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                li.innerHTML = `<label class="task-checkbox-wrapper"><input type="checkbox" class="task-checkbox" ${t.completed ? 'checked' : ''} onchange="toggleTask(${index}, this.checked)"></label><span class="task-text">${displayText}</span><button class="btn-task-del" onclick="deleteTask(${index})" title="삭제">&times;</button>`;
+                listContainer.appendChild(li);
+            });
+            updateTaskProgress(completedCount, tasks.length);
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+        }
+
+        function updateTaskProgress(completed, total) {
+            const percent = total > 0 ? Math.round((completed / total) * 100) : 0;
+            document.getElementById('task-progress-bar').style.width = percent + '%';
+            document.getElementById('task-progress-percent').innerText = percent + '%';
+            document.getElementById('task-progress-count').innerText = completed + ' / ' + total + ' 완료';
+        }
+
+        function toggleTaskPanel() {
+            const panel = document.querySelector('.task-panel');
+            const content = document.querySelector('.main-content');
+            const btn = document.getElementById('task-panel-toggle-icon');
+            panel.classList.toggle('collapsed');
+            content.classList.toggle('full-width');
+            btn.innerText = panel.classList.contains('collapsed') ? '◀' : '▶';
+            localStorage.setItem('taskPanelCollapsed', panel.classList.contains('collapsed'));
+        }
+
+        function toggleTask(index, isChecked) {
+            tasks[index].completed = isChecked;
+            saveTasks();
+        }
+
+        function addTaskFromForm(e) {
+            e.preventDefault();
+            const input = document.getElementById('new-task-text');
+            const text = input.value.trim();
+            if (!text) return;
+            tasks.push({ text: text, completed: false });
+            input.value = '';
+            saveTasks();
+        }
+
+        function deleteTask(index) {
+            if (confirm('"' + tasks[index].text + '" ???쇱쓣 삭제?섏떆寃좎뒿?덇퉴?')) {
+                tasks.splice(index, 1);
+                saveTasks();
+            }
+        }
+
+        function resetToDefault() {
+            if (confirm('紐⑤뱺 ?섏젙 ?ы빆??吏?곌퀬 珥덇린?뷀븯?쒓쿋?듬땲源?')) {
+                localStorage.removeItem('localCalendarEvents');
+                activeEvents = (typeof calendarEvents !== 'undefined') ? JSON.parse(JSON.stringify(calendarEvents)) : {};
+                renderAllCalendars();
+            }
+        }
+
+        function exportEventsFile() {
+            const jsContent = '// 더존하우징 기획부 일정 데이터 파일\nconst calendarEvents = ' + JSON.stringify(activeEvents, null, 4) + ';\n';
+            const blob = new Blob([jsContent], { type: 'application/javascript;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url; link.download = 'events.js';
+            document.body.appendChild(link); link.click();
+            document.body.removeChild(link); URL.revokeObjectURL(url);
+        }
+
+        function exportToIcsFile() {
+            let ics = 'BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//더존하우징/일정표/KO\r\nCALSCALE:GREGORIAN\r\n';
+            const merged = getMergedEvents();
+            const typePrefixes = {
+                "exhibit": "[박람회] ",
+                "open": "[모델하우스] ",
+                "shoot": "[출장/촬영] ",
+                "build": "[공사/착공] ",
+                "meeting": "[회의/마감] ",
+                "edit": "[인쇄] ",
+                "plan": "[기획] ",
+                "task": "[할일] "
+            };
+            for (const [dateStr, evts] of Object.entries(merged)) {
+                if (!evts) continue;
+                evts.forEach(evt => {
+                    const d = new Date(dateStr.substring(0,4), parseInt(dateStr.substring(4,6))-1, parseInt(dateStr.substring(6,8))+1);
+                    const dtEnd = d.getFullYear() + String(d.getMonth()+1).padStart(2,'0') + String(d.getDate()).padStart(2,'0');
+                    const prefix = typePrefixes[evt.type] || "";
+                    const completedStr = evt.completed ? "✓" : "";
+                    const summary = `${prefix}${completedStr}${evt.text}`;
+                    ics += 'BEGIN:VEVENT\r\nUID:' + dateStr + '-' + Math.random() + '@dujone\r\nDTSTART;VALUE=DATE:' + dateStr + '\r\nDTEND;VALUE=DATE:' + dtEnd + '\r\nSUMMARY:' + summary + '\r\nEND:VEVENT\r\n';
+                });
+            }
+            ics += 'END:VCALENDAR\r\n';
+            const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url; link.download = '더존하우징_기획부_일정.ics';
+            document.body.appendChild(link); link.click();
+            document.body.removeChild(link); URL.revokeObjectURL(url);
+        }
+
+        async function syncWithDesktopCal() {
+            if (!isServerMode) {
+                alert("서버 모드에서만 바탕화면 달력 동기화가 가능합니다. bat 실행기 창을 켜주세요.");
+                return;
+            }
+            
+            const btn = document.getElementById('btn-sync-desktopcal');
+            const originalHtml = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = '⏳ 동기화 진행 중..';
+            
+            try {
+                const res = await fetch('/api/sync_desktopcal', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(getMergedEvents())
+                });
+                const result = await res.json();
+                if (res.ok) {
+                    alert(result.message || "바탕화면 달력 동기화가 성공했습니다.");
+                } else {
+                    alert("동기화 실패: " + (result.error || "알 수 없는 오류"));
+                }
+            } catch (e) {
+                alert("동기화 오류: 서버와의 통신에 실패했습니다.");
+                console.error(e);
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = originalHtml;
+            }
+        }
+
+        // 초기 실행
+        window.addEventListener('DOMContentLoaded', () => {
+            initTasksData();
+            initScheduleData();
+        });
+    </script>
+</body>
+</html>
+

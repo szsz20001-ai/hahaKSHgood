@@ -1,0 +1,26 @@
+# Obsidian workspace state
+.obsidian/workspace
+.obsidian/workspace.json
+
+# Exclude node_modules
+**/node_modules/
+
+# Exclude OS metadata
+.DS_Store
+Thumbs.db
+._*
+
+# Exclude large video and camera raw files
+*.mp4
+*.MP4
+*.mts
+*.MTS
+*.mov
+*.MOV
+*.LRF
+*.THM
+
+# Exclude audio files
+*.mp3
+*.wav
+*.WAV

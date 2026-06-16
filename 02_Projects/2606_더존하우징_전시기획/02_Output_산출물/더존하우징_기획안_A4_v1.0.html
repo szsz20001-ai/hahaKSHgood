@@ -1,0 +1,1429 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>더존하우징 박람회 부스 차별화 기획안 (A4 가로 인쇄용)</title>
+    <!-- Google Fonts for Print & Web -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            /* Clean Light Theme for Ink-saving & High Readability in Print */
+            --color-bg-web: #E5E7EB;
+            --color-bg-page: #FFFFFF;
+            --color-text-primary: #111827;
+            --color-text-secondary: #4B5563;
+            --color-text-muted: #9CA3AF;
+            --color-accent: #B08D5B; /* Premium Matte Gold */
+            --color-navy: #1E293B; /* Slate Navy */
+            --color-border: #E5E7EB;
+            --color-bubble-docent: #F1F5F9;
+            --color-bubble-client: #FAF8F5;
+            
+            --font-main: 'Noto Sans KR', sans-serif;
+            --font-ui: 'Outfit', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: var(--color-text-primary);
+            font-family: var(--font-main);
+            line-height: 1.5;
+            background-color: var(--color-bg-web);
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+            word-break: keep-all;
+        }
+
+        /* Print Control Bar (Screen Only - Landscape Width) */
+        .print-control-bar {
+            width: 297mm;
+            margin: 15px auto 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--color-navy);
+            padding: 12px 24px;
+            border-radius: 8px 8px 0 0;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .print-btn {
+            background: var(--color-accent);
+            color: white;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            font-family: var(--font-ui);
+            font-size: 0.9em;
+        }
+
+        .print-btn:hover {
+            background: #9A774A;
+        }
+
+        /* Page Layout: Styled as A4 Landscape on screen, raw on print */
+        .page {
+            background: var(--color-bg-page);
+            box-sizing: border-box;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Screen Preview Styling (A4 Landscape) */
+        @media screen {
+            .page {
+                width: 297mm;
+                height: 210mm;
+                margin: 0 auto 30px auto;
+                padding: 15mm 20mm 15mm 20mm;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+                border-radius: 0 0 4px 4px;
+                border: 1px solid #D1D5DB;
+            }
+            .page:first-of-type {
+                border-radius: 0;
+            }
+        }
+
+        /* Print Styling - Strict A4 Landscape sizing with no cutoff */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background-color: #FFFFFF;
+            }
+            .page {
+                width: 297mm;
+                height: 210mm;
+                padding: 15mm 20mm 15mm 20mm;
+                page-break-after: always;
+                break-after: page;
+                border: none;
+                box-shadow: none;
+            }
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        /* Header / Footer Design */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--color-navy);
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        .header-title {
+            font-family: var(--font-ui);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--color-navy);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-subtitle {
+            font-size: 0.75rem;
+            color: var(--color-text-secondary);
+        }
+
+        .page-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--color-border);
+            padding-top: 8px;
+            font-size: 0.75rem;
+            color: var(--color-text-muted);
+            margin-top: auto;
+        }
+
+        .page-number::before {
+            content: attr(data-page);
+        }
+
+        /* Grid Layouts for Landscape view */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .split-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 15px;
+        }
+
+        .split-col {
+            padding: 15px 20px;
+            background: #F8FAFC;
+            border-radius: 6px;
+            border: 1px solid var(--color-border);
+        }
+
+        .split-col.solution {
+            border-color: rgba(176, 141, 91, 0.3);
+            background: rgba(176, 141, 91, 0.02);
+        }
+
+        .split-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .split-title.alert {
+            color: #EF4444;
+        }
+
+        .split-title.check {
+            color: var(--color-navy);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 8px;
+            color: var(--color-text-secondary);
+            font-size: 0.82rem;
+        }
+
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: bold;
+        }
+
+        .split-col.problem li::before {
+            color: #EF4444;
+        }
+
+        /* Content Sections */
+        .content-section {
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--color-navy);
+            border-left: 4px solid var(--color-accent);
+            padding-left: 10px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title span.badge {
+            font-size: 0.72rem;
+            background: rgba(176, 141, 91, 0.1);
+            color: var(--color-accent);
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        /* Printable Table for Cue Sheets */
+        .cue-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 5px 0;
+        }
+
+        .cue-table th, .cue-table td {
+            border: 1px solid #CBD5E1;
+            padding: 8px 12px;
+            font-size: 0.8rem;
+            text-align: left;
+        }
+
+        .cue-table th {
+            background: #F1F5F9;
+            font-weight: 700;
+            color: var(--color-navy);
+        }
+
+        .cue-table td.time {
+            font-family: var(--font-ui);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Dialogue Box for Docent Scenario */
+        .dialogue-box {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 10px;
+            border-top: 1px dashed var(--color-border);
+            padding-top: 10px;
+        }
+
+        .bubble {
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            max-width: 90%;
+            line-height: 1.4;
+        }
+
+        .bubble.docent {
+            border-left: 3px solid var(--color-accent);
+            align-self: flex-start;
+            background: var(--color-bubble-docent);
+        }
+
+        .bubble.client {
+            border-right: 3px solid var(--color-navy);
+            align-self: flex-end;
+            background: var(--color-bubble-client);
+        }
+
+        .bubble-name {
+            font-weight: 700;
+            margin-bottom: 2px;
+            font-size: 0.75rem;
+        }
+
+        .docent .bubble-name {
+            color: var(--color-accent);
+        }
+
+        .client .bubble-name {
+            color: var(--color-navy);
+        }
+
+                /* YouTube Channel Grid for Landscape (2 Columns, 5 per page) - Webpage Style adapted for Print */
+        .printable-creator-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 5px;
+        }
+
+        .creator-card-webstyle {
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background: #FFFFFF;
+            height: 215px; /* Fits exactly 2 rows on A4 landscape page */
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+            position: relative;
+        }
+
+        .creator-banner-top {
+            height: 55px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            background-color: #1a1815;
+            flex-shrink: 0;
+        }
+
+        .creator-banner-top::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0; height: 25px;
+            background: linear-gradient(to top, #FFFFFF, transparent);
+        }
+
+        .creator-profile-section-top {
+            padding: 0 12px;
+            position: relative;
+            margin-top: -24px; /* Overlap banner */
+            display: flex;
+            align-items: flex-end;
+            gap: 10px;
+            margin-bottom: 6px;
+            z-index: 2;
+        }
+
+        .creator-avatar-print {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2.5px solid #FFFFFF;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            object-fit: cover;
+            background: #FFFFFF;
+            flex-shrink: 0;
+        }
+
+        .creator-meta-print {
+            flex-grow: 1;
+            margin-bottom: 2px;
+            min-width: 0;
+        }
+
+        .creator-name-print {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--color-navy);
+            display: block;
+            line-height: 1.2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .creator-handle-print {
+            font-size: 0.65rem;
+            color: var(--color-accent);
+            font-family: var(--font-ui);
+            font-weight: 600;
+            display: block;
+        }
+
+        .creator-concept-tag-print {
+            font-size: 0.62rem;
+            background: rgba(176, 141, 91, 0.1);
+            color: var(--color-accent);
+            padding: 1px 6px;
+            border-radius: 10px;
+            font-weight: 700;
+            white-space: nowrap;
+            align-self: center;
+        }
+
+        .creator-details-print {
+            padding: 0 12px 10px 12px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-width: 0;
+        }
+
+        .creator-body-print {
+            font-size: 0.72rem;
+            color: var(--color-text-secondary);
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+
+        .creator-body-print strong {
+            color: var(--color-navy);
+        }
+
+        .recent-videos-title-print {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--color-accent);
+            margin-bottom: 5px;
+            border-bottom: 1px solid rgba(176, 141, 91, 0.12);
+            padding-bottom: 2px;
+        }
+
+        .recent-videos-grid-print {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+        }
+
+        .video-item-print {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            cursor: pointer;
+            min-width: 0;
+        }
+
+        .video-thumb-container-print {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 3px;
+            overflow: hidden;
+            background-color: #000;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .video-thumb-print {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-play-overlay-print {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-play-icon-print {
+            width: 10px;
+            height: 10px;
+            fill: #FFFFFF;
+        }
+
+        .video-title-print {
+            font-size: 0.58rem;
+            color: var(--color-text-primary);
+            margin-top: 2px;
+            font-weight: 500;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            line-height: 1.2;
+            height: 2.4em;
+        }
+
+        .video-meta-print {
+            font-size: 0.52rem;
+            color: var(--color-text-muted);
+            margin-top: 1px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Span 2 Card (Horizontal Layout for Page Harmony) */
+        .creator-card-webstyle.span-2 {
+            grid-column: span 2;
+            height: 155px; /* Shorter to fit the grid perfectly */
+            flex-direction: row;
+        }
+
+        .span2-left-banner {
+            width: 110px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            background-color: #1a1815;
+            flex-shrink: 0;
+        }
+
+        .span2-left-banner::after {
+            content: '';
+            position: absolute;
+            top: 0; bottom: 0; right: 0; width: 30px;
+            background: linear-gradient(to left, #FFFFFF, transparent);
+        }
+
+        .span2-avatar-container {
+            position: absolute;
+            top: 50%;
+            right: -22px;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        .span2-middle-details {
+            flex-grow: 1;
+            padding: 12px 12px 12px 32px; /* Extra left padding for overlapping avatar */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-width: 0;
+        }
+
+        .span2-creator-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 3px;
+            margin-bottom: 4px;
+        }
+
+        .span2-right-videos {
+            width: 265px;
+            flex-shrink: 0;
+            padding: 12px;
+            border-left: 1px dashed var(--color-border);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: #FAF8F5; /* subtle background tone */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Print Control Bar (Screen Only) -->
+    <div class="print-control-bar no-print">
+        <span><i class="fa-solid fa-file-pdf"></i> 회의용 가로 인쇄 미리보기 (A4 가로 규격 최적화)</span>
+        <button class="print-btn" onclick="window.print()"><i class="fa-solid fa-print"></i> PDF/인쇄하기 (Ctrl+P)</button>
+    </div>
+
+    <!-- PAGE 1: COVER & EXECUTIVE SUMMARY -->
+    <div class="page">
+        <!-- Header -->
+        <div class="page-header">
+            <span class="header-title">
+                <svg width="93" height="20" viewBox="0 0 149 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
+                    <path d="M59.0015 15.1655C59.0015 17.5381 58.2693 19.7282 56.8659 21.7358C55.4015 23.7434 53.5711 25.1427 51.3745 25.9336C50.2152 26.3594 48.9949 26.5419 47.7746 26.5419H38.9272V3.78906H47.7135C49.8491 3.78906 51.8626 4.39743 53.6931 5.55332C55.4626 6.70921 56.8659 8.23013 57.8422 10.1769C58.5744 11.8195 59.0015 13.4621 59.0015 15.1655ZM52.8389 15.1655C52.8389 13.5837 52.4118 12.2453 51.4965 11.0286C50.3372 9.44686 48.5678 8.71682 46.2492 8.71682H44.9068V21.6142H46.2492C48.5678 21.6142 50.3372 20.8233 51.4965 19.3024C52.3507 18.0856 52.8389 16.7472 52.8389 15.1655Z" fill="#2D2D2D" class="cl2"></path>
+                    <path d="M81.3333 16.9297C81.3333 18.329 81.2113 19.4849 81.0282 20.4583C80.6621 21.9792 79.8689 23.3176 78.5266 24.5951C76.6961 26.3594 74.1944 27.2111 71.0826 27.2111C67.9098 27.2111 65.4692 26.2986 63.6997 24.5343C62.7845 23.6218 62.1133 22.405 61.7472 21.0058C61.5031 20.0324 61.3811 18.6332 61.3811 16.9906V3.78906H67.2996V16.1389C67.2996 17.1123 67.2996 17.8423 67.3607 18.329C67.4827 19.8499 68.1539 20.945 69.4962 21.5533C70.0454 21.7967 70.5945 21.9183 71.2657 21.9183C72.7301 21.9183 73.8284 21.4316 74.5605 20.3974C75.1097 19.6674 75.3537 18.2073 75.3537 16.078V3.78906H81.2723V16.9297H81.3333Z" fill="#2D2D2D" class="cl2"></path>
+                    <path d="M96.0381 19.5475C96.0381 20.4601 95.9771 21.2509 95.8551 21.7985C95.611 23.076 94.9398 24.1711 93.8415 25.2053C92.3772 26.5437 90.6687 27.1521 88.5942 27.1521C86.1535 27.1521 84.14 26.057 82.6146 23.8061L86.5196 19.8517C86.7027 21.3118 87.3739 22.1027 88.4722 22.1027C89.6315 22.1027 90.1806 21.2509 90.1196 19.4867V3.79087H96.0381V19.5475Z" fill="#C3003B" class="cl1"></path>
+                    <path d="M123.739 15.2281C123.739 18.3308 122.702 21.0684 120.628 23.3802C118.248 26.057 115.075 27.3954 111.048 27.3954C107.021 27.3954 103.848 26.057 101.53 23.3802C99.455 21.0684 98.4177 18.3308 98.4177 15.2281C98.4177 13.8289 98.7228 12.3688 99.272 10.8479C99.8211 9.38783 100.553 8.11027 101.53 7.01521C103.909 4.3384 107.082 3 111.109 3C115.136 3 118.309 4.3384 120.689 7.01521C122.702 9.38783 123.739 12.1255 123.739 15.2281ZM117.577 15.2281C117.577 13.6464 117.089 12.2471 116.051 11.0304C114.709 9.50951 113.062 8.77947 111.109 8.77947C109.767 8.77947 108.485 9.14449 107.387 9.93536C106.289 10.7262 105.496 11.6996 105.007 12.9772C104.763 13.7072 104.58 14.4373 104.58 15.1673C104.58 16.6882 105.068 18.0875 106.106 19.3042C107.387 20.8251 109.035 21.5551 111.048 21.5551C113.062 21.5551 114.709 20.8251 115.99 19.3042C117.089 18.2091 117.577 16.8099 117.577 15.2281Z" fill="#C3003B" class="cl1"></path>
+                    <path d="M149 26.5437H143.02L132.099 12.5513V26.5437H126.18V3.79087H132.099L143.02 17.7224V3.79087H148.939V26.5437H149Z" fill="#C3003B" class="cl1"></path>
+                    <path d="M26.8469 7.91016V22.7543C26.8469 24.9444 25.0165 26.7695 22.8199 26.7695H21.2335C20.2572 28.8987 18.7318 30.7238 16.8403 32.0014H22.8809C28.0062 32.0014 32.1553 27.8645 32.1553 22.7543V7.91016H26.8469Z" fill="#C4003B" class="cl1"></path>
+                    <path d="M9.27442 0C4.14908 0 0 4.13688 0 9.24715V9.42966H5.24737V9.24715C5.24737 7.05703 7.01683 5.23194 9.27442 5.23194H24.0403V0H9.27442Z" fill="#C4003B" class="cl1"></path>
+                    <path d="M9.94559 11.5589H0V16.7909H9.94559C12.6913 16.7909 14.9489 19.0418 14.9489 21.7795C14.9489 24.5171 12.6913 26.7681 9.94559 26.7681H5.24737V18.8593H0V32H9.94559C15.6201 32 20.1963 27.4373 20.1963 21.7795C20.1963 16.1217 15.5591 11.5589 9.94559 11.5589Z" fill="#2D2D2D" class="cl2"></path>
+                    <path d="M32.1554 0H26.725V5.1711H32.1554V0Z" fill="#2D2D2D" class="cl2"></path>
+                </svg>
+                X CREATOR EXHIBITION
+            </span>
+            <span class="header-subtitle">회의용 기획 보고서</span>
+        </div>
+
+        <!-- Cover Title Block -->
+        <div class="content-section" style="text-align: center; margin-top: 15px; margin-bottom: 25px;">
+            <span style="font-family: var(--font-ui); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 4px; color: var(--color-accent); font-weight: 700; display: block; margin-bottom: 8px;">EXHIBITION MARKETING PROJECT</span>
+            <h1 style="font-size: 1.8rem; color: var(--color-navy); font-weight: 800; line-height: 1.3; margin-bottom: 10px;">
+                더존하우징 박람회 부스 차별화 및 크리에이터 협업 전시 마케팅 기획안
+            </h1>
+            <p style="font-size: 0.9rem; color: var(--color-text-secondary); max-width: 700px; margin: 0 auto; line-height: 1.5;">
+                기존 블록형 부스 시공사례 벽체 패널(90x90x25cm) 내 매립형 미디어 쇼케이스 구축 및 10인의 피지컬 크래프트 아티스트 콜라보 마케팅
+            </p>
+        </div>
+
+        <!-- Section 1: Problem & Solution (Editorial Layout) -->
+        <div class="content-section" style="margin-bottom: 0;">
+            <div class="section-title" style="margin-bottom: 12px;">
+                <span>1. 핵심 문제 정의 및 해결 방향 (Executive Summary)</span>
+                <span class="badge">현안 분석</span>
+            </div>
+            
+            <!-- Magazine-style 2-column Editorial Grid -->
+            <div style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 20px; align-items: stretch; margin-bottom: 5px;">
+                
+                <!-- Left Column: Content Cards (Problem & Solution stacked vertically) -->
+                <div style="display: flex; flex-direction: column; gap: 12px; justify-content: space-between;">
+                    <div class="split-col problem" style="margin-bottom: 0; padding: 12px 16px; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                        <div class="split-title alert" style="margin-bottom: 8px; font-size: 0.95rem;">
+                            <i class="fa-solid fa-triangle-exclamation"></i> 현황 및 문제점
+                        </div>
+                        <ul style="font-size: 0.82rem; line-height: 1.5; padding-left: 16px;">
+                            <li style="margin-bottom: 4px;"><strong>부스 디자인 카피캣 발생:</strong> 더존하우징만의 독창적 주택 디자인 요소를 타 경쟁업체들이 무분별하게 복제하여 박람회 내 시각적 변별력이 약화됨.</li>
+                            <li><strong>폐쇄형 부스 구조의 한계:</strong> 양측 벽체로 가로막힌 폐쇄적 공간 구성으로 인해, 부스 내부의 집객 활성화 상태가 외부 복도 통로에 노출되지 않음.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="split-col solution" style="margin-bottom: 0; padding: 12px 16px; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                        <div class="split-title check" style="margin-bottom: 8px; font-size: 0.95rem;">
+                            <i class="fa-solid fa-circle-check"></i> 해결 방향 (Solution)
+                        </div>
+                        <ul style="font-size: 0.82rem; line-height: 1.5; padding-left: 16px;">
+                            <li style="margin-bottom: 4px;"><strong>기존 블록형 부스 구조 유지:</strong> 더존하우징의 고유한 레드 스틸 프레임 and 시공사례 액자형 벽체 구성을 그대로 보존하여 브랜드 정체성 및 예산 절감 극대화.</li>
+                            <li><strong>벽체 매립형 빌트인 쇼케이스 (90x90x25cm):</strong> 외벽에 위치한 기존 시공사례/리플렛 패널 한 칸 규격을 입체 쇼케이스 박스로 개조, 크리에이터들의 주택 디오라마 모형과 메이킹 영상 재생용 디스플레이를 내장하여 지나가는 관람객 시선 확보.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Visual Feature (Mockup image with gradient backdrop, matching left height) -->
+                <div class="mockup-card-wrapper" style="margin-top: 0; border: 1px solid var(--color-border); border-radius: 6px; overflow: hidden; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); box-shadow: inset 0 0 15px rgba(0,0,0,0.02), 0 2px 8px rgba(0,0,0,0.06); position: relative; display: flex; align-items: center; justify-content: center; width: 100%;">
+                    <div style="width: 100%; height: 260px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+                        <img src="../01_Assets_작업소스/mockup_생성이미지/ai_booth_mockup_v1.png" alt="더존하우징 AI 생성 전시 부스 디자인" style="width: 100%; height: 100%; object-fit: cover; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.08));">
+                        
+                        <!-- Overlay Description Layer -->
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(30, 41, 59, 0.85); color: #FFFFFF; font-size: 0.62rem; text-align: center; font-weight: 600; padding: 6px 12px; display: flex; align-items: center; gap: 6px; justify-content: center; border-top: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(4px);">
+                            <i class="fa-solid fa-wand-magic-sparkles" style="color: var(--color-accent); font-size: 0.7rem;"></i> AI 생성 전시 부스 디자인 시뮬레이션 (시공사례 벽체 패널 한 칸(90x90x25cm)을 매립형 미디어 쇼케이스로 보완한 형태)
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="page-footer">
+            <span>더존하우징 기획본부 기획부 | 작성일자: 2026년 6월 15일</span>
+            <span class="page-number" data-page="1"></span>
+        </div>
+    </div>
+
+    <!-- PAGE 2: CREATOR LIST PART 1 (Creators 1 to 5) -->
+    <div class="page">
+        <!-- Header -->
+        <div class="page-header">
+            <span class="header-title">
+                <svg width="93" height="20" viewBox="0 0 149 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
+                    <path d="M59.0015 15.1655C59.0015 17.5381 58.2693 19.7282 56.8659 21.7358C55.4015 23.7434 53.5711 25.1427 51.3745 25.9336C50.2152 26.3594 48.9949 26.5419 47.7746 26.5419H38.9272V3.78906H47.7135C49.8491 3.78906 51.8626 4.39743 53.6931 5.55332C55.4626 6.70921 56.8659 8.23013 57.8422 10.1769C58.5744 11.8195 59.0015 13.4621 59.0015 15.1655ZM52.8389 15.1655C52.8389 13.5837 52.4118 12.2453 51.4965 11.0286C50.3372 9.44686 48.5678 8.71682 46.2492 8.71682H44.9068V21.6142H46.2492C48.5678 21.6142 50.3372 20.8233 51.4965 19.3024C52.3507 18.0856 52.8389 16.7472 52.8389 15.1655Z" fill="#2D2D2D" class="cl2"></path>
+                    <path d="M81.3333 16.9297C81.3333 18.329 81.2113 19.4849 81.0282 20.4583C80.6621 21.9792 79.8689 23.3176 78.5266 24.5951C76.6961 26.3594 74.1944 27.2111 71.0826 27.2111C67.9098 27.2111 65.4692 26.2986 63.6997 24.5343C62.7845 23.6218 62.1133 22.405 61.7472 21.0058C61.5031 20.0324 61.3811 18.6332 61.3811 16.9906V3.78906H67.2996V16.1389C67.2996 17.1123 67.2996 17.8423 67.3607 18.329C67.4827 19.8499 68.1539 20.945 69.4962 21.5533C70.0454 21.7967 70.5945 21.9183 71.2657 21.9183C72.7301 21.9183 73.8284 21.4316 74.5605 20.3974C75.1097 19.6674 75.3537 18.2073 75.3537 16.078V3.78906H81.2723V16.9297H81.3333Z" fill="#2D2D2D" class="cl2"></path>
+                    <path d="M96.0381 19.5475C96.0381 20.4601 95.9771 21.2509 95.8551 21.7985C95.611 23.076 94.9398 24.1711 93.8415 25.2053C92.3772 26.5437 90.6687 27.1521 88.5942 27.1521C86.1535 27.1521 84.14 26.057 82.6146 23.8061L86.5196 19.8517C86.7027 21.3118 87.3739 22.1027 88.4722 22.1027C89.6315 22.1027 90.1806 21.2509 90.1196 19.4867V3.79087H96.0381V19.5475Z" fill="#C3003B" class="cl1"></path>
+                    <path d="M123.739 15.2281C123.739 18.3308 122.702 21.0684 120.628 23.3802C118.248 26.057 115.075 27.3954 111.048 27.3954C107.021 27.3954 103.848 26.057 101.53 23.3802C99.455 21.0684 98.4177 18.3308 98.4177 15.2281C98.4177 13.8289 98.7228 12.3688 99.272 10.8479C99.8211 9.38783 100.553 8.11027 101.53 7.01521C103.909 4.3384 107.082 3 111.109 3C115.136 3 118.309 4.3384 120.689 7.01521C122.702 9.38783 123.739 12.1255 123.739 15.2281ZM117.577 15.2281C117.577 13.6464 117.089 12.2471 116.051 11.0304C114.709 9.50951 113.062 8.77947 111.109 8.77947C109.767 8.77947 108.485 9.14449 107.387 9.93536C106.289 10.7262 105.496 11.6996 105.007 12.9772C104.763 13.7072 104.58 14.4373 104.58 15.1673C104.58 16.6882 105.068 18.0875 106.106 19.3042C107.387 20.8251 109.035 21.5551 111.048 21.5551C113.062 21.5551 114.709 20.8251 115.99 19.3042C117.089 18.2091 117.577 16.8099 117.577 15.2281Z" fill="#C3003B" class="cl1"></path>
+                    <path d="M149 26.5437H143.02L132.099 12.5513V26.5437H126.18V3.79087H132.099L143.02 17.7224V3.79087H148.939V26.5437H149Z" fill="#C3003B" class="cl1"></path>
+                    <path d="M26.8469 7.91016V22.7543C26.8469 24.9444 25.0165 26.7695 22.8199 26.7695H21.2335C20.2572 28.8987 18.7318 30.7238 16.8403 32.0014H22.8809C28.0062 32.0014 32.1553 27.8645 32.1553 22.7543V7.91016H26.8469Z" fill="#C4003B" class="cl1"></path>
+                    <path d="M9.27442 0C4.14908 0 0 4.13688 0 9.24715V9.42966H5.24737V9.24715C5.24737 7.05703 7.01683 5.23194 9.27442 5.23194H24.0403V0H9.27442Z" fill="#C4003B" class="cl1"></path>
+                    <path d="M9.94559 11.5589H0V16.7909H9.94559C12.6913 16.7909 14.9489 19.0418 14.9489 21.7795C14.9489 24.5171 12.6913 26.7681 9.94559 26.7681H5.24737V18.8593H0V32H9.94559C15.6201 32 20.1963 27.4373 20.1963 21.7795C20.1963 16.1217 15.5591 11.5589 9.94559 11.5589Z" fill="#2D2D2D" class="cl2"></path>
+                    <path d="M32.1554 0H26.725V5.1711H32.1554V0Z" fill="#2D2D2D" class="cl2"></path>
+                </svg>
+                X CREATOR EXHIBITION
+            </span>
+            <span class="header-subtitle">협업 아티스트 리스트 (1/2)</span>
+        </div>
+
+        <!-- Section 2: Creator Recommendations Part 1 -->
+        <div class="content-section">
+            <div class="section-title">
+                <span>2. 협업 아티스트 추천 리스트 - 피지컬 크래프트 분야 (1~5번)</span>
+                <span class="badge">최근 3개월 활성 검증</span>
+            </div>
+            
+            <div class="printable-creator-list">
+                <!-- 하안 아뜰리에 -->
+                <div class="creator-card-webstyle">
+                    <div class="creator-banner-top" style="background-image: url('https://yt3.googleusercontent.com/tO7EG7qc4EKqpjs2S2nhuDWhNOeG2FMn1Hte6QWIkXdpdsqCkDog04WklBt5NvQS8YM8s7hUwRQ=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj');"></div>
+                    <div class="creator-profile-section-top">
+                        <img class="creator-avatar-print" src="https://yt3.googleusercontent.com/LTd6V_OlG7uI7sX0MOyk4R2EqAzTuHhmFoXP9_TXo1G1U-Nh7r82aLcRBO0gsarZOdEvf_2TsA=s900-c-k-c0x00ffffff-no-rj" alt="하안 아뜰리에" />
+                        <div class="creator-meta-print">
+                            <span class="creator-name-print">하안 아뜰리에</span>
+                            <span class="creator-handle-print">@hahnsatelier</span>
+                        </div>
+                        <span class="creator-concept-tag-print">가죽 공예</span>
+                    </div>
+                    <div class="creator-details-print">
+                        <div class="creator-body-print">
+                            <strong>주력:</strong> 천연 가죽 입체 오브제 / <strong>매칭:</strong> 플래그십 최고급 프리미엄 전원주택<br>천연 가죽의 고급스러운 질감과 정교한 손바느질(새들스티치)로 주택 단면 및 디테일을 구현합니다.
+                        </div>
+                        <div class="recent-videos-title-print">최근 업로드 영상</div>
+                        <div class="recent-videos-grid-print">
+            <a href="https://www.youtube.com/watch?v=TTF0wo2WYZ4" target="_blank" class="video-item-print" title="계란판으로 가죽을 만들 수 있을까?">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/TTF0wo2WYZ4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA5wqitki9U2L56oweig22fk-vgtQ" alt="계란판으로 가죽을 만들 수 있을까?" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">계란판으로 가죽을 만들 수 있을까?</span>
+                <span class="video-meta-print">조회수 7.9만회 • 2일 전</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=Uprddm8UN0E" target="_blank" class="video-item-print" title="역대급 가방이 나타났습니다.. | 하안 부탁해 EP.2">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/Uprddm8UN0E/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB2K6hmYdRykANuHDECOZkhYGRN-Q" alt="역대급 가방이 나타났습니다.. | 하안 부탁해 EP.2" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">역대급 가방이 나타났습니다.. | 하안 부탁해 EP.2</span>
+                <span class="video-meta-print">조회수 29만회 • 4주 전</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=ggeFv9bRyME" target="_blank" class="video-item-print" title="악마는 프라다를 입는다 팝콘백 직접 만들어봤습니다">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/ggeFv9bRyME/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC_e3Xps6YPfjMDIevtmb6ZLQp3Jw" alt="악마는 프라다를 입는다 팝콘백 직접 만들어봤습니다" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">악마는 프라다를 입는다 팝콘백 직접 만들어봤습니다</span>
+                <span class="video-meta-print">조회수 39만회 • 1개월 전</span>
+            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 레베기 -->
+                <div class="creator-card-webstyle">
+                    <div class="creator-banner-top" style="background-image: url('https://yt3.googleusercontent.com/LFAGGzkFw3BrlleQijNGZ1yHW7HEN43vFVxTOnOmmiZHa1f2jpbKOAEcGCc-DcolCQujdC2-=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj');"></div>
+                    <div class="creator-profile-section-top">
+                        <img class="creator-avatar-print" src="https://yt3.googleusercontent.com/ytc/AIdro_kTe36Ilc-OvM6zePwJcx95tPHBHttZ9yTRHLUd-eR4Dr0=s900-c-k-c0x00ffffff-no-rj" alt="레베기" />
+                        <div class="creator-meta-print">
+                            <span class="creator-name-print">레베기</span>
+                            <span class="creator-handle-print">@hi_lebegi</span>
+                        </div>
+                        <span class="creator-concept-tag-print">크리에이티브 가죽</span>
+                    </div>
+                    <div class="creator-details-print">
+                        <div class="creator-body-print">
+                            <strong>주력:</strong> 이색 가죽 질감 및 오브제 / <strong>매칭:</strong> 모던 & 클래식 퓨전 주택<br>특수 패턴 가죽의 질석 느낌을 입체 모형에 접목하여 모던 전원주택의 입체적 외벽을 재현합니다.
+                        </div>
+                        <div class="recent-videos-title-print">최근 업로드 영상</div>
+                        <div class="recent-videos-grid-print">
+            <a href="https://www.youtube.com/watch?v=YIibiP7xMCg" target="_blank" class="video-item-print" title="BTS도 쓴다는 세상에서 가장 비싼 이어폰..">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/YIibiP7xMCg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAsyOQvFLf_R3AsOdthAj4zRsEUzg" alt="BTS도 쓴다는 세상에서 가장 비싼 이어폰.." class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">BTS도 쓴다는 세상에서 가장 비싼 이어폰..</span>
+                <span class="video-meta-print">조회수 16만회 • 2개월 전</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=5gq5Zzp2E2s" target="_blank" class="video-item-print" title="카드 지갑 67,000개 만들어서 전부 공짜로 뿌리는 이유.. 신한 나라사랑카드">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/5gq5Zzp2E2s/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAJxW42lov0zdd8uv4d9v16-iQMGA" alt="카드 지갑 67,000개 만들어서 전부 공짜로 뿌리는 이유.. 신한 나라사랑카드" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">카드 지갑 67,000개 만들어서 전부 공짜로 뿌리는 이유.. 신한 나라사랑카드</span>
+                <span class="video-meta-print">조회수 10만회 • 4개월 전</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=pQCAJ9w8hDY" target="_blank" class="video-item-print" title="친구에게 8,600만 원짜리 가방 만들어 선물하면 생기는 일">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/pQCAJ9w8hDY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLClJ4gal5f2f6NPoAT7oJKGatXayQ" alt="친구에게 8,600만 원짜리 가방 만들어 선물하면 생기는 일" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">친구에게 8,600만 원짜리 가방 만들어 선물하면 생기는 일</span>
+                <span class="video-meta-print">조회수 21만회 • 7개월 전</span>
+            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 사나고 -->
+                <div class="creator-card-webstyle">
+                    <div class="creator-banner-top" style="background-image: url('https://yt3.googleusercontent.com/GVeEfIs6QIsqFoFtMFaN5ebZxcwPHseUFzzZoEzfZT-C-lirhoMRKYCFdF9K2HNhtMRa2G_Q-bw=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj');"></div>
+                    <div class="creator-profile-section-top">
+                        <img class="creator-avatar-print" src="https://yt3.googleusercontent.com/ytc/AIdro_nN-7Vdy0T2PEWo5palhhFWXuNaDYqGDlLYX_FR-96qbmQa=s900-c-k-c0x00ffffff-no-rj" alt="사나고" />
+                        <div class="creator-meta-print">
+                            <span class="creator-name-print">사나고</span>
+                            <span class="creator-handle-print">@sanago</span>
+                        </div>
+                        <span class="creator-concept-tag-print">3D펜 아트 (3.4M)</span>
+                    </div>
+                    <div class="creator-details-print">
+                        <div class="creator-body-print">
+                            <strong>주력:</strong> 3D펜 입체 드로잉 & 레진 / <strong>매칭:</strong> 미래형 비정형 전원주택<br>자유로운 비정형 곡선과 투명 에폭시 레진 공법을 적용해 미래지향적 지붕 라인과 구조를 구현합니다.
+                        </div>
+                        <div class="recent-videos-title-print">최근 업로드 영상</div>
+                        <div class="recent-videos-grid-print">
+            <a href="https://www.youtube.com/watch?v=FAgYaXyV3lA" target="_blank" class="video-item-print" title="팝콘 단 하나 들어가는 요시 만들기">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/FAgYaXyV3lA/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB7DgmIfoGyPFS3_w7GIjFyQJqdqQ" alt="팝콘 단 하나 들어가는 요시 만들기" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">팝콘 단 하나 들어가는 요시 만들기</span>
+                <span class="video-meta-print">조회수 37만회 • 3일 전</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=EBHHBKrRL-E" target="_blank" class="video-item-print" title="진짜 이끼로 잠만보 만들기">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/EBHHBKrRL-E/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC7xjEYMzqfZ_aTH9DZjwuH5YwCAA" alt="진짜 이끼로 잠만보 만들기" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">진짜 이끼로 잠만보 만들기</span>
+                <span class="video-meta-print">조회수 83만회 • 4주 전</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=ZxFe8vI3Ofw" target="_blank" class="video-item-print" title="3D펜으로 작은 로키 만들기">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/ZxFe8vI3Ofw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAC1CZyk5j_LAc7JoGwtoIKi3ewQg" alt="3D펜으로 작은 로키 만들기" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">3D펜으로 작은 로키 만들기</span>
+                <span class="video-meta-print">조회수 81만회 • 1개월 전</span>
+            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 박소소 -->
+                <div class="creator-card-webstyle">
+                    <div class="creator-banner-top" style="background-image: url('https://yt3.googleusercontent.com/6JYcrAkp-mk7oFiMUiPKsypi1cIGrt3YWix3qwaGa0Vmz-4XIgwCz-J3ycqgf-XnpFCLF0A96qU=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj');"></div>
+                    <div class="creator-profile-section-top">
+                        <img class="creator-avatar-print" src="https://yt3.googleusercontent.com/5yVd3cyK6F4XQ9CAvNAh3obOkQ5fr6guUIzht0GY483GffJETiaFVGcowMnKNDU7PiEmVWWsgaI=s900-c-k-c0x00ffffff-no-rj" alt="박소소" />
+                        <div class="creator-meta-print">
+                            <span class="creator-name-print">박소소</span>
+                            <span class="creator-handle-print">@_sosominiature7412</span>
+                        </div>
+                        <span class="creator-concept-tag-print">미니어처 돌하우스</span>
+                    </div>
+                    <div class="creator-details-print">
+                        <div class="creator-body-print">
+                            <strong>주력:</strong> 극사실 목재 가구 및 조명 / <strong>매칭:</strong> 내추럴 중목구조 인테리어<br>주택 단면을 개방하여 내부 가구, 조명을 1/24 극사실 룸박스 예술품으로 재현합니다.
+                        </div>
+                        <div class="recent-videos-title-print">최근 업로드 영상</div>
+                        <div class="recent-videos-grid-print">
+            <a href="https://www.youtube.com/watch?v=PNv1E0a-CBM" target="_blank" class="video-item-print" title="DIY Miniature house KitㅣCheers Bar & Diningㅣ다이닝 치어스바ㅣ미니어처하우스ㅣ박소소">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/PNv1E0a-CBM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB_NGiLJuHO3u9g2xkHeTPaJ-TZiQ" alt="DIY Miniature house KitㅣCheers Bar & Diningㅣ다이닝 치어스바ㅣ미니어처하우스ㅣ박소소" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">DIY Miniature house KitㅣCheers Bar & Diningㅣ다이닝 치어스바ㅣ미니어처하우스ㅣ박소소</span>
+                <span class="video-meta-print">조회수 749회 • 4주 전</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=aqwmv7SGk7I" target="_blank" class="video-item-print" title="DIY Miniature house KitㅣElsa's Tailoringㅣ엘사의 의상실ㅣ미니어처하우스ㅣ박소소">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/aqwmv7SGk7I/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9RSRfqIjOFuRnDWUR-yrz71Awrg" alt="DIY Miniature house KitㅣElsa's Tailoringㅣ엘사의 의상실ㅣ미니어처하우스ㅣ박소소" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">DIY Miniature house KitㅣElsa's Tailoringㅣ엘사의 의상실ㅣ미니어처하우스ㅣ박소소</span>
+                <span class="video-meta-print">조회수 879회 • 1개월 전</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=26silPH0Sak" target="_blank" class="video-item-print" title="DIY Miniature house KitㅣCatherine's Living Roomㅣ캐서린의 거실ㅣ미니어처하우스ㅣ박소소">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/26silPH0Sak/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBkBcxDiO9lNQBKHdBVMRd301S5GQ" alt="DIY Miniature house KitㅣCatherine's Living Roomㅣ캐서린의 거실ㅣ미니어처하우스ㅣ박소소" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">DIY Miniature house KitㅣCatherine's Living Roomㅣ캐서린의 거실ㅣ미니어처하우스ㅣ박소소</span>
+                <span class="video-meta-print">조회수 869회 • 1개월 전</span>
+            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 프라아트 (PlaART) -->
+                <div class="creator-card-webstyle span-2">
+                    <div class="span2-left-banner" style="background-image: url('https://yt3.googleusercontent.com/CiACFZPOGq1PEQzB-Gdh_npF4gmu6TSBXbn0qhvxwk5PwAyo2wweeejhwobjL0zLHe3SnMZXEg=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj');">
+                        <div class="span2-avatar-container">
+                            <img class="creator-avatar-print" src="https://yt3.googleusercontent.com/209lgd2Qt7INrj4L31rwfxEO9gnyl309-WH43XWLRSqIonoZdBjvIg8JVh66vdZ1wOK5VS2N=s900-c-k-c0x00ffffff-no-rj" alt="프라아트 (PlaART)" />
+                        </div>
+                    </div>
+                    <div class="span2-middle-details">
+                        <div class="span2-creator-header">
+                            <div style="display: flex; flex-direction: column;">
+                                <span class="creator-name-print">프라아트 (PlaART)</span>
+                                <span class="creator-handle-print">@pla_art</span>
+                            </div>
+                            <span class="creator-concept-tag-print">3D 프린팅 디오라마</span>
+                        </div>
+                        <div class="creator-body-print" style="margin-bottom: 0;">
+                            <strong>주력:</strong> 3D 프린팅 및 정밀 채색 / <strong>매칭:</strong> 모던 한옥 & 목조 단독주택<br>전통 기와지붕의 텍스처, 서까래의 고목 질감과 한지의 투광 효과를 3D 출력 및 웨더링(도색) 기법으로 사실감 있게 묘사합니다.
+                        </div>
+                    </div>
+                    <div class="span2-right-videos">
+                        <div class="recent-videos-title-print">최근 업로드 영상</div>
+                        <div class="recent-videos-grid-print">
+            <a href="https://www.youtube.com/watch?v=cY4eoCjB4Bc" target="_blank" class="video-item-print" title="1980년대 서울 거리 디오라마">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/cY4eoCjB4Bc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBDiZgBzWzih3ju_ejDHEum3yyrOQ" alt="1980년대 서울 거리 디오라마" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">1980년대 서울 거리 디오라마</span>
+                <span class="video-meta-print">조회수 70만회 • 5년 전</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=W8YgGDG3ptQ" target="_blank" class="video-item-print" title="함선폭발 디오라마 '1944 레이테만 해전'">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/W8YgGDG3ptQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC0v_dOCWT3ef75a_p_a3FpW4f1Lg" alt="함선폭발 디오라마 '1944 레이테만 해전'" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">함선폭발 디오라마 '1944 레이테만 해전'</span>
+                <span class="video-meta-print">조회수 21만회 • 6년 전</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=MWDl7p-7Zmo" target="_blank" class="video-item-print" title="K511A1 Cargo Truck Academy 1/35 Scale (육공트럭, 아카데미)">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/MWDl7p-7Zmo/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB4ximRCdbdNF9Nzm2P_MHQhYaxRA" alt="K511A1 Cargo Truck Academy 1/35 Scale (육공트럭, 아카데미)" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">K511A1 Cargo Truck Academy 1/35 Scale (육공트럭, 아카데미)</span>
+                <span class="video-meta-print">조회수 21만회 • 6년 전</span>
+            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="page-footer">
+            <span>더존하우징 기획본부 기획부 | 작성일자: 2026년 6월 15일</span>
+            <span class="page-number" data-page="2"></span>
+        </div>
+    </div>
+
+    <!-- PAGE 3: CREATOR LIST PART 2 (Creators 6 to 10) -->
+    <div class="page">
+        <!-- Header -->
+        <div class="page-header">
+            <span class="header-title">
+                <svg width="93" height="20" viewBox="0 0 149 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
+                    <path d="M59.0015 15.1655C59.0015 17.5381 58.2693 19.7282 56.8659 21.7358C55.4015 23.7434 53.5711 25.1427 51.3745 25.9336C50.2152 26.3594 48.9949 26.5419 47.7746 26.5419H38.9272V3.78906H47.7135C49.8491 3.78906 51.8626 4.39743 53.6931 5.55332C55.4626 6.70921 56.8659 8.23013 57.8422 10.1769C58.5744 11.8195 59.0015 13.4621 59.0015 15.1655ZM52.8389 15.1655C52.8389 13.5837 52.4118 12.2453 51.4965 11.0286C50.3372 9.44686 48.5678 8.71682 46.2492 8.71682H44.9068V21.6142H46.2492C48.5678 21.6142 50.3372 20.8233 51.4965 19.3024C52.3507 18.0856 52.8389 16.7472 52.8389 15.1655Z" fill="#2D2D2D" class="cl2"></path>
+                    <path d="M81.3333 16.9297C81.3333 18.329 81.2113 19.4849 81.0282 20.4583C80.6621 21.9792 79.8689 23.3176 78.5266 24.5951C76.6961 26.3594 74.1944 27.2111 71.0826 27.2111C67.9098 27.2111 65.4692 26.2986 63.6997 24.5343C62.7845 23.6218 62.1133 22.405 61.7472 21.0058C61.5031 20.0324 61.3811 18.6332 61.3811 16.9906V3.78906H67.2996V16.1389C67.2996 17.1123 67.2996 17.8423 67.3607 18.329C67.4827 19.8499 68.1539 20.945 69.4962 21.5533C70.0454 21.7967 70.5945 21.9183 71.2657 21.9183C72.7301 21.9183 73.8284 21.4316 74.5605 20.3974C75.1097 19.6674 75.3537 18.2073 75.3537 16.078V3.78906H81.2723V16.9297H81.3333Z" fill="#2D2D2D" class="cl2"></path>
+                    <path d="M96.0381 19.5475C96.0381 20.4601 95.9771 21.2509 95.8551 21.7985C95.611 23.076 94.9398 24.1711 93.8415 25.2053C92.3772 26.5437 90.6687 27.1521 88.5942 27.1521C86.1535 27.1521 84.14 26.057 82.6146 23.8061L86.5196 19.8517C86.7027 21.3118 87.3739 22.1027 88.4722 22.1027C89.6315 22.1027 90.1806 21.2509 90.1196 19.4867V3.79087H96.0381V19.5475Z" fill="#C3003B" class="cl1"></path>
+                    <path d="M123.739 15.2281C123.739 18.3308 122.702 21.0684 120.628 23.3802C118.248 26.057 115.075 27.3954 111.048 27.3954C107.021 27.3954 103.848 26.057 101.53 23.3802C99.455 21.0684 98.4177 18.3308 98.4177 15.2281C98.4177 13.8289 98.7228 12.3688 99.272 10.8479C99.8211 9.38783 100.553 8.11027 101.53 7.01521C103.909 4.3384 107.082 3 111.109 3C115.136 3 118.309 4.3384 120.689 7.01521C122.702 9.38783 123.739 12.1255 123.739 15.2281ZM117.577 15.2281C117.577 13.6464 117.089 12.2471 116.051 11.0304C114.709 9.50951 113.062 8.77947 111.109 8.77947C109.767 8.77947 108.485 9.14449 107.387 9.93536C106.289 10.7262 105.496 11.6996 105.007 12.9772C104.763 13.7072 104.58 14.4373 104.58 15.1673C104.58 16.6882 105.068 18.0875 106.106 19.3042C107.387 20.8251 109.035 21.5551 111.048 21.5551C113.062 21.5551 114.709 20.8251 115.99 19.3042C117.089 18.2091 117.577 16.8099 117.577 15.2281Z" fill="#C3003B" class="cl1"></path>
+                    <path d="M149 26.5437H143.02L132.099 12.5513V26.5437H126.18V3.79087H132.099L143.02 17.7224V3.79087H148.939V26.5437H149Z" fill="#C3003B" class="cl1"></path>
+                    <path d="M26.8469 7.91016V22.7543C26.8469 24.9444 25.0165 26.7695 22.8199 26.7695H21.2335C20.2572 28.8987 18.7318 30.7238 16.8403 32.0014H22.8809C28.0062 32.0014 32.1553 27.8645 32.1553 22.7543V7.91016H26.8469Z" fill="#C4003B" class="cl1"></path>
+                    <path d="M9.27442 0C4.14908 0 0 4.13688 0 9.24715V9.42966H5.24737V9.24715C5.24737 7.05703 7.01683 5.23194 9.27442 5.23194H24.0403V0H9.27442Z" fill="#C4003B" class="cl1"></path>
+                    <path d="M9.94559 11.5589H0V16.7909H9.94559C12.6913 16.7909 14.9489 19.0418 14.9489 21.7795C14.9489 24.5171 12.6913 26.7681 9.94559 26.7681H5.24737V18.8593H0V32H9.94559C15.6201 32 20.1963 27.4373 20.1963 21.7795C20.1963 16.1217 15.5591 11.5589 9.94559 11.5589Z" fill="#2D2D2D" class="cl2"></path>
+                    <path d="M32.1554 0H26.725V5.1711H32.1554V0Z" fill="#2D2D2D" class="cl2"></path>
+                </svg>
+                X CREATOR EXHIBITION
+            </span>
+            <span class="header-subtitle">협업 아티스트 리스트 (2/2)</span>
+        </div>
+
+        <!-- Section 3: Creator Recommendations Part 2 -->
+        <div class="content-section">
+            <div class="section-title">
+                <span>3. 협업 아티스트 추천 리스트 - 피지컬 크래프트 분야 (6~10번)</span>
+                <span class="badge">최근 3개월 활성 검증</span>
+            </div>
+            
+            <div class="printable-creator-list">
+                <!-- 레고도사꾸삐 -->
+                <div class="creator-card-webstyle">
+                    <div class="creator-banner-top" style="background-image: url('https://yt3.googleusercontent.com/8bLQVVa-viyT2eEQRGcHOfG_cGXMgtjJMDqQGMjA6l6XnGO_vmOJGPwjAr4hR0057ege_lXbmB4=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj');"></div>
+                    <div class="creator-profile-section-top">
+                        <img class="creator-avatar-print" src="https://yt3.googleusercontent.com/BVqfGlVVPTHqRSpXOqfkhCxC-t7IV6uKDa9QTeLEZQftkKmB7mXCorTr5Yownq3jXum-wySy4Ic=s900-c-k-c0x00ffffff-no-rj" alt="레고도사꾸삐" />
+                        <div class="creator-meta-print">
+                            <span class="creator-name-print">레고도사꾸삐</span>
+                            <span class="creator-handle-print">@kupibricks</span>
+                        </div>
+                        <span class="creator-concept-tag-print">창작 레고 (1.2M)</span>
+                    </div>
+                    <div class="creator-details-print">
+                        <div class="creator-body-print">
+                            <strong>주력:</strong> 대형 레고 디오라마 빌드 / <strong>매칭:</strong> 시그니처 대형 단독주택 모형<br>더존하우징의 시그니처 주택을 레고 브릭으로 직접 설계 및 축소 빌드하여 부스 중심에 전시합니다.
+                        </div>
+                        <div class="recent-videos-title-print">최근 업로드 영상</div>
+                        <div class="recent-videos-grid-print">
+            <a href="https://www.youtube.com/watch?v=mKQYldnnc9o" target="_blank" class="video-item-print" title="마이뮤지엄 7001 백유리 레고 장식장 12차 공동구매 시작 (6월23일~)">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/mKQYldnnc9o/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAG9p8FJHzfHYQY1GcltZTCVBcIXA" alt="마이뮤지엄 7001 백유리 레고 장식장 12차 공동구매 시작 (6월23일~)" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">마이뮤지엄 7001 백유리 레고 장식장 12차 공동구매 시작 (6월23일~)</span>
+                <span class="video-meta-print">레고도사꾸삐</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=RULZftcj5FU" target="_blank" class="video-item-print" title="마이뮤지엄(백유리ver.) 실제후기 모음">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/RULZftcj5FU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA7mqy4q9RsW80HXfqLjFYthoKVhg" alt="마이뮤지엄(백유리ver.) 실제후기 모음" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">마이뮤지엄(백유리ver.) 실제후기 모음</span>
+                <span class="video-meta-print">레고도사꾸삐</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=64b0NHQ5PlU" target="_blank" class="video-item-print" title="솔직히 선 넘었습니다, 심사위원이 극찬한 레고 포켓몬 카드 출시 후보 5개">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/64b0NHQ5PlU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA_bBOizMCHLb2Qu0ARz7Qlfv7ugQ" alt="솔직히 선 넘었습니다, 심사위원이 극찬한 레고 포켓몬 카드 출시 후보 5개" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">솔직히 선 넘었습니다, 심사위원이 극찬한 레고 포켓몬 카드 출시 후보 5개</span>
+                <span class="video-meta-print">레고도사꾸삐</span>
+            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 건축가의 공방 -->
+                <div class="creator-card-webstyle">
+                    <div class="creator-banner-top" style="background-image: url('https://yt3.googleusercontent.com/rQ4RMt9uowk-nUI38dH811NiYQXfTjTi9JCTVWWCZvXpfSWUi1AG3sHYnn7gUo9qqhDLmB3zJiU=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj');"></div>
+                    <div class="creator-profile-section-top">
+                        <img class="creator-avatar-print" src="https://yt3.googleusercontent.com/ytc/AIdro_kaIygTczXisnrB2BAeLgOVSEPR60tQjxaolQ7da-pOwg=s900-c-k-c0x00ffffff-no-rj" alt="건축가의 공방" />
+                        <div class="creator-meta-print">
+                            <span class="creator-name-print">건축가의 공방</span>
+                            <span class="creator-handle-print">@건축가의공방</span>
+                        </div>
+                        <span class="creator-concept-tag-print">실무 설계 모형</span>
+                    </div>
+                    <div class="creator-details-print">
+                        <div class="creator-body-print">
+                            <strong>주력:</strong> 아크릴/포맥스 정밀 스케일 / <strong>매칭:</strong> 현대 주택 스케일 모델 (1:50)<br>실무 설계 도면을 기반으로 벽체 단면과 외부 마감재의 질감까지 정교하게 살려 모형을 올립니다.
+                        </div>
+                        <div class="recent-videos-title-print">최근 업로드 영상</div>
+                        <div class="recent-videos-grid-print">
+            <a href="https://www.youtube.com/watch?v=SDr8v5QrCSU" target="_blank" class="video-item-print" title="gis 좌표계 추가가 안돼요...(구버전 & 신버전) / 자주하는 질문">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/SDr8v5QrCSU/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuALzGA==&rs=AOn4CLDCdYVvdvuaygZEdJPZVs5Ov83HQg" alt="gis 좌표계 추가가 안돼요...(구버전 & 신버전) / 자주하는 질문" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">gis 좌표계 추가가 안돼요...(구버전 & 신버전) / 자주하는 질문</span>
+                <span class="video-meta-print">조회수 7.4천회 • 4년 전</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=jrTdMKldLh8" target="_blank" class="video-item-print" title="일러스트에서 옥상 파라펫을 표현하는 방법 / 건축 다이어그램">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/jrTdMKldLh8/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuALzGA==&rs=AOn4CLDeUiEDL0WDM1gvHc2hyC--8dDB8w" alt="일러스트에서 옥상 파라펫을 표현하는 방법 / 건축 다이어그램" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">일러스트에서 옥상 파라펫을 표현하는 방법 / 건축 다이어그램</span>
+                <span class="video-meta-print">조회수 6.3천회 • 4년 전</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=c8vv1ItL06Y&pp=0gcJCUELAYcqIYzv" target="_blank" class="video-item-print" title="건물 높이에 맞게 그림자 그리는 방법 (feat. Q-gis & 일러스트)">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/c8vv1ItL06Y/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuALzGA==&rs=AOn4CLBx8Bu80Gg8qMnGl7ms6yyVjvPoCw" alt="건물 높이에 맞게 그림자 그리는 방법 (feat. Q-gis & 일러스트)" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">건물 높이에 맞게 그림자 그리는 방법 (feat. Q-gis & 일러스트)</span>
+                <span class="video-meta-print">조회수 2.8만회 • 4년 전</span>
+            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 류황별의 종이공방 -->
+                <div class="creator-card-webstyle">
+                    <div class="creator-banner-top" style="background-image: url('https://yt3.googleusercontent.com/8Ff4Gql9DSaknVeGQxfaUmY7iiUhkzDE_Bcl1cRIOKCgvJRT9SMUHM1shC7XUiAUiA3VW-pP_yA=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj');"></div>
+                    <div class="creator-profile-section-top">
+                        <img class="creator-avatar-print" src="https://yt3.googleusercontent.com/Xz6r_IWnRx0VuPsEdILVtgQse-CN_p0PMbMGnqpwqOzWQJlWNGZ4xyaKUKgXbe3ZFmvVQu_iVw=s900-c-k-c0x00ffffff-no-rj" alt="류황별의 종이공방" />
+                        <div class="creator-meta-print">
+                            <span class="creator-name-print">류황별의 종이공방</span>
+                            <span class="creator-handle-print">@ryustar_paperlab</span>
+                        </div>
+                        <span class="creator-concept-tag-print">초정밀 페이퍼크래프트</span>
+                    </div>
+                    <div class="creator-details-print">
+                        <div class="creator-body-print">
+                            <strong>주력:</strong> 고평량 종이 설계/조립 / <strong>매칭:</strong> 순백의 설계도면 입체 모형<br>백색 수입 전용지만 사용하여 도면의 섬세함을 100% 백색 종이 건축 모형으로 구현합니다.
+                        </div>
+                        <div class="recent-videos-title-print">최근 업로드 영상</div>
+                        <div class="recent-videos-grid-print">
+            <a href="https://www.youtube.com/watch?v=bfztgENI4io" target="_blank" class="video-item-print" title="만드는데 240시간?! OO로 만든 경기도 버스모형">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/bfztgENI4io/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBR6tfBqF4Kl4Phkzm6xNVBdoN1JA" alt="만드는데 240시간?! OO로 만든 경기도 버스모형" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">만드는데 240시간?! OO로 만든 경기도 버스모형</span>
+                <span class="video-meta-print">288만 • 3년 전</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=3LRvfKXsGvE&pp=0gcJCUELAYcqIYzv" target="_blank" class="video-item-print" title="종이로 마을버스 만들기 / 종이로 만드는 서울 1위 마을버스, 동작 01번과 노량진 풍경 [디오라마, ASMR]">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/3LRvfKXsGvE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAjMyBhDoXpvqVI_bU7KQrsveg01A" alt="종이로 마을버스 만들기 / 종이로 만드는 서울 1위 마을버스, 동작 01번과 노량진 풍경 [디오라마, ASMR]" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">종이로 마을버스 만들기 / 종이로 만드는 서울 1위 마을버스, 동작 01번과 노량진 풍경 [디오라마, ASMR]</span>
+                <span class="video-meta-print">78만 • 2년 전</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=tq9k7naQX1Y" target="_blank" class="video-item-print" title="종이로 만드는 부산 시내버스 / 종이로 만드는 버스, 영도대교, 영도 이야기 [디오라마, ASMR]">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/tq9k7naQX1Y/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDsHOAqnePky9Ri0WIILkJVEl628w" alt="종이로 만드는 부산 시내버스 / 종이로 만드는 버스, 영도대교, 영도 이야기 [디오라마, ASMR]" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">종이로 만드는 부산 시내버스 / 종이로 만드는 버스, 영도대교, 영도 이야기 [디오라마, ASMR]</span>
+                <span class="video-meta-print">77만 • 1년 전</span>
+            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 애틋_Ateut -->
+                <div class="creator-card-webstyle">
+                    <div class="creator-banner-top" style="background-image: url('https://yt3.googleusercontent.com/_yOxYGHUcyE0zRZMW7VIWcJaWmQOo-ITXtxKJRh1sxH3G32yJZKuVCoN5naw3KIxkASqtZto=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj');"></div>
+                    <div class="creator-profile-section-top">
+                        <img class="creator-avatar-print" src="https://yt3.googleusercontent.com/ytc/AIdro_myuhrI1uImia86OCoZm-dYTj19a3A7gbfA2BHTOD1hNw=s900-c-k-c0x00ffffff-no-rj" alt="애틋_Ateut" />
+                        <div class="creator-meta-print">
+                            <span class="creator-name-print">애틋_Ateut</span>
+                            <span class="creator-handle-print">@_ateut7220</span>
+                        </div>
+                        <span class="creator-concept-tag-print">전통 목조 조형</span>
+                    </div>
+                    <div class="creator-details-print">
+                        <div class="creator-body-print">
+                            <strong>주력:</strong> 나무 판재 및 기와 수공예 / <strong>매칭:</strong> 현대적 한옥 및 세미목조 주택<br>실제 나뭇결이 살아있는 목재와 한지를 사용하여 전통 목공 기법으로 주택 모형을 제작합니다.
+                        </div>
+                        <div class="recent-videos-title-print">최근 업로드 영상</div>
+                        <div class="recent-videos-grid-print">
+            <a href="https://www.youtube.com/watch?v=SjHu2N6gOvg" target="_blank" class="video-item-print" title="Diy Miniature Korean Style Cafe l 미니어쳐 한옥 카페 만들기">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/SjHu2N6gOvg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB7dVWa6lqWSZKnIKgvtsRLAqGX3w" alt="Diy Miniature Korean Style Cafe l 미니어쳐 한옥 카페 만들기" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">Diy Miniature Korean Style Cafe l 미니어쳐 한옥 카페 만들기</span>
+                <span class="video-meta-print">조회수 6.5만회 • 3년 전</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=_5Fp8Shf9bA" target="_blank" class="video-item-print" title="[Harry Potterㅣ해리포터🪄] Diy Miniature Magic House ㅣ 미니어처 매직하우스">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/_5Fp8Shf9bA/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA8HDHonGerOe4i7Np1RxRJew25CA" alt="[Harry Potterㅣ해리포터🪄] Diy Miniature Magic House ㅣ 미니어처 매직하우스" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">[Harry Potterㅣ해리포터🪄] Diy Miniature Magic House ㅣ 미니어처 매직하우스</span>
+                <span class="video-meta-print">조회수 2.5만회 • 2년 전</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=4eqzjNEF3BE" target="_blank" class="video-item-print" title="[ 점심으로 치킨 내기 한 판?! Game play🎮] Diy ROKR 3D PINBALL Machine Wood Kit l 3D 핀볼">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/4eqzjNEF3BE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLACUy4VO5U6XaZI9SYCqdHJmFmqOQ" alt="[ 점심으로 치킨 내기 한 판?! Game play🎮] Diy ROKR 3D PINBALL Machine Wood Kit l 3D 핀볼" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">[ 점심으로 치킨 내기 한 판?! Game play🎮] Diy ROKR 3D PINBALL Machine Wood Kit l 3D 핀볼</span>
+                <span class="video-meta-print">조회수 1.5만회 • 2년 전</span>
+            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 미니어처 미니로즈 -->
+                <div class="creator-card-webstyle span-2">
+                    <div class="span2-left-banner" style="background-image: url('https://yt3.googleusercontent.com/yP5cJOu3onHoy8lHHNL3jWPLcIAxw_nJecnjANTaYMimKKSja1fBSIVbUAVY7aC8Ag1XtXwYWA=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj');">
+                        <div class="span2-avatar-container">
+                            <img class="creator-avatar-print" src="https://yt3.googleusercontent.com/aWD8MW3lnvB8XOeH73bBmempOu-hzWYdqTNKoYzZD1XQQv5lcMALwy9v9gtxEXtatxj4wsOGSA=s900-c-k-c0x00ffffff-no-rj" alt="미니어처 미니로즈" />
+                        </div>
+                    </div>
+                    <div class="span2-middle-details">
+                        <div class="span2-creator-header">
+                            <div style="display: flex; flex-direction: column;">
+                                <span class="creator-name-print">미니어처 미니로즈</span>
+                                <span class="creator-handle-print">@minirose-miniature</span>
+                            </div>
+                            <span class="creator-concept-tag-print">정원 & 조경 하우스</span>
+                        </div>
+                        <div class="creator-body-print" style="margin-bottom: 0;">
+                            <strong>주력:</strong> 식물 조경 및 유리 아크릴 조형 / <strong>매칭:</strong> 온실 및 썬룸/정원 테라스 주택<br>다양한 조경 재료와 투명 아크릴을 활용하여 꿈의 전원 주택 정원과 아늑한 테라스를 감성적으로 시각화합니다.
+                        </div>
+                    </div>
+                    <div class="span2-right-videos">
+                        <div class="recent-videos-title-print">최근 업로드 영상</div>
+                        <div class="recent-videos-grid-print">
+            <a href="https://www.youtube.com/watch?v=cori7cgodSs" target="_blank" class="video-item-print" title="The Book House l 북 하우스 l DIY Miniature Dollhouse Kit l 미니어처 miniature 쉽게 만들기 l Book Nook l 책꽂이미니어처">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/cori7cgodSs/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuALzGA==&rs=AOn4CLBTgGV_2eYwVJHFXh0qM3cRtpuEfA" alt="The Book House l 북 하우스 l DIY Miniature Dollhouse Kit l 미니어처 miniature 쉽게 만들기 l Book Nook l 책꽂이미니어처" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">The Book House l 북 하우스 l DIY Miniature Dollhouse Kit l 미니어처 miniature 쉽게 만들기 l Book Nook l 책꽂이미니어처</span>
+                <span class="video-meta-print">조회수 1.8천회 • 2개월 전</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=skGDJt1O-uw" target="_blank" class="video-item-print" title="ANAVRIN KYOTO GION DIY BOOK NOOK l Miniature Dollhouse Kit l 미니어처 miniature 쉽게 만들기">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/skGDJt1O-uw/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuALzGA==&rs=AOn4CLB335vRTAnx3AC48hsFq3b0zGgTUA" alt="ANAVRIN KYOTO GION DIY BOOK NOOK l Miniature Dollhouse Kit l 미니어처 miniature 쉽게 만들기" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">ANAVRIN KYOTO GION DIY BOOK NOOK l Miniature Dollhouse Kit l 미니어처 miniature 쉽게 만들기</span>
+                <span class="video-meta-print">조회수 840회 • 2개월 전</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=lEMHFK0D1NE" target="_blank" class="video-item-print" title="Dream Moment - PART 2 l Alice in Wonderland l DIY Miniature Dollhouse Kit l Booknook 미니어처 쉽게 만들기">
+                <div class="video-thumb-container-print">
+                    <img src="https://i.ytimg.com/vi/lEMHFK0D1NE/hqdefault.jpg?sqp=-oaymwEfCKgBEF5IVfKriqkDEggBFQAAiEIYAXABwAEGuALzGA==&rs=AOn4CLCXNOOIz3_YA58wSeH_MjheoGoiwA" alt="Dream Moment - PART 2 l Alice in Wonderland l DIY Miniature Dollhouse Kit l Booknook 미니어처 쉽게 만들기" class="video-thumb-print" />
+                    <div class="video-play-overlay-print">
+                        <svg class="video-play-icon-print" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="video-title-print">Dream Moment - PART 2 l Alice in Wonderland l DIY Miniature Dollhouse Kit l Booknook 미니어처 쉽게 만들기</span>
+                <span class="video-meta-print">조회수 729회 • 3개월 전</span>
+            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="page-footer">
+            <span>더존하우징 기획본부 기획부 | 작성일자: 2026년 6월 15일</span>
+            <span class="page-number" data-page="3"></span>
+        </div>
+    </div>
+
+    <!-- PAGE 4: GUIDELINES, TIMELINE & DOCENT SCENARIO -->
+    <div class="page">
+        <!-- Header -->
+        <div class="page-header">
+            <span class="header-title">
+                <svg width="93" height="20" viewBox="0 0 149 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
+                    <path d="M59.0015 15.1655C59.0015 17.5381 58.2693 19.7282 56.8659 21.7358C55.4015 23.7434 53.5711 25.1427 51.3745 25.9336C50.2152 26.3594 48.9949 26.5419 47.7746 26.5419H38.9272V3.78906H47.7135C49.8491 3.78906 51.8626 4.39743 53.6931 5.55332C55.4626 6.70921 56.8659 8.23013 57.8422 10.1769C58.5744 11.8195 59.0015 13.4621 59.0015 15.1655ZM52.8389 15.1655C52.8389 13.5837 52.4118 12.2453 51.4965 11.0286C50.3372 9.44686 48.5678 8.71682 46.2492 8.71682H44.9068V21.6142H46.2492C48.5678 21.6142 50.3372 20.8233 51.4965 19.3024C52.3507 18.0856 52.8389 16.7472 52.8389 15.1655Z" fill="#2D2D2D" class="cl2"></path>
+                    <path d="M81.3333 16.9297C81.3333 18.329 81.2113 19.4849 81.0282 20.4583C80.6621 21.9792 79.8689 23.3176 78.5266 24.5951C76.6961 26.3594 74.1944 27.2111 71.0826 27.2111C67.9098 27.2111 65.4692 26.2986 63.6997 24.5343C62.7845 23.6218 62.1133 22.405 61.7472 21.0058C61.5031 20.0324 61.3811 18.6332 61.3811 16.9906V3.78906H67.2996V16.1389C67.2996 17.1123 67.2996 17.8423 67.3607 18.329C67.4827 19.8499 68.1539 20.945 69.4962 21.5533C70.0454 21.7967 70.5945 21.9183 71.2657 21.9183C72.7301 21.9183 73.8284 21.4316 74.5605 20.3974C75.1097 19.6674 75.3537 18.2073 75.3537 16.078V3.78906H81.2723V16.9297H81.3333Z" fill="#2D2D2D" class="cl2"></path>
+                    <path d="M96.0381 19.5475C96.0381 20.4601 95.9771 21.2509 95.8551 21.7985C95.611 23.076 94.9398 24.1711 93.8415 25.2053C92.3772 26.5437 90.6687 27.1521 88.5942 27.1521C86.1535 27.1521 84.14 26.057 82.6146 23.8061L86.5196 19.8517C86.7027 21.3118 87.3739 22.1027 88.4722 22.1027C89.6315 22.1027 90.1806 21.2509 90.1196 19.4867V3.79087H96.0381V19.5475Z" fill="#C3003B" class="cl1"></path>
+                    <path d="M123.739 15.2281C123.739 18.3308 122.702 21.0684 120.628 23.3802C118.248 26.057 115.075 27.3954 111.048 27.3954C107.021 27.3954 103.848 26.057 101.53 23.3802C99.455 21.0684 98.4177 18.3308 98.4177 15.2281C98.4177 13.8289 98.7228 12.3688 99.272 10.8479C99.8211 9.38783 100.553 8.11027 101.53 7.01521C103.909 4.3384 107.082 3 111.109 3C115.136 3 118.309 4.3384 120.689 7.01521C122.702 9.38783 123.739 12.1255 123.739 15.2281ZM117.577 15.2281C117.577 13.6464 117.089 12.2471 116.051 11.0304C114.709 9.50951 113.062 8.77947 111.109 8.77947C109.767 8.77947 108.485 9.14449 107.387 9.93536C106.289 10.7262 105.496 11.6996 105.007 12.9772C104.763 13.7072 104.58 14.4373 104.58 15.1673C104.58 16.6882 105.068 18.0875 106.106 19.3042C107.387 20.8251 109.035 21.5551 111.048 21.5551C113.062 21.5551 114.709 20.8251 115.99 19.3042C117.089 18.2091 117.577 16.8099 117.577 15.2281Z" fill="#C3003B" class="cl1"></path>
+                    <path d="M149 26.5437H143.02L132.099 12.5513V26.5437H126.18V3.79087H132.099L143.02 17.7224V3.79087H148.939V26.5437H149Z" fill="#C3003B" class="cl1"></path>
+                    <path d="M26.8469 7.91016V22.7543C26.8469 24.9444 25.0165 26.7695 22.8199 26.7695H21.2335C20.2572 28.8987 18.7318 30.7238 16.8403 32.0014H22.8809C28.0062 32.0014 32.1553 27.8645 32.1553 22.7543V7.91016H26.8469Z" fill="#C4003B" class="cl1"></path>
+                    <path d="M9.27442 0C4.14908 0 0 4.13688 0 9.24715V9.42966H5.24737V9.24715C5.24737 7.05703 7.01683 5.23194 9.27442 5.23194H24.0403V0H9.27442Z" fill="#C4003B" class="cl1"></path>
+                    <path d="M9.94559 11.5589H0V16.7909H9.94559C12.6913 16.7909 14.9489 19.0418 14.9489 21.7795C14.9489 24.5171 12.6913 26.7681 9.94559 26.7681H5.24737V18.8593H0V32H9.94559C15.6201 32 20.1963 27.4373 20.1963 21.7795C20.1963 16.1217 15.5591 11.5589 9.94559 11.5589Z" fill="#2D2D2D" class="cl2"></path>
+                    <path d="M32.1554 0H26.725V5.1711H32.1554V0Z" fill="#2D2D2D" class="cl2"></path>
+                </svg>
+                X CREATOR EXHIBITION
+            </span>
+            <span class="header-subtitle">실행 가이드 및 현장 시나리오</span>
+        </div>
+
+        <!-- Section 4: Exhibition Action Plan -->
+        <div class="content-section">
+            <div class="section-title">
+                <span>4. 전시 마케팅 실행 로드맵 (Action Roadmap)</span>
+                <span class="badge">부스 운영 안</span>
+            </div>
+            
+            <table class="cue-table">
+                <thead>
+                    <tr>
+                        <th style="width: 70px; text-align: center;">단계</th>
+                        <th style="width: 130px;">기획 항목</th>
+                        <th>구체적 실행 내용 및 목표</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="time">Step 1</td>
+                        <td>벽체 매립 쇼케이스 설계 (D-60)</td>
+                        <td>기존 블록형 부스의 시공사례 벽체 패널 규격(높이90x넓이90x벽체25cm)에 맞춰 빌트인 매립 쇼케이스 및 디스플레이(크리에이터 메이킹 영상 재생용) 연동 설계.</td>
+                    </tr>
+                    <tr>
+                        <td class="time">Step 2</td>
+                        <td>사전 바이럴 빌드업 (D-14)</td>
+                        <td>각 협업 크리에이터 채널에 제작 비하인드 영상 업로드. 영상 고정 댓글에 VIP 무료입장권 다운로드 링크를 제공하여 오프라인 부스 유입 사전 확보.</td>
+                    </tr>
+                    <tr>
+                        <td class="time">Step 3</td>
+                        <td>현장 전환 상담 (D-Day)</td>
+                        <td>작품 옆에 보증서 콘셉트의 QR코드 네임텍 거치. 평면도 조회 및 1:1 상담 예약 페이지 연결 후, 부스 도슨트 직원을 매개로 대기 없이 심층 상담석으로 연계.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Section 5: Docent Scenario (Ji Ye Eun Style Dialogue) -->
+        <div class="content-section">
+            <div class="section-title">
+                <span>5. 현장 고객 큐레이션 및 상담 전환 시나리오 (Docent Script)</span>
+                <span class="badge">현장 접객 롤플레이</span>
+            </div>
+
+            <div class="dialogue-box">
+                <div class="bubble docent">
+                    <div class="bubble-name"><i class="fa-solid fa-user-tie"></i> 도슨트 (현장 큐레이터)</div>
+                    안녕하세요 관람객님! 지금 보고 계신 것은 저희 더존하우징의 시그니처 프리미엄 목조주택 도면을 바탕으로 가죽 공예 작가님이 천연 이탈리아 베지터블 가죽과 새들스티치 바느질만으로 한 땀 한 땀 구현한 실물 스케일 아트웍입니다.
+                </div>
+                <div class="bubble client">
+                    <div class="bubble-name"><i class="fa-solid fa-user"></i> 관람객 (4060 실수요 고객)</div>
+                    어쩐지 질감이 독특하다 했더니 가죽이군요. 단순한 장난감 미니어처인 줄 알았는데 지붕 선이나 창틀 마감이 실제 지을 집처럼 너무나 고급스럽고 정밀해서 계속 보게 됩니다.
+                </div>
+                <div class="bubble docent">
+                    <div class="bubble-name"><i class="fa-solid fa-user-tie"></i> 도슨트 (현장 큐레이터)</div>
+                    네, 맞습니다. 건축 설계의 한 치의 오차 없는 구조미를 예술적으로 전달하고자 기획되었습니다. 옆에 위치한 QR 코드를 스캔해 보시면 이 모델의 원형이 된 주택의 실제 평면 레이아웃과 완공 인테리어를 즉시 살펴보실 수 있습니다. 혹시 관람객님의 토지 조건에 맞춘 실물 평당 단가나 인테리어 스펙이 궁금하시다면 바로 뒤쪽의 아늑한 VIP 상담석에서 차 한 잔과 함께 더 자세히 안내해 드릴까요?
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="page-footer">
+            <span>더존하우징 기획본부 기획부 | 작성일자: 2026년 6월 15일</span>
+            <span class="page-number" data-page="4"></span>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026-06-12 기획부 회의록</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --bg-page: #f1f5f9;
+            --bg-card: #ffffff;
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --success: #10b981;
+            --warning: #f59e0b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 24px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .header-title-area h1 {
+            font-size: 26px;
+            font-weight: 900;
+            color: var(--primary);
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+
+        .meta-info {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .meta-info span {
+            margin-right: 15px;
+        }
+
+        .back-btn {
+            background-color: var(--primary-light);
+            color: #ffffff;
+            border: none;
+            padding: 10px 18px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-btn:hover {
+            background-color: var(--accent);
+            transform: translateY(-1px);
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-left: 4px solid var(--accent);
+            padding-left: 10px;
+        }
+
+        .card {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .card h3 {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--primary-light);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card-tag {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .tag-todo { background: #fee2e2; color: #ef4444; }
+        .tag-info { background: #e0e7ff; color: #4338ca; }
+        .tag-success { background: #dcfce7; color: #15803d; }
+
+        .card p, .card li {
+            font-size: 13.5px;
+            color: #334155;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .card ul {
+            padding-left: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 13px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background-color: #f8fafc;
+            font-weight: 700;
+            color: var(--primary-light);
+        }
+
+        tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        .badge {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .badge-today { background-color: #fef3c7; color: #d97706; }
+        .badge-mon { background-color: #e0e7ff; color: #4338ca; }
+        .badge-date { background-color: #f1f5f9; color: var(--text-muted); }
+
+        .badge-type-plan { background-color: #ecfeff; color: #0891b2; }
+        .badge-type-meeting { background-color: #fef2f2; color: #ef4444; }
+        .badge-type-open { background-color: #eff6ff; color: #3b82f6; }
+        .badge-type-shoot { background-color: #f5f3ff; color: #8b5cf6; }
+
+        @media print {
+            body {
+                background-color: #ffffff;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                max-width: 100%;
+            }
+            .back-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-title-area">
+                <h1>📅 2026-06-12 기획부 회의록</h1>
+                <div class="meta-info">
+                    <span><strong>일시:</strong> 2026년 6월 12일 (금) 오전 10:20</span>
+                    <span><strong>장소:</strong> 기획부 사무실</span>
+                    <span><strong>작성자:</strong> 기획부</span>
+                </div>
+            </div>
+            <a href="캘린더_인쇄용.html" class="back-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                캘린더로 돌아가기
+            </a>
+        </div>
+
+        <div class="section">
+            <div class="section-title">📌 주요 안건 및 의사결정 사항</div>
+            
+            <div class="card">
+                <h3>1. 김포 운양동 오픈하우스 페이지 오픈 준비 <span class="card-tag tag-success">진행완료</span></h3>
+                <ul>
+                    <li><strong>현황:</strong> 어제(6월 11일) 페이지 시안 최종 컨펌 완료.</li>
+                    <li><strong>계획:</strong> 단톡방 최종 피드백 확인 후, 금일 마케팅 자료 준비 및 업체 전달 진행.</li>
+                    <li><strong>오픈 예정:</strong> <strong>6월 15일 (월)</strong> 공식 오픈 및 온라인 마케팅 일제히 개시.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>2. 경상지사 주택전시장 도면 관련 조치 <span class="card-tag tag-todo">조치필요</span></h3>
+                <ul>
+                    <li><strong>현황:</strong> 경상지사 전시장 주택 3개소 리뉴얼 중 2개소의 엔타임(N-Type) 도면 누락 상태 확인.</li>
+                    <li><strong>조치:</strong> 금일 김종국 부장에게 도면 재송부 요청 예정 (점심 식사 미팅 시 구두 전달).</li>
+                    <li><strong>추가:</strong> 이사님으로부터 P-Type 도면 데이터 금일 내 수령 협의 완료.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>3. 7월 박람회 준비 및 마감 일정 수립 <span class="card-tag tag-info">일정관리</span></h3>
+                <ul>
+                    <li><strong>일정 압박:</strong> 홍보물 인쇄 및 제작에 열흘 이상 소요되므로 이사님 휴가 일정을 고려해 <strong>7월 초까지 원고 마감</strong>.</li>
+                    <li><strong>카탈로그 수정:</strong> 일정 압박으로 전면 교체는 불가하며, <strong>일부 시공사례만 선별적으로 부분 교체</strong>하기로 합의.</li>
+                    <li><strong>현수막:</strong> 박람회 대형 현수막 품의안 상무님 결제 대기 중.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>4. 전국 공사현장 현수막/간판 리뉴얼 <span class="card-tag tag-info">기획</span></h3>
+                <ul>
+                    <li><strong>문제점:</strong> 현수막이 너무 작아 브랜드 가독성이 나쁘다는 현장 민원 컴플레인 누적.</li>
+                    <li><strong>리뉴얼 방향:</strong> 경쟁사 레이아웃을 벤치마킹하여 사이즈를 확대하고, 복잡한 세부 텍스트를 제거하여 <strong>브랜드 로고 중심의 직관적이고 큰 대형 현수막 디자인</strong> 적용 예정.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>5. 동탄 더 힐 (동탄 더위) 마케팅 협업 프로모션 <span class="card-tag tag-todo">기획진행</span></h3>
+                <ul>
+                    <li><strong>내용:</strong> 대지 분양 시행사와 당사(시공사) 간의 시너지 프로모션 제안 접수.</li>
+                    <li><strong>전략:</strong> 단순 시행사 홍보에 편중되지 않도록 <strong>영업부의 기존 프로모션 파워를 패키지로 엮어 당사 브랜드를 우선 부각</strong>하는 방향으로 구성. 상무님 및 영업부와 세부 기획 조율 예정.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>6. 일본 외장재 협력사 방문 스케줄 <span class="card-tag tag-info">일정확정</span></h3>
+                <ul>
+                    <li><strong>일정:</strong> <strong>6월 15일 (월)</strong> 일본 협력사 내방.</li>
+                    <li><strong>업무:</strong> 미팅 스케치 촬영 및 홈페이지 공식 공지사항 게재.</li>
+                    <li><strong>영향:</strong> 차주 월요일 다른 기획서들(지예은 기획안 등) 마감 일정과 겹치므로 금일 중 사전 작업 완료 필요.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>7. 기타 콘텐츠 활용 및 일정 조율 <span class="card-tag tag-info">기타</span></h3>
+                <ul>
+                    <li><strong>김기리님 미팅:</strong> <strong>6월 29일 (월)</strong> 미팅 및 촬영 스케줄 최종 조율.</li>
+                    <li><strong>로그 분석:</strong> 에이스카운터 및 AI 서치 데이터를 활용해 유입 검색 경로 분석 및 마케팅 효율성 체크.</li>
+                    <li><strong>백년손님 오디오:</strong> 울림이 심해 긴 다큐멘터리 제작은 보류될 수 있으나, 현장 시공사례 영상 내 짧은 인터뷰 컷 위주로 재가공하여 활용.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">📅 관련 업무 및 일정표 동기화 내역</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 15%;">날짜</th>
+                        <th style="width: 15%;">구분</th>
+                        <th style="width: 45%;">일정 내용</th>
+                        <th style="width: 15%;">상태</th>
+                        <th style="width: 10%;">비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="badge badge-today">6월 12일 (오늘)</span></td>
+                        <td><span class="badge badge-type-plan">기획/마감</span></td>
+                        <td>오픈하우스 페이지 최종 수정 및 마케팅 준비</td>
+                        <td><strong>진행중</strong></td>
+                        <td>금일 마감</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge badge-today">6월 12일 (오늘)</span></td>
+                        <td><span class="badge badge-type-plan">도면요청</span></td>
+                        <td>경상지사 N-Type 도면 요청 및 이사님 P-Type 도면 수령</td>
+                        <td><strong>진행중</strong></td>
+                        <td>식사 미팅</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge badge-mon">6월 15일 (월)</span></td>
+                        <td><span class="badge badge-type-meeting">미팅/촬영</span></td>
+                        <td>일본 외장재 협력사 내방 및 현장 촬영</td>
+                        <td><strong>예정</strong></td>
+                        <td>공지용</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge badge-mon">6월 15일 (월)</span></td>
+                        <td><span class="badge badge-type-open">마케팅</span></td>
+                        <td>김포 운양동 오픈하우스 마케팅 시작 및 업체 전달</td>
+                        <td><strong>예정</strong></td>
+                        <td>공식오픈</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge badge-mon">6월 15일 (월)</span></td>
+                        <td><span class="badge badge-type-plan">기획마감</span></td>
+                        <td>기획서 및 박람회 모델 기획서 1차 마감</td>
+                        <td><strong>예정</strong></td>
+                        <td>타이트</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge badge-date">6월 29일 (월)</span></td>
+                        <td><span class="badge badge-type-shoot">미팅/촬영</span></td>
+                        <td>김기리님 미팅 진행 및 촬영 스케줄 조율</td>
+                        <td><strong>예정</strong></td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge badge-date">7월 초</span></td>
+                        <td><span class="badge badge-type-plan">박람회마감</span></td>
+                        <td>7월 박람회 자료 원고 마감</td>
+                        <td><strong>예정</strong></td>
+                        <td>원고마감</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge badge-date">7월 10일 (금)</span></td>
+                        <td><span class="badge badge-type-plan">박람회제작</span></td>
+                        <td>7월 박람회 자료 인쇄 및 제작 마감</td>
+                        <td><strong>예정</strong></td>
+                        <td>제작마감</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,226 @@
+{
+  "main": {
+    "id": "076581ebda94bfb5",
+    "type": "split",
+    "children": [
+      {
+        "id": "8050f13ea92d7e5f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c5da0f9897567514",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "환영합니다!.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "환영합니다!"
+            }
+          },
+          {
+            "id": "d862810f4671d51f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "99_Inbox/오늘 업무.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "오늘 업무"
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "db74d9a39436f03b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b8164719f6bdafbb",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ff43d8c97619361f",
+    "type": "split",
+    "children": [
+      {
+        "id": "c8ab16f13fbba4f6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c90779a1344b4ce8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
+            }
+          },
+          {
+            "id": "9e1b0bb23489f074",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "검색"
+            }
+          },
+          {
+            "id": "ce052c5546161a1e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "북마크"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b6e3b98515c63e4f",
+    "type": "split",
+    "children": [
+      {
+        "id": "922737c99274f4ee",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c18334c9e4739c39",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "99_Inbox/오늘 업무.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "오늘 업무 의 백링크"
+            }
+          },
+          {
+            "id": "4194ecf53d834574",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "99_Inbox/오늘 업무.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "오늘 업무 의 나가는 링크"
+            }
+          },
+          {
+            "id": "37c841da9b184cf3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "태그"
+            }
+          },
+          {
+            "id": "ae8dc76612a23302",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "모든 속성"
+            }
+          },
+          {
+            "id": "16c2217354c76b75",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "99_Inbox/오늘 업무.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "오늘 업무 의 개요"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:빠른 전환기 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "bases:새 베이스 생성하기": false,
+      "remotely-save:Remotely Save": false
+    }
+  },
+  "active": "b8164719f6bdafbb",
+  "lastOpenFiles": [
+    "99_Inbox/오늘 업무.md",
+    "환영합니다!.md",
+    "99_Inbox",
+    "02_Personal",
+    "01_Work"
+  ]
+}
