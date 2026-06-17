@@ -124,15 +124,19 @@ const savedTasks = {
         },
         {
             "text": "지예은 미팅(13시)",
-            "completed": false
+            "completed": true
         },
         {
             "text": "동탄더힐 기획회의(14시)",
-            "completed": false
+            "completed": true
         },
         {
             "text": "숏폼제작",
-            "completed": false
+            "completed": true
+        },
+        {
+            "text": "안동 M타입(P427) 홍보영상 최종 컷 편집 완료 및 렌더링",
+            "completed": true
         }
     ]
 };

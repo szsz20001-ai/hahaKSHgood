@@ -141,6 +141,11 @@ const calendarEvents = {
         {
             "type": "meeting",
             "text": "동탄더힐 기획회의(14시)"
+        },
+        {
+            "type": "shoot",
+            "text": "안동 M타입(P427) 홍보영상 최종 컷 편집 완료 및 렌더링",
+            "completed": true
         }
     ],
     "20260617": [
